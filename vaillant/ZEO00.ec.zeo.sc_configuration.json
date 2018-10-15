@@ -1,0 +1,365 @@
+{
+  "id": "ZEO00",
+  "vendor": "Vaillant",
+  "label": "Vaillant Zeolite AMU",
+  "description": "Vaillant Zeolite AMU",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "5A 45 4F 30 30"
+  ],
+  "commands": [
+    {
+      "command": "B5 09",
+      "label": "SolarCollPumpDcIntegrator",
+      "get": {
+        "master": [
+          {
+            "default": "0D CB 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "SolCollPumpDcIntegrator"
+    },
+    {
+      "command": "B5 09",
+      "label": "SolEnableDiffTemp",
+      "get": {
+        "master": [
+          {
+            "default": "0D CD 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolEnableDiffTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E CD 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "5..12K / 1K Auflösung",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SolDisableDiffTemp",
+      "get": {
+        "master": [
+          {
+            "default": "0D CE 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolDisableDiffTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E CE 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "1..10K / 1K Auflösung",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 04",
+      "label": "SolDhwMaxLoadTemp",
+      "get": {
+        "master": [
+          {
+            "default": "CF 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolHwcMaxLoadTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E CF 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "35..80°C / 1°C",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 04",
+      "label": "SolarConfigFlags",
+      "get": {
+        "master": [
+          {
+            "default": "D0 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "SolConfigFlags"
+    },
+    {
+      "command": "B5 04",
+      "label": "SolarCollectorPumpED",
+      "get": {
+        "master": [
+          {
+            "default": "D1 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "SolCollPumpED"
+    },
+    {
+      "command": "B5 04",
+      "label": "CollectorPumpSRuntime",
+      "get": {
+        "master": [
+          {
+            "default": "D2 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CollPumpSRuntime",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E D2 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 04",
+      "label": "CollectorPumpHRuntime",
+      "get": {
+        "master": [
+          {
+            "default": "D3 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CollPumpHRuntime",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E D3 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 04",
+      "label": "SolarYieldMinute",
+      "get": {
+        "master": [
+          {
+            "default": "D4 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "YieldMinute",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E D4 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 04",
+      "label": "SolarYieldKw",
+      "get": {
+        "master": [
+          {
+            "default": "D5 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Yield",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E D5 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 04",
+      "label": "SolarFlowRate",
+      "get": {
+        "master": [
+          {
+            "default": "D6 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolFlowRate",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E D6 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "vendor": "Vaillant",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "commands": [
+    {
+      "command": "B5 16",
+      "label": "date/time",
+      "get": {
+        "master": [
+          {
+            "default": "00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "null1",
+            "type": "time"
+          },
+          {
+            "name": "null2",
+            "type": "date"
+          }
+        ]
+      },
+      "id": "vdatetime"
+    },
+    {
+      "command": "B5 16",
+      "label": "outside temperature",
+      "get": {
+        "master": [
+          {
+            "default": "01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.temp2"
+          }
+        ]
+      },
+      "id": "outsidetemp"
+    },
+    {
+      "command": "B5 05",
+      "label": "state hot water",
+      "get": {
+        "master": [
+          {
+            "default": "27",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "null1",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          },
+          {
+            "name": "VF1",
+            "type": "template",
+            "id": "vaillant.templ.temp0"
+          },
+          {
+            "name": "null2",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "hwcStatus"
+    },
+    {
+      "command": "B5 05",
+      "label": "quick - hot water tank filling",
+      "get": {
+        "master": [
+          {
+            "default": "06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "load"
+    }
+  ]
+}

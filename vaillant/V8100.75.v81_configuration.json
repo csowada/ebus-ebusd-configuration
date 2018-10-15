@@ -1,0 +1,501 @@
+{
+  "id": "V8100",
+  "vendor": "Vaillant",
+  "label": "Vaillant VR 81",
+  "description": "Vaillant VR 81",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "56 38 31 30 30"
+  ],
+  "commands": [
+    {
+      "command": "B5 09",
+      "label": "DisplayedRoomTemp",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "displayed room temperature",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.temp"
+          }
+        ]
+      },
+      "id": "DisplayedRoomTemp"
+    },
+    {
+      "command": "B5 09",
+      "label": "RaumtemperaturIst",
+      "get": {
+        "master": [
+          {
+            "default": "0D 00 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "raw value current room temperature and sensorstate (without any correction)",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "RoomTemp"
+    },
+    {
+      "command": "B5 09",
+      "label": "DesiredHCRoomSetPoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current room setpoint",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.temp"
+          }
+        ]
+      },
+      "id": "DesiredHcRoomTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "HCRoomSetPointAdjustable",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "room temperature setpoint is currently adjustable",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      },
+      "id": "HcRoomTempDesiredAdjustable"
+    },
+    {
+      "command": "B5 09",
+      "label": "HCActiveSpecialFunction",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "HcActiveSpecialFunction"
+    },
+    {
+      "command": "B5 09",
+      "label": "OperatingMode430",
+      "get": {
+        "master": [
+          {
+            "default": "0D 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "OperatingMode430",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 04 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SelectedHeatCircuit",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "SelectedHc"
+    },
+    {
+      "command": "B5 09",
+      "label": "RaumtemperaturIstOffset",
+      "get": {
+        "master": [
+          {
+            "default": "0D 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "RoomTempOffset",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "room temperature correction",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "RaumTempOffsetEigenErwaerm",
+      "get": {
+        "master": [
+          {
+            "default": "0D 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "room temperature intrinsic heating offset",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.temp"
+          }
+        ]
+      },
+      "id": "RoomTempOffsetSelfWarming"
+    },
+    {
+      "command": "B5 09",
+      "label": "MaxStackeBUSTask",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "StackeBUSTaskMax"
+    },
+    {
+      "command": "B5 09",
+      "label": "MaxStackMainTask",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "StackMainTaskMax"
+    },
+    {
+      "command": "B5 09",
+      "label": "MaxStackLifeCheckTask",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "StackLifeCheckTaskMax"
+    },
+    {
+      "command": "B5 09",
+      "label": "Variant",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "null1",
+            "type": "word"
+          },
+          {
+            "name": "null2",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "Variant"
+    },
+    {
+      "command": "B5 09",
+      "label": "eBUS_CRC",
+      "get": {
+        "master": [
+          {
+            "default": "0D 10 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "eBUSCRC"
+    },
+    {
+      "command": "B5 09",
+      "label": "eBUSFifoDiffCntMax",
+      "get": {
+        "master": [
+          {
+            "default": "0D 11 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "eBUSFifoDiffCntMax"
+    },
+    {
+      "command": "B5 09",
+      "label": "EEpromMaxInkonsCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 13 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "EEpromMaxInkonsCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "POCResetCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "POCResetCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "WDResetCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 15 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "WDResetCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "LVResetCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 16 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "LVResetCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "CMResetCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "CMResetCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "COMErrorCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "COMErrorCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "VariantDKRefreshCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 19 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "VariantDKRefreshCnt"
+    },
+    {
+      "command": "B5 09",
+      "label": "FiFoResetCnt",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "FiFoResetCnt"
+    }
+  ]
+}

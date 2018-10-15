@@ -1,0 +1,2289 @@
+{
+  "id": "VD400",
+  "vendor": "Vaillant",
+  "label": "Vaillant vrnetDIALOG 840/2",
+  "description": "Vaillant vrnetDIALOG 840/2",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "56 44 34 30 30"
+  ],
+  "commands": [
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 00 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SoftwareVersion",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 00 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "EnableMonitoring",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 01 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "FlexibleMonitoring",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DataCollectionRequest",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DataCollectionBuffer",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 04 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 05 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DataCollCycle",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 05 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "length": 4,
+          "name": "value",
+          "type": "unumber"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 06 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DataCollBufSize",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 06 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "length": 4,
+          "name": "value",
+          "type": "unumber"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Enable broadcast error messages",
+      "get": {
+        "master": [
+          {
+            "default": "0D 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "EnableBcErrMsg",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 07 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Brodcast error messages on the eBUS will be send to the server",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.yesno"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BoxSerialNumber1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 08 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 09 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BoxSerialNumber2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 09 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BoxSerialNumber3",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BoxSerialNumber4",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Device Layout",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DeviceLayout",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Layout Checksum",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DeviceLayoutCRC",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "AutoSync enabled",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "AutoSyncEnable",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Enabling or disabling of the AutoYync on the eBUS. Only usefull if there problems with outher AutoSync devices on the eBUS.",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Last connection error",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "LastConnectionError",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Connection error retry delay [minutes]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 10 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ConnErrorRetryDelay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 10 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Connection Delay [minutes]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 11 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ConnectionDelay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 11 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 12 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ErrorMessage",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 12 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Connection error counter",
+      "get": {
+        "master": [
+          {
+            "default": "0D 13 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ConnErrorCnt",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 13 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PPP phone number 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PppPhoneNumber1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PPP Login 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 15 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PppLogin1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 15 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PPP Password 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 16 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PppPassword1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 16 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Phone number provider 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PppPhoneNumber2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 17 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PPP Login 2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PppLogin2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 18 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PPP Password 2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 19 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PppPassword2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 19 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Server IP address",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ServerIpAddr",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "null1",
+          "type": "byte"
+        },
+        {
+          "name": "null2",
+          "type": "byte"
+        },
+        {
+          "name": "null3",
+          "type": "byte"
+        },
+        {
+          "name": "null4",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Actual GSM/GPRS provider",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ActualGsmProvider",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Modem init string",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ModemInitString",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Call back delay GSM/GPRS [s]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "RingTimeGsmCB",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Rings before pickup",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "RingsBeforePickup",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 20 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "RingTimeTSM1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 20 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 21 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "RingTimeTSM2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 21 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 22 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MessageThreshold",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 22 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 23 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ConnectionCycle",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 23 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Max. signal strength GSM/GPRS",
+      "get": {
+        "master": [
+          {
+            "default": "0D 24 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "FieldStrengthMax",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 24 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Min. signal strength GSM/GPRS",
+      "get": {
+        "master": [
+          {
+            "default": "0D 25 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "FieldStrengthMin",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 25 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Enable OK message",
+      "get": {
+        "master": [
+          {
+            "default": "0D 26 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "EnableDisErrorMsg",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 26 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "If on a error free message will be sent to the server.",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Relay outputs",
+      "get": {
+        "master": [
+          {
+            "default": "0D 27 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SwitchRelays",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 27 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "children": [
+            {
+              "pos": 0,
+              "type": "bit"
+            }
+          ],
+          "name": "null1",
+          "type": "byte"
+        },
+        {
+          "children": [
+            {
+              "pos": 1,
+              "type": "bit"
+            }
+          ],
+          "name": "null2",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "StandbySignal",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 2B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Power on alarm",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PowerOnMessage",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 2C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "If on a alarm message is sent after power on",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "AlarmOnDelay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 2E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "null1",
+          "type": "word"
+        },
+        {
+          "name": "null2",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "AlarmOffDelay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 2F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "null1",
+          "type": "word"
+        },
+        {
+          "name": "null2",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 30 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ScanLayoutCycle",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 30 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 31 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PredMaintConnectionCycle",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 31 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 32 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "LastKnownEbusAddr",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 32 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 33 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Time",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 33 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.time"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 34 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Date",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 34 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.date"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 36 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CurrentPppProvider",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 36 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "GSM SIM Pin",
+      "get": {
+        "master": [
+          {
+            "default": "0D 37 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "GsmGprsPin",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 37 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 38 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ModemType",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 38 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 39 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "H2BusLayout",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 39 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Digital input actual values",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ActualDigitalInputs",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "children": [
+            {
+              "pos": 0,
+              "type": "bit"
+            }
+          ],
+          "name": "null1",
+          "type": "byte"
+        },
+        {
+          "children": [
+            {
+              "pos": 1,
+              "type": "bit"
+            }
+          ],
+          "name": "null2",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Analog inputs actual values",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ActualAnalogInputs",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "null1",
+          "type": "word"
+        },
+        {
+          "name": "null2",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Counter inputs actual values",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ActualCounterValue",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "null1",
+          "type": "word"
+        },
+        {
+          "name": "null2",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Modem dial prefix",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ModemDialPrefix",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DebugFlags",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "length": 4,
+          "name": "value",
+          "type": "unumber"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Modem country code",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ModemCountryCode",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 40 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DoReset",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 40 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 41 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DataCollectionLimit",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 41 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "length": 4,
+          "name": "value",
+          "type": "unumber"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 42 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Temp3WayValve",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 42 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "get": {
+        "master": [
+          {
+            "default": "0D 46 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "RfWakeupCycle",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 46 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    }
+  ]
+}

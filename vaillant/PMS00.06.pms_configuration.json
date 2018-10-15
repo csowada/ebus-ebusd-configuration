@@ -1,0 +1,1281 @@
+{
+  "id": "PMS00",
+  "vendor": "Vaillant",
+  "label": "Vaillant VPM 20 S",
+  "description": "Vaillant VPM 20 S",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "50 4D 53 30 30"
+  ],
+  "commands": [
+    {
+      "command": "B5 09",
+      "label": "Ntc1RawData",
+      "get": {
+        "master": [
+          {
+            "default": "0D 00 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "Ntc1RawData"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc2RawData",
+      "get": {
+        "master": [
+          {
+            "default": "0D 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "Ntc2RawData"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc3RawData",
+      "get": {
+        "master": [
+          {
+            "default": "0D 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "Ntc3RawData"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc4RawData",
+      "get": {
+        "master": [
+          {
+            "default": "0D 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "Ntc4RawData"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc1Sensor",
+      "get": {
+        "master": [
+          {
+            "default": "0D 05 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temperature in solar flow (from solar collector)",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "Ntc1Sensor"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc2Sensor",
+      "get": {
+        "master": [
+          {
+            "default": "0D 06 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temperature in solar back flow (to solar collector)",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "Ntc2Sensor"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc3Sensor",
+      "get": {
+        "master": [
+          {
+            "default": "0D 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temperature in buffer flow (to buffer)",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "Ntc3Sensor"
+    },
+    {
+      "command": "B5 09",
+      "label": "Ntc4Sensor",
+      "get": {
+        "master": [
+          {
+            "default": "0D 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temperature in buffer back flow (from buffer)",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "Ntc4Sensor"
+    },
+    {
+      "command": "B5 09",
+      "label": "Relais Solarpumpe",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolPumpRelay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Solar pump relay: 0: OFF; 1: ON",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarPumpPower",
+      "get": {
+        "master": [
+          {
+            "default": "0D 10 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolPumpPower",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 10 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Performance of solar pump: (7 - 100 %)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.power"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "BufferPumpPower",
+      "get": {
+        "master": [
+          {
+            "default": "0D 11 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BufferPumpPower",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 11 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Performance of buffer pump: (15 - 100%)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.power"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "MonitorMatlab_Last5minSolarAverage",
+      "get": {
+        "master": [
+          {
+            "default": "0D 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "MonitorMatlabLast5minSolAverage"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentSolarSetpoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "CurrentSolTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentVPM_LoadingMode",
+      "get": {
+        "master": [
+          {
+            "default": "0D 19 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "CurrentVPMLoadingMode"
+    },
+    {
+      "command": "B5 09",
+      "label": "RunTimePump1_Minutes",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Runtime of solar pump in minutes",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.minutes0"
+          }
+        ]
+      },
+      "id": "RunTimePump1Minutes"
+    },
+    {
+      "command": "B5 09",
+      "label": "RunTimePump1_Hours",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Runtime of solar pump in hours",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.hoursum2"
+          }
+        ]
+      },
+      "id": "RunTimePump1Hours"
+    },
+    {
+      "command": "B5 09",
+      "label": "ExternalDHWRequest",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "0: No request; 1: Request",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "ExternalHwcRequest"
+    },
+    {
+      "command": "B5 09",
+      "label": "ExternalCHRequest",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "0: No request; 1: Request",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "ExternalHcRequest"
+    },
+    {
+      "command": "B5 09",
+      "label": "ExternalDHWSetpoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Requested temperature for DHW",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.desiredtemp"
+          }
+        ]
+      },
+      "id": "ExternalHwcTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "ExternalCHSetpoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Requested temperature for CH",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.desiredtemp"
+          }
+        ]
+      },
+      "id": "ExternalHcTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentASCStateforExternals",
+      "get": {
+        "master": [
+          {
+            "default": "0D 20 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "CurrentASCStateforExternals"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentASCStateforASI",
+      "get": {
+        "master": [
+          {
+            "default": "0D 21 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "CurrentASCStateforASI"
+    },
+    {
+      "command": "B5 09",
+      "label": "DateAndTimeIsSet",
+      "get": {
+        "master": [
+          {
+            "default": "0D 22 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "0: Date and Time is not set; 1: Date and Time is set",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "DateAndTimeIsSet"
+    },
+    {
+      "command": "B5 09",
+      "label": "time",
+      "get": {
+        "master": [
+          {
+            "default": "0D 23 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Time",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 23 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.time"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "date",
+      "get": {
+        "master": [
+          {
+            "default": "0D 24 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Date",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 24 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.date"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "P_BufferControl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 25 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "BufferControlPress"
+    },
+    {
+      "command": "B5 09",
+      "label": "I_BufferControl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 26 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "BufferControlInt"
+    },
+    {
+      "command": "B5 09",
+      "label": "D_BufferControl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 27 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "BufferControlDiff"
+    },
+    {
+      "command": "B5 09",
+      "label": "P_SolarControl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 28 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "SolControlPress"
+    },
+    {
+      "command": "B5 09",
+      "label": "I_SolarControl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 29 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "SolControlInt"
+    },
+    {
+      "command": "B5 09",
+      "label": "D_SolarControl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "SolControlDiff"
+    },
+    {
+      "command": "B5 09",
+      "label": "MonitorBufferPIDValue",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "MonitorBufferPIDValue"
+    },
+    {
+      "command": "B5 09",
+      "label": "MonitorSolarPIDValue",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "MonitorSolPIDValue"
+    },
+    {
+      "command": "B5 09",
+      "label": "FlowSensorFrequency",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "FlowSensorFrequency"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentFlow",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "CurrentFlow"
+    },
+    {
+      "command": "B5 09",
+      "label": "Variante",
+      "get": {
+        "master": [
+          {
+            "default": "0D 30 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "Variante"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentSystemMode",
+      "get": {
+        "master": [
+          {
+            "default": "0D 33 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "CurrentSystemMode"
+    },
+    {
+      "command": "B5 09",
+      "label": "InternalDHWSetpoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 35 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "InternalHwcTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "InternalCHSetpoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 36 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "InternalHcTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "ASIDetected",
+      "get": {
+        "master": [
+          {
+            "default": "0D 38 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "ASIDetected"
+    },
+    {
+      "command": "B5 09",
+      "label": "CountryZone",
+      "get": {
+        "master": [
+          {
+            "default": "0D 39 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CountryZone",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 39 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "RequestForExternalDateTimeSetting",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "0: Time and Date is set; 1: Time and Date is not set",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "RequestForExternalDateTimeSetting"
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarYieldCurrentDay",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "YieldCurrentDay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Accumulated solar gain from 00:00 to 24:00 if time is set",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PowerOnCounter",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "PowerOnCounter"
+    },
+    {
+      "command": "B5 09",
+      "label": "RTCLowVoltageCounter",
+      "get": {
+        "master": [
+          {
+            "default": "0D 40 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "RTCLowVoltageCounter"
+    },
+    {
+      "command": "B5 09",
+      "label": "ForceStartSolarPumpKick",
+      "get": {
+        "master": [
+          {
+            "default": "0D 47 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Start solar pump for max. 5min to check collector temperature 0: OFF, 1: ON",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "ForceStartSolPumpKick"
+    },
+    {
+      "command": "B5 09",
+      "label": "MonitorMatlabState",
+      "get": {
+        "master": [
+          {
+            "default": "0D 48 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "MonitorMatlabState"
+    },
+    {
+      "command": "B5 09",
+      "label": "CurrentBufferSetpoint",
+      "get": {
+        "master": [
+          {
+            "default": "0D 49 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "CurrentBufferTempDesired"
+    },
+    {
+      "command": "B5 09",
+      "label": "RunTimeBufferPump_Minutes",
+      "get": {
+        "master": [
+          {
+            "default": "0D 4B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Runtime of buffer pump in minutes",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.minutes0"
+          }
+        ]
+      },
+      "id": "RunTimeBufferPumpMinutes"
+    },
+    {
+      "command": "B5 09",
+      "label": "RunTimeBufferPump_Hours",
+      "get": {
+        "master": [
+          {
+            "default": "0D 4C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Runtime of buffer pump in hours",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.hoursum2"
+          }
+        ]
+      },
+      "id": "RunTimeBufferPumpHours"
+    },
+    {
+      "command": "B5 09",
+      "label": "MonitorOverheatState",
+      "get": {
+        "master": [
+          {
+            "default": "0D 4F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "MonitorOverheatState"
+    },
+    {
+      "command": "B5 09",
+      "label": "Monitor_Matlab_DHW_Calculation",
+      "get": {
+        "master": [
+          {
+            "default": "0D 53 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "MonitorMatlabHwcCalculation"
+    },
+    {
+      "command": "B5 09",
+      "label": "Monitor_Matlab_CH_Calculation",
+      "get": {
+        "master": [
+          {
+            "default": "0D 54 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "MonitorMatlabHcCalculation"
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarYieldTotal",
+      "get": {
+        "master": [
+          {
+            "default": "0D 56 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "YieldTotal",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 56 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Accumulated solar gain since installation",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 03",
+      "label": "Current errors",
+      "get": {
+        "master": [
+          {
+            "default": "00 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.errors"
+          }
+        ]
+      },
+      "id": "currenterror"
+    },
+    {
+      "command": "B5 03",
+      "label": "Error history",
+      "get": {
+        "master": [
+          {
+            "default": "01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "null1",
+            "type": "byte"
+          },
+          {
+            "name": "null2",
+            "type": "template-block",
+            "id": "vaillant.errorhistory"
+          }
+        ]
+      },
+      "id": "errorhistory"
+    },
+    {
+      "command": "B5 03",
+      "label": "Clear error history",
+      "id": "clearerrorhistory",
+      "set": {
+        "master": [
+          {
+            "default": "02 01",
+            "type": "static"
+          },
+          {
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      }
+    }
+  ]
+}

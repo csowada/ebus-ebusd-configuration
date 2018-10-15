@@ -1,0 +1,1556 @@
+{
+  "id": "SDR_P",
+  "vendor": "Vaillant",
+  "label": "Vaillant auroMATIC 560",
+  "description": "Vaillant auroMATIC 560",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "53 44 52 5F 50"
+  ],
+  "commands": [
+    {
+      "command": "B5 09",
+      "label": "Cyl. temp. probe 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 00 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Storage1Sensor",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 00 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Cyl. temp. probe 2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Storage2Sensor",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 01 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Cyl. temp. probe 3",
+      "get": {
+        "master": [
+          {
+            "default": "0D 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Storage3Sensor",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Solar panel temp. 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Coll1Sensor",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Solar panel temp. 2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Coll2Sensor",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 04 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Solar gain probe",
+      "get": {
+        "master": [
+          {
+            "default": "0D 05 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "YieldSensor",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 05 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.tempsensor"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Status solar panel pump 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 06 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CollPump1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 06 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Current power solar pumps",
+      "get": {
+        "master": [
+          {
+            "default": "0D 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CollPump1ActualPower",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 07 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Status solar panel pump 2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CollPump2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 08 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "UV 1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 09 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ThreeWayValve1",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 09 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Status legionella pump",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "LegioPump",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Circulation pump",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CirPump",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Status electrical heater",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ElectronicCartridge",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Status C1/C2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "C1C2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Bypass valve",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BypassValve",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Target temperature [C]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ActualTempDesired",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp1"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Operation mode",
+      "get": {
+        "master": [
+          {
+            "default": "0D 15 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "OperatingMode",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 15 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.mcmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Time",
+      "get": {
+        "master": [
+          {
+            "default": "0D 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Time",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 17 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.time"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Solar gain",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Yield",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Operation time solar pump",
+      "get": {
+        "master": [
+          {
+            "default": "0D 1F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CollPumpHRuntime",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 1F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "null1",
+          "type": "word"
+        },
+        {
+          "name": "null2",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Date",
+      "get": {
+        "master": [
+          {
+            "default": "0D 20 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Date",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 20 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.date"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Holiday",
+      "get": {
+        "master": [
+          {
+            "default": "0D 28 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "IsInHoliday",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 28 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "override (partyfunction)",
+      "get": {
+        "master": [
+          {
+            "default": "0D 29 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "IsInParty",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 29 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "cylinder boost",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "IsInSingleHwcLoading",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 2A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Hzdraulic plan",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HydraulicScheme",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Max. temp. solar cylinder [C]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolHwcMaxLoadTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Switch-on diff. solar cyl. [K]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolEnableDiffTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 3F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Switch/off diff. solar cyl. [K]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 40 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolDisableDiffTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 40 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Legionella protection",
+      "get": {
+        "master": [
+          {
+            "default": "0D 41 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "LegioProtectionEnabled",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 41 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Starting time filling mode (tFIL)",
+      "get": {
+        "master": [
+          {
+            "default": "0D 42 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "StartTimeFillingMode",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 42 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Starting time operatiion mode (tOP)",
+      "get": {
+        "master": [
+          {
+            "default": "0D 43 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "StartTimeOperatingMode",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 43 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "No. of solar panels",
+      "get": {
+        "master": [
+          {
+            "default": "0D 44 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "NumCollPanels",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 44 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Blocking time solar pumps (tBLK)",
+      "get": {
+        "master": [
+          {
+            "default": "0D 45 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolPumpBlockingTime",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 45 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Re-charge delay",
+      "get": {
+        "master": [
+          {
+            "default": "0D 46 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcLoadingDelay",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 46 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Solar flow rate [l/h]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 47 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolFlowRate",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 47 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Solarpump durat.ratio ctrl",
+      "get": {
+        "master": [
+          {
+            "default": "0D 48 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolEDEnable",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 48 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Reset solar gain",
+      "get": {
+        "master": [
+          {
+            "default": "0D 49 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ResetYield",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 49 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Reset operation hours",
+      "get": {
+        "master": [
+          {
+            "default": "0D 4A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ResetOperatingTimes",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 4A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Power solar pump [%]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 4B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolPumpPower",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 4B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.power"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "De-activation autosync",
+      "get": {
+        "master": [
+          {
+            "default": "0D 51 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "DisableAutoSync",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 51 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Min. switch-on diff. solar cylinder [K]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 52 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolEnableDiffTempMin",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 52 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "Max. switch-on diff. solar cylinder [K]",
+      "get": {
+        "master": [
+          {
+            "default": "0D 53 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolEnableDiffTempMax",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 53 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "char"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1378 @@
+{
+  "id": "sol00",
+  "vendor": "Vaillant",
+  "label": "Vaillant VR 68",
+  "description": "Vaillant VR 68",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "73 6F 6C 30 30"
+  ],
+  "commands": [
+    {
+      "command": "B5 09",
+      "label": "KOL",
+      "get": {
+        "master": [
+          {
+            "default": "0D 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "value and sensorstate of the collector sensor",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "Col"
+    },
+    {
+      "command": "B5 09",
+      "label": "SP1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 00 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "value and sensorstate of upper tank temperature sensor SP1",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "SP1"
+    },
+    {
+      "command": "B5 09",
+      "label": "SP2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "value and sensorstate of lower tank temperature sensor SP2",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "SP2"
+    },
+    {
+      "command": "B5 09",
+      "label": "TD1",
+      "get": {
+        "master": [
+          {
+            "default": "0D 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "value and sensorstate of middle tank temperature sensor TD1",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "D1Temp"
+    },
+    {
+      "command": "B5 09",
+      "label": "TD2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "value and sensorstate of the system\u0027s return flow sensor TD2",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "D2Temp"
+    },
+    {
+      "command": "B5 09",
+      "label": "Sensor Solarertrag",
+      "get": {
+        "master": [
+          {
+            "default": "0D 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "value and sensorstate of the solar gain sensor",
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.tempsensor"
+          }
+        ]
+      },
+      "id": "SolGain"
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarOperationMode",
+      "get": {
+        "master": [
+          {
+            "default": "0D 36 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "solar operation mode (permanently on, off)",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "SolOperationMode"
+    },
+    {
+      "command": "B5 09",
+      "label": "CollectorPump",
+      "get": {
+        "master": [
+          {
+            "default": "0D 06 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "collector pump\u0027s state",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "CollPump"
+    },
+    {
+      "command": "B5 09",
+      "label": "RuntimeCollectorPump",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "accumulated runtime of the collector pump",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.hoursum2"
+          }
+        ]
+      },
+      "id": "RuntimeCollPump"
+    },
+    {
+      "command": "B5 09",
+      "label": "RuntimeCollectorPumpSeconds",
+      "get": {
+        "master": [
+          {
+            "default": "0D 29 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "RuntimeCollPumpSeconds"
+    },
+    {
+      "command": "B5 09",
+      "label": "KickFunction",
+      "get": {
+        "master": [
+          {
+            "default": "0D 32 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "KickFunction",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 32 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "enable kick function",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "ColKickPumpTime",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "ColKickPumpTime"
+    },
+    {
+      "command": "B5 09",
+      "label": "ColKickTempDelta",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "temperature difference necessary for activating the pump kick",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.temp0"
+          }
+        ]
+      },
+      "id": "ColKickTempDelta"
+    },
+    {
+      "command": "B5 09",
+      "label": "FlowRate",
+      "get": {
+        "master": [
+          {
+            "default": "0D 2D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "FlowRate",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 2D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarCollPumpDcIntegrator",
+      "get": {
+        "master": [
+          {
+            "default": "0D 19 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "int"
+          }
+        ]
+      },
+      "id": "SolCollPumpDcIntegrator"
+    },
+    {
+      "command": "B5 09",
+      "label": "MaximalTemperature",
+      "get": {
+        "master": [
+          {
+            "default": "0D 26 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MaximalTemp",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 26 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "solar storage 1 maximum temperature for solar charge",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "TempDifferenceEIN",
+      "get": {
+        "master": [
+          {
+            "default": "0D 24 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "TempDifferenceOn",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 24 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "solar difference control\u0027s switch on temperature of storage 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "TempDifferenceAUS",
+      "get": {
+        "master": [
+          {
+            "default": "0D 25 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "TempDifferenceOff",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 25 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "solar difference control\u0027s switch off temperature of storage 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "MaximalTemperature2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 26 30",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MaximalTemp2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 26 30",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "maximum temperature for solar charge of storage 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "TempDifferenceEIN2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 24 30",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "TempDifferenceOn2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 24 30",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "solar difference control\u0027s switch on temperature of storage 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "TempDifferenceAUS2",
+      "get": {
+        "master": [
+          {
+            "default": "0D 25 30",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "TempDifferenceOff2",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 25 30",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "solar difference control\u0027s switch off temperature of storage 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "EDFunktion",
+      "get": {
+        "master": [
+          {
+            "default": "0D 34 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "EDFunction",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 34 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "enable duty ratio control",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarCollectorPumpED",
+      "get": {
+        "master": [
+          {
+            "default": "0D 28 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "percentage of \u0027pump is on\u0027 during one minute (if duty ratio control is enabled)",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.percent0"
+          }
+        ]
+      },
+      "id": "SolCollPumpED"
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarCircuitProtectionLimit",
+      "get": {
+        "master": [
+          {
+            "default": "0D 30 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ScProtectionLimit",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 30 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "switch off temperature for collector protection (109 \u003c\u003d\u003e off)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.desiredtemp"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarCircuitProtectionHysteresis",
+      "get": {
+        "master": [
+          {
+            "default": "0D 31 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "temperature hysteresis for activating solar pump after collector protection",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.calibration0"
+          }
+        ]
+      },
+      "id": "ScProtectionHysteresis"
+    },
+    {
+      "command": "B5 09",
+      "label": "SolarCircuitProtectionTime",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "ScProtectionTime"
+    },
+    {
+      "command": "B5 09",
+      "label": "EnableSolarCircuitProtection",
+      "get": {
+        "master": [
+          {
+            "default": "0D 59 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "EnableScProtection",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 59 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "enable solar circuit protection",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "FrostProtectionEnabled",
+      "get": {
+        "master": [
+          {
+            "default": "0D 5A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "set TRUE to enable solar frost protection",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      },
+      "id": "FrostProtectionEnabled"
+    },
+    {
+      "command": "B5 09",
+      "label": "FrostProtectionLimit",
+      "get": {
+        "master": [
+          {
+            "default": "0D 5B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "temperature level for activating solar frost protection",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.temps2"
+          }
+        ]
+      },
+      "id": "FrostProtectionLimit"
+    },
+    {
+      "command": "B5 09",
+      "label": "ResetSolarGain",
+      "get": {
+        "master": [
+          {
+            "default": "0D 35 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ResetSolGain",
+      "set": {
+        "command": "B5 09",
+        "master": [
+          {
+            "default": "0E 35 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "reset solar gain",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.yesno"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "SumSolarGain_day_before",
+      "get": {
+        "master": [
+          {
+            "default": "0D 4C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "sum of yesterday\u0027s solar gain",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.energy4"
+          }
+        ]
+      },
+      "id": "SumSolGainDayBefore"
+    },
+    {
+      "command": "B5 09",
+      "label": "SumSolarGain",
+      "get": {
+        "master": [
+          {
+            "default": "0D 33 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "accumulated solar gain",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.energy4"
+          }
+        ]
+      },
+      "id": "SumSolGain"
+    },
+    {
+      "command": "B5 09",
+      "label": "Date",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current date",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.date"
+          }
+        ]
+      },
+      "id": "Date"
+    },
+    {
+      "command": "B5 09",
+      "label": "Time",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current time",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.time"
+          }
+        ]
+      },
+      "id": "Time"
+    },
+    {
+      "command": "B5 09",
+      "label": "Hzdraulic plan",
+      "get": {
+        "master": [
+          {
+            "default": "0D 21 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      },
+      "id": "HydraulicScheme"
+    },
+    {
+      "command": "B5 09",
+      "label": "SystemMode",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "0 \u003d heatpump; 1 \u003d 430 system, must be cyclicly written by the CI",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "SystemMode"
+    },
+    {
+      "command": "B5 09",
+      "label": "MultifunctionOutput",
+      "get": {
+        "master": [
+          {
+            "default": "0D 0A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Output of multifunction relay",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "MultifunctionOutput"
+    },
+    {
+      "command": "B5 09",
+      "label": "O_Multifunction",
+      "get": {
+        "master": [
+          {
+            "default": "0D 3A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "OMultifunction",
+      "set": {
+        "command": "B5 03",
+        "master": [
+          {
+            "default": "02 3A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "multifunction relay: 0 \u003d 2nd storage, 1 \u003d differential control",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "MAPreferredStorage",
+      "get": {
+        "master": [
+          {
+            "default": "0D 37 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MAPreferredStorage",
+      "set": {
+        "command": "B5 03",
+        "master": [
+          {
+            "default": "02 37 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "TempDifferenceOnTD12",
+      "get": {
+        "master": [
+          {
+            "default": "0D 42 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "TempDifferenceOnTD12",
+      "set": {
+        "command": "B5 03",
+        "master": [
+          {
+            "default": "02 42 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "temperature difference for the multifunction-output relay to switch on",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "TempDifferenceOffTD12",
+      "get": {
+        "master": [
+          {
+            "default": "0D 43 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "TempDifferenceOffTD12",
+      "set": {
+        "command": "B5 03",
+        "master": [
+          {
+            "default": "02 43 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "temperature difference for the multifunction-output relay to switch off",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.temp0"
+        }
+      ]
+    },
+    {
+      "command": "B5 09",
+      "label": "PumpAntiLockingFlags",
+      "get": {
+        "master": [
+          {
+            "default": "0D 09 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "word"
+          }
+        ]
+      },
+      "id": "PumpAntiLockingFlags"
+    },
+    {
+      "command": "B5 09",
+      "label": "InitCircuit",
+      "get": {
+        "master": [
+          {
+            "default": "0D 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "true if DHW and CP circuits are in init phase",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      },
+      "id": "InitCircuit"
+    },
+    {
+      "command": "B5 09",
+      "label": "IsInBoostMode",
+      "get": {
+        "master": [
+          {
+            "default": "0D 39 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "heatpump in boost mode",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "IsInBoostMode"
+    },
+    {
+      "command": "B5 09",
+      "label": "QuickVetoStart",
+      "get": {
+        "master": [
+          {
+            "default": "0D 45 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Signal for starting quick veto (will be reset after quick veto has been started)",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      },
+      "id": "QuickVetoStart"
+    },
+    {
+      "command": "B5 09",
+      "label": "Lp_Zp_Ma_Port",
+      "get": {
+        "master": [
+          {
+            "default": "0D 54 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "multifunction-output port replay",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "LpZpMaPort"
+    },
+    {
+      "command": "B5 09",
+      "label": "Hk1P_Kol1P_P1_Port",
+      "get": {
+        "master": [
+          {
+            "default": "0D 55 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "collector 1 pump port replay",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "Hc1PumpKol1PP1Port"
+    },
+    {
+      "command": "B5 09",
+      "label": "Hk2a_LegP_P2_Port",
+      "get": {
+        "master": [
+          {
+            "default": "0D 57 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "legionella pump port replay",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "Hc2aLegPumpP2Port"
+    },
+    {
+      "command": "B5 09",
+      "label": "Hk2z_Port",
+      "get": {
+        "master": [
+          {
+            "default": "0D 58 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Port replay",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.onoff"
+          }
+        ]
+      },
+      "id": "Hc2zPort"
+    },
+    {
+      "command": "B5 03",
+      "label": "Current errors",
+      "get": {
+        "master": [
+          {
+            "default": "00 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.errors"
+          }
+        ]
+      },
+      "id": "currenterror"
+    },
+    {
+      "command": "B5 03",
+      "label": "Error history",
+      "get": {
+        "master": [
+          {
+            "default": "01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "null1",
+            "type": "byte"
+          },
+          {
+            "name": "null2",
+            "type": "template-block",
+            "id": "vaillant.errorhistory"
+          }
+        ]
+      },
+      "id": "errorhistory"
+    },
+    {
+      "command": "B5 03",
+      "label": "Clear error history",
+      "id": "clearerrorhistory",
+      "set": {
+        "master": [
+          {
+            "default": "02 01",
+            "type": "static"
+          },
+          {
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      }
+    },
+    {
+      "command": "B5 06",
+      "label": "I/O test",
+      "id": "iotest",
+      "set": {
+        "master": [
+          {
+            "default": "02",
+            "type": "static"
+          },
+          {
+            "name": "value",
+            "type": "byte"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6487 @@
+{
+  "id": "70000",
+  "vendor": "Vaillant",
+  "label": "Vaillant VRC 700",
+  "description": "Vaillant VRC 700",
+  "authors": [
+    "Ebusd File Converter"
+  ],
+  "identification": [
+    "37 30 30 30 30"
+  ],
+  "commands": [
+    {
+      "command": "B5 24",
+      "label": "Durchgehendes Heizen",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ContinuosHeating",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "-26\u003doff, when the outside temperature falls below this threshold temperature the continuous heating function is started (off \u003c\u003d\u003e function is disabled)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Frostschutz-Verzögerung",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "FrostOverRideTime",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "delay before frost protection is activated",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hoursum2"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Parallele Ladung Warmwasserkreis",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 0A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcParallelLoading",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 0A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Heizbetrieb und Speicherladung parallel",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.onoff"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "maxRoomHumidity",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MaxRoomHumidity",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Adaptive Heizkurve",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "AdaptHeatCurve",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "automatic correction of configured heat curve",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.yesno"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "maximale Speicherladezeit",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MaxCylinderChargeTime",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 17 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "maximum cylinder charging time",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.minutes2"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "lockTimeHwc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcLockTime",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 18 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Sperrzeit WW-Bedarf",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.minutes2"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "pumpAdditionalTime",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 1B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PumpAdditionalTime",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 1B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Ladepumpe Nachlaufzeit",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.minutes2"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "hystCylinderCharge",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 27 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CylinderChargeHyst",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 27 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Hysterese Speicherladung",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.calibrationv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "offsetCylinderCharge",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 29 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "CylinderChargeOffset",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 29 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Speicherlad. Offset",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.calibrationv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "nächste Wartung",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 2C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MaintenanceDate",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 2C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Datum nächste Wartung",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.date"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Datum",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 34 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Date",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 34 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Aktuelles Datum",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.date"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeit",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 35 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Time",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 35 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "time",
+          "variant": "hex"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Systemschema",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 36 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HydraulicScheme",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 36 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Wasserdruck",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 39 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Wasserdruck",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.pressv"
+          }
+        ]
+      },
+      "id": "WaterPressure"
+    },
+    {
+      "command": "B5 24",
+      "label": "TotalSolarYield",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 3D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SolarYieldTotal",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 3D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Solarertrag gesamt",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "TotalEnvironmentalYield",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 3E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "YieldTotal",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 3E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Umweltertrag gesamt",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcMaxFlowTempDesired",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 46 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcMaxFlowTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 46 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "maximum flow temperature setpoint of Hwc",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Systemvorlauf",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 4B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Systemvorlauf",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "SystemFlowTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "Multifunktionsausgang",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 4D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "MultiRelaySetting",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 4D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.mamode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "ThisMonthsEConsumptionHc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 4F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySumHcThisMonth",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 4F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Aktueller Monat Stromverbrauch Heizung",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "ThisMonthsEConsumptionHwc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 50 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySumHwcThisMonth",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 50 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Aktueller Monat Stromverbrauch Warmwasser",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "LastMonthsEConsumptionHc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 53 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySumHcLastMonth",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 53 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Letzter Monat Stromverbrauch Heizung",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "LastMonthsEConsumptionHwc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 54 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySumHwcLastMonth",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 54 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Letzter Monat Stromverbrauch Warmwasser",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "TotalEConsumptionHc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 57 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySumHc",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 57 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Stromverbrauch Heizung gesamt",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "TotalEConsumptionHwc",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 58 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySumHwc",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 58 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Stromverbrauch Warmwasser gesamt",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "TotalEConsumption",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 5C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PrEnergySum",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 5C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "Stromverbrauch gesamt",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.energy4"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "OpModeEffect",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 69 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "OpModeEffect",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 69 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "selection which heating circuit is affected by changing parameters in the basic display",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zonesel"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Installationsfirma Teil 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 6C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Installer1",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 6C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "installer\u0027s name",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.shortname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Installationsfirma Teil 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 6D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Installer2",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 6D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "installer\u0027s name",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.shortname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Telefonnummer",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 6F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PhoneNumber1",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 6F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "installer\u0027s telephone number",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.shortphone"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Telefonnummer",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 70 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "PhoneNumber2",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 70 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "installer\u0027s telephone number",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.shortphone"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HolidayStartPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 71 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 71 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HolidayEndPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 72 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 72 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Außentemperatur",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 73 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Außentemperatur",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "DisplayedOutsideTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "SFMode",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 74 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "SFMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 74 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.sfmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Passwort für das Konfigurationsmenü",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 76 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "KeyCodeforConfigMenu",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 76 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "OpMode",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 7B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "OpMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 7B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "operation mode of all/configured zone(s) matching OpModeEffect",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.opmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HolidayTemp",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 82 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HolidayTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 82 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "holiday setpoint",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "BankHolidayStartPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 83 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BankHolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 83 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of bank holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "BankHolidayEndPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 84 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "BankHolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 84 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of bank holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "mittlere Außentemperatur",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 95 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "OutsideTempAvg",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 00 00 95 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "gerundete mittlere Außentemperatur (alle 3h aktualisiert)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Wartung fällig",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 96 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "zeigt an ob die Wartung fällig ist",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      },
+      "id": "MaintenanceDue"
+    },
+    {
+      "command": "B5 24",
+      "label": "Temp.fühler WW, oben",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 9D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temp.fühler WW, oben",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "HwcStorageTempTop"
+    },
+    {
+      "command": "B5 24",
+      "label": "Temp.fühler WW, unten",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 9E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temp.fühler WW, unten",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "HwcStorageTempBottom"
+    },
+    {
+      "command": "B5 24",
+      "label": "Temp.fühler Hz, oben",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 9F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temp.fühler Hz, oben",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "HcStorageTempTop"
+    },
+    {
+      "command": "B5 24",
+      "label": "Temp.fühler Hz, unten",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 00 00 A0 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Temp.fühler Hz, unten",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "HcStorageTempBottom"
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcOpMode",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcOpMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "operation mode of Hwc",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.opmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "gewünschte Temperatur Warmwasserkreis",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 04 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "setpoint of domestic hot water circuit",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcStorageTemp",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 05 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "Speicheristtemperatur",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "HwcStorageTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcFlowTemp",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "desired flow temp for Hwc",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "HwcFlowTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcHolidayStartPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 09 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcHolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 09 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcHolidayEndPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 0A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcHolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 0A 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcHolidayStartPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 0B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcBankHolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 0B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of bank holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcHolidayEndPeriod",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcBankHolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 0C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of bank holidays",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HwcSFMode",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 01 00 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "HwcSFMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 01 00 0D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.sfmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "CircuitType Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "mctype",
+            "type": "template",
+            "id": "vaillant.templ.mctype"
+          },
+          {
+            "length": 1,
+            "type": "bytes"
+          }
+        ]
+      },
+      "id": "Hc1CircuitType"
+    },
+    {
+      "command": "B5 24",
+      "label": "ActualFlowTempDesired Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current flow temperature setpoint of Hc1",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "Hc1ActualFlowTempDesired"
+    },
+    {
+      "command": "B5 24",
+      "label": "FlowTemp Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current flow temperature of Hc1",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "Hc1FlowTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "ExcessTemp Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 0B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1ExcessTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 0B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "excess temperature of Hc1 (flow temperature\u0027s setpoint is increased by this value to keep the mixing valve in its control range)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.calibrationv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "AutoOffMode Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1AutoOffMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "operation of Hc1 during the lowering time; no influence if room temperature modulation is set to thermostat",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.offmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HeatCurve Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1HeatCurve",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 0F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "MaxFlowTempDesired Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 10 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1MaxFlowTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 10 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "maximum flow temperature setpoint (end emphasis) of Hc1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "MinFlowTempDesired Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 12 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1MinFlowTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 12 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "minimum flow temperature setpoint (end emphasis) of Hc1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "AT-Abschaltgrenze Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1SummerTempLimit",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "if outside temperature \u003e summer limit \u003d\u003e heating is OFF;applies to comfort and night setback setpoint",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "RoomTempSwitchOn Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 15 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1RoomTempSwitchOn",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 15 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "room temperature modulation of Hc1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.rcmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "MixerMovement Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 1A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "float"
+          }
+        ]
+      },
+      "id": "Hc1MixerMovement"
+    },
+    {
+      "command": "B5 24",
+      "label": "HeatCurveAdaption Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 1C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "float"
+          }
+        ]
+      },
+      "id": "Hc1HeatCurveAdaption"
+    },
+    {
+      "command": "B5 24",
+      "label": "Status Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 1B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1Status",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 1B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "PumpStatus Heizkreis 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 00 1E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc1PumpStatus",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 00 1E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "CircuitType Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "mctype",
+            "type": "template",
+            "id": "vaillant.templ.mctype"
+          },
+          {
+            "length": 1,
+            "type": "bytes"
+          }
+        ]
+      },
+      "id": "Hc2CircuitType"
+    },
+    {
+      "command": "B5 24",
+      "label": "ActualFlowTempDesired Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current flow temperature setpoint of Hc2",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "Hc2ActualFlowTempDesired"
+    },
+    {
+      "command": "B5 24",
+      "label": "FlowTemp Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current flow temperature of Hc2",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "Hc2FlowTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "ExcessTemp Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 0B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2ExcessTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 0B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "excess temperature of Hc2 (flow temperature\u0027s setpoint is increased by this value to keep the mixing valve in its control range)",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.calibrationv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "AutoOffMode Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2AutoOffMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "operation of Hc2 during the lowering time; no influence if room temperature modulation is set to thermostat",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.offmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "HeatCurve Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2HeatCurve",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 0F 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "MaxFlowTempDesired Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 10 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2MaxFlowTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 10 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "maximum flow temperature setpoint (end emphasis) of Hc2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "MinFlowTempDesired Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 12 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2MinFlowTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 12 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "minimum flow temperature setpoint (end emphasis) of Hc2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "AT-Abschaltgrenze Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2SummerTempLimit",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "if outside temperature \u003e summer limit \u003d\u003e heating is OFF;applies to comfort and night setback setpoint",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "RoomTempSwitchOn Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 15 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2RoomTempSwitchOn",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 15 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "room temperature modulation of Hc2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.rcmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "MixerMovement Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 1A 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "float"
+          }
+        ]
+      },
+      "id": "Hc2MixerMovement"
+    },
+    {
+      "command": "B5 24",
+      "label": "HeatCurveAdaption Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 1C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "float"
+          }
+        ]
+      },
+      "id": "Hc2HeatCurveAdaption"
+    },
+    {
+      "command": "B5 24",
+      "label": "Status Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 1B 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2Status",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 1B 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "PumpStatus Heizkreis 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 02 01 1E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "Hc2PumpStatus",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 02 01 1E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "word"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Ferienzeitraum Start Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1HolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of holidays for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Ferienzeitraum Ende Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1HolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 04 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of holidays for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumsollwert Ferienbetrieb Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 05 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1HolidayTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 05 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "holiday setpoint for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Betriebsart Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 06 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1OpMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 06 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "operation mode of zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.opmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Solltemperatur Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1DayTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 07 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "day setpoint for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Quick Veto Temperatur Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1QuickVetoTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 08 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "manual override setpoint for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Absenktemperatur Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 09 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1NightTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 09 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "night setpoint for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Bank Feiertag Start Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1BankHolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 0C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of bank holidays for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Bank Feiertag Ende Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1BankHolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 0D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of bank holidays for zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "SFMode Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1SFMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.sfmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumisttemperatur Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current room temperature in zone 1",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "z1RoomTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "Ventilstatus Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 12 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1ValveStatus",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 12 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumregler Zuordnung Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 13 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1RoomZoneMapping",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 13 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "configures which room temperature is assigned to zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zmapping"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumsolltemperatur Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1ActualRoomTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "current room setpoint considering all basic conditions passed to the control algorithms",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Kurzbezeichnung Zone 1",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 16 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Shortname",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 16 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "short name of zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.shortname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zone 1 label (first part)",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Name1",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 17 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "name of zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zone 1 label (second part)",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 00 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Name2",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 00 18 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "name of zone 1",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Ferienzeitraum Start Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2HolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of holidays for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Ferienzeitraum Ende Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 04 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2HolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 04 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of holidays for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumsollwert Ferienbetrieb Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 05 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2HolidayTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 05 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "holiday setpoint for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Betriebsart Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 06 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2OpMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 06 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "operation mode of zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.opmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Solltemperatur Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 07 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2DayTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 07 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "day setpoint for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Quick Veto Temperatur Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 08 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2QuickVetoTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 08 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "manual override setpoint for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Absenktemperatur Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 09 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2NightTemp",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 09 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "night setpoint for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Bank Feiertag Start Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 0C 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2BankHolidayStartPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 0C 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "start date of bank holidays for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hfrom"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Bank Feiertag Ende Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 0D 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2BankHolidayEndPeriod",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 0D 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "end date of bank holidays for zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.hto"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "SFMode Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 0E 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2SFMode",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 0E 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.sfmode"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumisttemperatur Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 0F 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "label": "current room temperature in zone 2",
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.tempv"
+          }
+        ]
+      },
+      "id": "z2RoomTemp"
+    },
+    {
+      "command": "B5 24",
+      "label": "Ventilstatus Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 12 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2ValveStatus",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 12 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "byte"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumregler Zuordnung Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 13 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2RoomZoneMapping",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 13 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "configures which room temperature is assigned to zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zmapping"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Raumsolltemperatur Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 14 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2ActualRoomTempDesired",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 14 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "current room setpoint considering all basic conditions passed to the control algorithms",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.tempv"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Kurzbezeichnung Zone 2",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 16 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Shortname",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 16 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "short name of zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.shortname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zone 2 label (first part)",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 17 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Name1",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 17 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "name of zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zone 2 label (second part)",
+      "get": {
+        "master": [
+          {
+            "default": "02 00 03 01 18 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Name2",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "02 01 03 01 18 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "label": "name of zone 2",
+          "name": "value",
+          "type": "template",
+          "id": "vaillant.templ.zname"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Lüftung Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 01 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ventilationTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 01 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Flüsterbetrieb Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 02 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "noiseReductionTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 02 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Hochtarif Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 00 00 03 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "tariffTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 00 00 03 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 01 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "hwcTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 01 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 01 00 02 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "ccTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 01 00 02 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 02 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1Timer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 02 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 00 01 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z1CoolingTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 00 01 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Heizen Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 02 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2Timer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 02 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Montag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 00",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Monday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 00",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Dienstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Tuesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 01",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Mittwoch",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 02",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Wednesday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 02",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Donnerstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 03",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Thursday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 03",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Freitag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 04",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Friday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 04",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Samstag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 05",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Saturday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 05",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 24",
+      "label": "Zeitfenster Kühlen Sonntag",
+      "get": {
+        "master": [
+          {
+            "default": "03 03 01 01 06",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "id": "z2CoolingTimer.Sunday",
+      "set": {
+        "command": "B5 24",
+        "master": [
+          {
+            "default": "04 03 01 01 06",
+            "type": "static"
+          },
+          {
+            "type": "template-block"
+          }
+        ]
+      },
+      "template": [
+        {
+          "name": "value",
+          "type": "template-block",
+          "id": "vaillant.slot1-3"
+        }
+      ]
+    },
+    {
+      "command": "B5 03",
+      "label": "Current errors",
+      "get": {
+        "master": [
+          {
+            "default": "00 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "value",
+            "type": "template-block",
+            "id": "vaillant.errors"
+          }
+        ]
+      },
+      "id": "currenterror"
+    },
+    {
+      "command": "B5 03",
+      "label": "Error history",
+      "get": {
+        "master": [
+          {
+            "default": "01 01",
+            "type": "static"
+          }
+        ],
+        "slave": [
+          {
+            "name": "null1",
+            "type": "byte"
+          },
+          {
+            "name": "null2",
+            "type": "template-block",
+            "id": "vaillant.errorhistory"
+          }
+        ]
+      },
+      "id": "errorhistory"
+    },
+    {
+      "command": "B5 03",
+      "label": "Clear error history",
+      "id": "clearerrorhistory",
+      "set": {
+        "master": [
+          {
+            "default": "02 01",
+            "type": "static"
+          },
+          {
+            "name": "value",
+            "type": "template",
+            "id": "vaillant.templ.yesno"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "files": [
+    {
+      "name": "vaillant-templates",
+      "url": "./vaillant/vaillant_template.json"
+    },
+    {
+      "name": "PMS00.06.pms",
+      "url": "./vaillant/PMS00.06.pms_configuration.json"
+    },
+    {
+      "name": "35000.15.350",
+      "url": "./vaillant/35000.15.350_configuration.json"
+    },
+    {
+      "name": "VD400.05.vd4",
+      "url": "./vaillant/VD400.05.vd4_configuration.json"
+    },
+    {
+      "name": "null.08.hmu",
+      "url": "./vaillant/null.08.hmu_configuration.json"
+    },
+    {
+      "name": "BAI00.08.bai",
+      "url": "./vaillant/BAI00.08.bai_configuration.json"
+    },
+    {
+      "name": "PMW00.0a.pmw.hwc",
+      "url": "./vaillant/PMW00.0a.pmw.hwc_configuration.json"
+    },
+    {
+      "name": "EHP00.08.ehp",
+      "url": "./vaillant/EHP00.08.ehp_configuration.json"
+    },
+    {
+      "name": "37000.15.370",
+      "url": "./vaillant/37000.15.370_configuration.json"
+    },
+    {
+      "name": "70000.15.700",
+      "url": "./vaillant/70000.15.700_configuration.json"
+    },
+    {
+      "name": "39200.15.392",
+      "url": "./vaillant/39200.15.392_configuration.json"
+    },
+    {
+      "name": "E7f00.15.e7f",
+      "url": "./vaillant/E7f00.15.e7f_configuration.json"
+    },
+    {
+      "name": "43000.15.430",
+      "url": "./vaillant/43000.15.430_configuration.json"
+    },
+    {
+      "name": "SDR_P.15.sdr_p",
+      "url": "./vaillant/SDR_P.15.sdr_p_configuration.json"
+    },
+    {
+      "name": "UIH00.15.uih",
+      "url": "./vaillant/UIH00.15.uih_configuration.json"
+    },
+    {
+      "name": "UI.15.ui",
+      "url": "./vaillant/UI.15.ui_configuration.json"
+    },
+    {
+      "name": "F3700.15.f37",
+      "url": "./vaillant/F3700.15.f37_configuration.json"
+    },
+    {
+      "name": "47000.15.470",
+      "url": "./vaillant/47000.15.470_configuration.json"
+    },
+    {
+      "name": "F4700.15.f47",
+      "url": "./vaillant/F4700.15.f47_configuration.json"
+    },
+    {
+      "name": "ZEO00.23.zeo.cc",
+      "url": "./vaillant/ZEO00.23.zeo.cc_configuration.json"
+    },
+    {
+      "name": "F4300.15.f43",
+      "url": "./vaillant/F4300.15.f43_configuration.json"
+    },
+    {
+      "name": "EHP00.23.ehp.cc",
+      "url": "./vaillant/EHP00.23.ehp.cc_configuration.json"
+    },
+    {
+      "name": "SOLSY.23.solsy.cc",
+      "url": "./vaillant/SOLSY.23.solsy.cc_configuration.json"
+    },
+    {
+      "name": "VR630.23.vr630.cc",
+      "url": "./vaillant/VR630.23.vr630.cc_configuration.json"
+    },
+    {
+      "name": "VR_71.26.vr_71",
+      "url": "./vaillant/VR_71.26.vr_71_configuration.json"
+    },
+    {
+      "name": "SOLSY.25.solsy.hwc",
+      "url": "./vaillant/SOLSY.25.solsy.hwc_configuration.json"
+    },
+    {
+      "name": "ZEO00.25.zeo.hwc",
+      "url": "./vaillant/ZEO00.25.zeo.hwc_configuration.json"
+    },
+    {
+      "name": "EHP00.25.ehp.hwc",
+      "url": "./vaillant/EHP00.25.ehp.hwc_configuration.json"
+    },
+    {
+      "name": "VR630.25.vr630.hwc",
+      "url": "./vaillant/VR630.25.vr630.hwc_configuration.json"
+    },
+    {
+      "name": "SOLSY.26.solsy.hc",
+      "url": "./vaillant/SOLSY.26.solsy.hc_configuration.json"
+    },
+    {
+      "name": "VR630.26.vr630.hc",
+      "url": "./vaillant/VR630.26.vr630.hc_configuration.json"
+    },
+    {
+      "name": "VR_70.52.vr_70",
+      "url": "./vaillant/VR_70.52.vr_70_configuration.json"
+    },
+    {
+      "name": "V6100.50.v61.mc",
+      "url": "./vaillant/V6100.50.v61.mc_configuration.json"
+    },
+    {
+      "name": "ZEO00.50.zeo.mc",
+      "url": "./vaillant/ZEO00.50.zeo.mc_configuration.json"
+    },
+    {
+      "name": "EHP00.50.ehp.mc",
+      "url": "./vaillant/EHP00.50.ehp.mc_configuration.json"
+    },
+    {
+      "name": "VR630.51.vr630.mc.3",
+      "url": "./vaillant/VR630.51.vr630.mc.3_configuration.json"
+    },
+    {
+      "name": "VR630.50.vr630.mc",
+      "url": "./vaillant/VR630.50.vr630.mc_configuration.json"
+    },
+    {
+      "name": "RC C.75.rcc",
+      "url": "./vaillant/RC C.75.rcc_configuration.json"
+    },
+    {
+      "name": "V8100.75.v81",
+      "url": "./vaillant/V8100.75.v81_configuration.json"
+    },
+    {
+      "name": "SOLSY.50.solsy.mc",
+      "url": "./vaillant/SOLSY.50.solsy.mc_configuration.json"
+    },
+    {
+      "name": "null.broadcast",
+      "url": "./vaillant/null.broadcast_configuration.json"
+    },
+    {
+      "name": "ZEO00.84.zeo",
+      "url": "./vaillant/ZEO00.84.zeo_configuration.json"
+    },
+    {
+      "name": "MC2.52.mc2.mc.4",
+      "url": "./vaillant/MC2.52.mc2.mc.4_configuration.json"
+    },
+    {
+      "name": "ZEO00.ec.zeo.sc",
+      "url": "./vaillant/ZEO00.ec.zeo.sc_configuration.json"
+    },
+    {
+      "name": "MC2.53.mc2.mc.5",
+      "url": "./vaillant/MC2.53.mc2.mc.5_configuration.json"
+    },
+    {
+      "name": "SOLSY.ec.solsy.sc",
+      "url": "./vaillant/SOLSY.ec.solsy.sc_configuration.json"
+    },
+    {
+      "name": "sol00.ec.sol.sc",
+      "url": "./vaillant/sol00.ec.sol.sc_configuration.json"
+    },
+    {
+      "name": "OMU00.e0.omu",
+      "url": "./vaillant/OMU00.e0.omu_configuration.json"
+    },
+    {
+      "name": "sol00.a0.sol.hwc",
+      "url": "./vaillant/sol00.a0.sol.hwc_configuration.json"
+    },
+    {
+      "name": "null.general",
+      "url": "./vaillant/null.general_configuration.json"
+    },
+    {
+      "name": "sol00.a1.sol.cc",
+      "url": "./vaillant/sol00.a1.sol.cc_configuration.json"
+    }
+  ]
+}
