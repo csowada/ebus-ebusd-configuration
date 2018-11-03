@@ -1,2289 +1,1430 @@
 {
-  "id": "VD400",
-  "vendor": "Vaillant",
-  "label": "Vaillant vrnetDIALOG 840/2",
-  "description": "Vaillant vrnetDIALOG 840/2",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "identification": [
-    "56 44 34 30 30"
-  ],
-  "commands": [
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 00 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SoftwareVersion",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 00 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 01 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "EnableMonitoring",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 01 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FlexibleMonitoring",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 02 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 03 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DataCollectionRequest",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 03 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DataCollectionBuffer",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 04 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 05 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DataCollCycle",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 05 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "length": 4,
-          "name": "value",
-          "type": "unumber"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 06 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DataCollBufSize",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 06 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "length": 4,
-          "name": "value",
-          "type": "unumber"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Enable broadcast error messages",
-      "get": {
-        "master": [
-          {
-            "default": "0D 07 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "EnableBcErrMsg",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 07 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Brodcast error messages on the eBUS will be send to the server",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.yesno"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 08 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "BoxSerialNumber1",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 08 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 09 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "BoxSerialNumber2",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 09 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "BoxSerialNumber3",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "BoxSerialNumber4",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Device Layout",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DeviceLayout",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Layout Checksum",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DeviceLayoutCRC",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "AutoSync enabled",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "AutoSyncEnable",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Enabling or disabling of the AutoYync on the eBUS. Only usefull if there problems with outher AutoSync devices on the eBUS.",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Last connection error",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LastConnectionError",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Connection error retry delay [minutes]",
-      "get": {
-        "master": [
-          {
-            "default": "0D 10 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ConnErrorRetryDelay",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 10 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Connection Delay [minutes]",
-      "get": {
-        "master": [
-          {
-            "default": "0D 11 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ConnectionDelay",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 11 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 12 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ErrorMessage",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 12 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Connection error counter",
-      "get": {
-        "master": [
-          {
-            "default": "0D 13 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ConnErrorCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 13 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "PPP phone number 1",
-      "get": {
-        "master": [
-          {
-            "default": "0D 14 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PppPhoneNumber1",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 14 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "PPP Login 1",
-      "get": {
-        "master": [
-          {
-            "default": "0D 15 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PppLogin1",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 15 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "PPP Password 1",
-      "get": {
-        "master": [
-          {
-            "default": "0D 16 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PppPassword1",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 16 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Phone number provider 1",
-      "get": {
-        "master": [
-          {
-            "default": "0D 17 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PppPhoneNumber2",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 17 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "PPP Login 2",
-      "get": {
-        "master": [
-          {
-            "default": "0D 18 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PppLogin2",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 18 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "PPP Password 2",
-      "get": {
-        "master": [
-          {
-            "default": "0D 19 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PppPassword2",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 19 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Server IP address",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ServerIpAddr",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "null1",
-          "type": "byte"
-        },
-        {
-          "name": "null2",
-          "type": "byte"
-        },
-        {
-          "name": "null3",
-          "type": "byte"
-        },
-        {
-          "name": "null4",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Actual GSM/GPRS provider",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualGsmProvider",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Modem init string",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ModemInitString",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Call back delay GSM/GPRS [s]",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RingTimeGsmCB",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Rings before pickup",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RingsBeforePickup",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 20 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RingTimeTSM1",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 20 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 21 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RingTimeTSM2",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 21 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 22 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "MessageThreshold",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 22 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 23 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ConnectionCycle",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 23 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Max. signal strength GSM/GPRS",
-      "get": {
-        "master": [
-          {
-            "default": "0D 24 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FieldStrengthMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 24 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Min. signal strength GSM/GPRS",
-      "get": {
-        "master": [
-          {
-            "default": "0D 25 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FieldStrengthMin",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 25 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Enable OK message",
-      "get": {
-        "master": [
-          {
-            "default": "0D 26 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "EnableDisErrorMsg",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 26 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "If on a error free message will be sent to the server.",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Relay outputs",
-      "get": {
-        "master": [
-          {
-            "default": "0D 27 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SwitchRelays",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 27 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "children": [
-            {
-              "pos": 0,
-              "type": "bit"
-            }
-          ],
-          "name": "null1",
-          "type": "byte"
-        },
-        {
-          "children": [
-            {
-              "pos": 1,
-              "type": "bit"
-            }
-          ],
-          "name": "null2",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StandbySignal",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Power on alarm",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PowerOnMessage",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "If on a alarm message is sent after power on",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "AlarmOnDelay",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "null1",
-          "type": "word"
-        },
-        {
-          "name": "null2",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "AlarmOffDelay",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "null1",
-          "type": "word"
-        },
-        {
-          "name": "null2",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 30 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ScanLayoutCycle",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 30 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 31 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PredMaintConnectionCycle",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 31 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 32 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LastKnownEbusAddr",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 32 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 33 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Time",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 33 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.time"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 34 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Date",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 34 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.date"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 36 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "CurrentPppProvider",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 36 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "GSM SIM Pin",
-      "get": {
-        "master": [
-          {
-            "default": "0D 37 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "GsmGprsPin",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 37 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 38 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ModemType",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 38 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 39 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "H2BusLayout",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 39 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Digital input actual values",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualDigitalInputs",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "children": [
-            {
-              "pos": 0,
-              "type": "bit"
-            }
-          ],
-          "name": "null1",
-          "type": "byte"
-        },
-        {
-          "children": [
-            {
-              "pos": 1,
-              "type": "bit"
-            }
-          ],
-          "name": "null2",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Analog inputs actual values",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualAnalogInputs",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "null1",
-          "type": "word"
-        },
-        {
-          "name": "null2",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Counter inputs actual values",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualCounterValue",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "null1",
-          "type": "word"
-        },
-        {
-          "name": "null2",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Modem dial prefix",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ModemDialPrefix",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DebugFlags",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "length": 4,
-          "name": "value",
-          "type": "unumber"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Modem country code",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ModemCountryCode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 40 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DoReset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 40 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 41 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DataCollectionLimit",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 41 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "length": 4,
-          "name": "value",
-          "type": "unumber"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 42 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Temp3WayValve",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 42 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 46 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RfWakeupCycle",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 46 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    }
-  ]
+	"id": "VD400",
+	"vendor": "Vaillant",
+	"label": "Vaillant vrnetDIALOG 840/2",
+	"description": "Vaillant vrnetDIALOG 840/2",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"id": "SoftwareVersion",
+			"command": "B5 09",
+			"template": [
+				{"name":"4","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 00 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 00 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "EnableMonitoring",
+			"command": "B5 09",
+			"template": [
+				{"name":"5","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 01 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 01 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "FlexibleMonitoring",
+			"command": "B5 09",
+			"template": [
+				{"name":"8","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 02 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 02 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DataCollectionRequest",
+			"command": "B5 09",
+			"template": [
+				{"name":"DataCollectionRequest","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 03 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 03 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DataCollectionBuffer",
+			"command": "B5 09",
+			"template": [
+				{"name":"DataCollectionBuffer","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 04 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 04 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DataCollCycle",
+			"command": "B5 09",
+			"template": [
+				{"name":"DataCollCycle","type":"unumber","length":4}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 05 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 05 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DataCollBufSize",
+			"command": "B5 09",
+			"template": [
+				{"name":"DataCollBufSize","type":"unumber","length":4}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 06 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 06 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Enable broadcast error messages",
+			"id": "EnableBcErrMsg",
+			"command": "B5 09",
+			"template": [
+				{"name":"EnableBcErrMsg","type":"template","label":"Brodcast error messages on the eBUS will be send to the server","id":"vaillant.templ.yesno"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 07 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 07 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "BoxSerialNumber1",
+			"command": "B5 09",
+			"template": [
+				{"name":"9","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 08 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 08 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "BoxSerialNumber2",
+			"command": "B5 09",
+			"template": [
+				{"name":"9","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 09 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 09 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "BoxSerialNumber3",
+			"command": "B5 09",
+			"template": [
+				{"name":"9","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "BoxSerialNumber4",
+			"command": "B5 09",
+			"template": [
+				{"name":"9","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Device Layout",
+			"id": "DeviceLayout",
+			"command": "B5 09",
+			"template": [
+				{"name":"DeviceLayout","type":"byte","label":"Type of Interface which will be used and definition of appliance"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Layout Checksum",
+			"id": "DeviceLayoutCRC",
+			"command": "B5 09",
+			"template": [
+				{"name":"DeviceLayoutCRC","type":"byte","label":"Checksum over all devives connected to vrnetDIALOG. Will be used from the server to find out if new devices added or devices are deleted"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "AutoSync enabled",
+			"id": "AutoSyncEnable",
+			"command": "B5 09",
+			"template": [
+				{"name":"AutoSyncEnable","type":"template","label":"Enabling or disabling of the AutoYync on the eBUS. Only usefull if there problems with outher AutoSync devices on the eBUS.","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Last connection error",
+			"id": "LastConnectionError",
+			"command": "B5 09",
+			"template": [
+				{"name":"LastConnectionError","type":"byte","label":"Shows the last state where the connection has failed."}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Connection error retry delay [minutes]",
+			"id": "ConnErrorRetryDelay",
+			"command": "B5 09",
+			"template": [
+				{"name":"ConnErrorRetryDelay","type":"byte","label":"Delay between two connection tries in case of a connection error"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 10 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 10 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Connection Delay [minutes]",
+			"id": "ConnectionDelay",
+			"command": "B5 09",
+			"template": [
+				{"name":"ConnectionDelay","type":"byte","label":"Minimum delay between two server connections established by the dialog box."}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 11 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 11 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ErrorMessage",
+			"command": "B5 09",
+			"template": [
+				{"name":"ErrorMessage","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 12 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 12 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Connection error counter",
+			"id": "ConnErrorCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"ConnErrorCnt","type":"byte","label":"Number of connection tries. Will be reset to zero after a successful connection"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 13 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 13 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "PPP phone number 1",
+			"id": "PppPhoneNumber1",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Fon number or ATN of the first PPP provider selected by server"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 14 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 14 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "PPP Login 1",
+			"id": "PppLogin1",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Login for the first internetprovider"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 15 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 15 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "PPP Password 1",
+			"id": "PppPassword1",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Password for the first internet provider"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 16 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 16 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Phone number provider 1",
+			"id": "PppPhoneNumber2",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Phone number provider 1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 17 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 17 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "PPP Login 2",
+			"id": "PppLogin2",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Login for second internetprovide"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 18 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 18 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "PPP Password 2",
+			"id": "PppPassword2",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Paswword for second internetprovider"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 19 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 19 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Server IP address",
+			"id": "ServerIpAddr",
+			"command": "B5 09",
+			"template": [
+				{"name":"UCH1","type":"byte","label":"Server IP address"},
+				{"name":"UCH2","type":"byte","label":"Server IP address"},
+				{"name":"UCH3","type":"byte","label":"Server IP address"},
+				{"name":"UCH4","type":"byte","label":"Server IP address"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Actual GSM/GPRS provider",
+			"id": "ActualGsmProvider",
+			"command": "B5 09",
+			"template": [
+				{"name":"5","type":"string","label":"Information which provider has been selectet. Only valid in case of GSM/GPRS modem."}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Modem init string",
+			"id": "ModemInitString",
+			"command": "B5 09",
+			"template": [
+				{"name":"21","type":"string","label":"Special string for initialsing the modem. Default empty. Wrong values can cause a dialog box which can't communicate."}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Call back delay GSM/GPRS [s]",
+			"id": "RingTimeGsmCB",
+			"command": "B5 09",
+			"template": [
+				{"name":"RingTimeGsmCB","type":"byte","label":"Time between the last ring and the call back."}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Rings before pickup",
+			"id": "RingsBeforePickup",
+			"command": "B5 09",
+			"template": [
+				{"name":"RingsBeforePickup","type":"byte","label":"Only for analog modems used. 0 = will never pick up."}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RingTimeTSM1",
+			"command": "B5 09",
+			"template": [
+				{"name":"RingTimeTSM1","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 20 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 20 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RingTimeTSM2",
+			"command": "B5 09",
+			"template": [
+				{"name":"RingTimeTSM2","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 21 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 21 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "MessageThreshold",
+			"command": "B5 09",
+			"template": [
+				{"name":"MessageThreshold","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 22 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 22 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ConnectionCycle",
+			"command": "B5 09",
+			"template": [
+				{"name":"ConnectionCycle","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 23 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 23 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Max. signal strength GSM/GPRS",
+			"id": "FieldStrengthMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"FieldStrengthMax","type":"byte","label":"Max value since last power on (0..31)"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 24 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 24 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Min. signal strength GSM/GPRS",
+			"id": "FieldStrengthMin",
+			"command": "B5 09",
+			"template": [
+				{"name":"FieldStrengthMin","type":"byte","label":"Min. value since last power on (0..31)"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 25 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 25 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Enable OK message",
+			"id": "EnableDisErrorMsg",
+			"command": "B5 09",
+			"template": [
+				{"name":"EnableDisErrorMsg","type":"template","label":"If on a error free message will be sent to the server.","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 26 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 26 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Relay outputs",
+			"id": "SwitchRelays",
+			"command": "B5 09",
+			"template": [
+				{"name":"BI0","type":"byte","label":"Relay outputs",
+					"children": [
+						{"type":"bit","pos":0}
+					]
+				},
+				{"name":"BI1","type":"byte","label":"Relay outputs",
+					"children": [
+						{"type":"bit","pos":1}
+					]
+				}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 27 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 27 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StandbySignal",
+			"command": "B5 09",
+			"template": [
+				{"name":"StandbySignal","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Power on alarm",
+			"id": "PowerOnMessage",
+			"command": "B5 09",
+			"template": [
+				{"name":"PowerOnMessage","type":"template","label":"If on a alarm message is sent after power on","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "AlarmOnDelay",
+			"command": "B5 09",
+			"template": [
+				{"name":"UIN1","type":"word"},
+				{"name":"UIN2","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "AlarmOffDelay",
+			"command": "B5 09",
+			"template": [
+				{"name":"UIN1","type":"word"},
+				{"name":"UIN2","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ScanLayoutCycle",
+			"command": "B5 09",
+			"template": [
+				{"name":"ScanLayoutCycle","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 30 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 30 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "PredMaintConnectionCycle",
+			"command": "B5 09",
+			"template": [
+				{"name":"PredMaintConnectionCycle","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 31 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 31 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "LastKnownEbusAddr",
+			"command": "B5 09",
+			"template": [
+				{"name":"LastKnownEbusAddr","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 32 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 32 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Time",
+			"command": "B5 09",
+			"template": [
+				{"name":"Time","type":"template","id":"vaillant.templ.time"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 33 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 33 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Date",
+			"command": "B5 09",
+			"template": [
+				{"name":"Date","type":"template","id":"vaillant.templ.date"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 34 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 34 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "CurrentPppProvider",
+			"command": "B5 09",
+			"template": [
+				{"name":"CurrentPppProvider","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 36 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 36 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "GSM SIM Pin",
+			"id": "GsmGprsPin",
+			"command": "B5 09",
+			"template": [
+				{"name":"4","type":"string","label":"Wrong pin disables the box functionality"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 37 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 37 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ModemType",
+			"command": "B5 09",
+			"template": [
+				{"name":"ModemType","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 38 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 38 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "H2BusLayout",
+			"command": "B5 09",
+			"template": [
+				{"name":"H2BusLayout","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 39 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 39 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Digital input actual values",
+			"id": "ActualDigitalInputs",
+			"command": "B5 09",
+			"template": [
+				{"name":"BI0","type":"byte","label":"Digital input actual values",
+					"children": [
+						{"type":"bit","pos":0}
+					]
+				},
+				{"name":"BI1","type":"byte","label":"Digital input actual values",
+					"children": [
+						{"type":"bit","pos":1}
+					]
+				}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Analog inputs actual values",
+			"id": "ActualAnalogInputs",
+			"command": "B5 09",
+			"template": [
+				{"name":"UIN1","type":"word","label":"Analog inputs actual values"},
+				{"name":"UIN2","type":"word","label":"Analog inputs actual values"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Counter inputs actual values",
+			"id": "ActualCounterValue",
+			"command": "B5 09",
+			"template": [
+				{"name":"UIN1","type":"word","label":"Counter inputs actual values"},
+				{"name":"UIN2","type":"word","label":"Counter inputs actual values"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Modem dial prefix",
+			"id": "ModemDialPrefix",
+			"command": "B5 09",
+			"template": [
+				{"name":"4","type":"string","label":"Prefix which will be sent to the modem befor dialing"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DebugFlags",
+			"command": "B5 09",
+			"template": [
+				{"name":"DebugFlags","type":"unumber","length":4}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Modem country code",
+			"id": "ModemCountryCode",
+			"command": "B5 09",
+			"template": [
+				{"name":"ModemCountryCode","type":"byte","label":"Modem country code"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DoReset",
+			"command": "B5 09",
+			"template": [
+				{"name":"DoReset","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 40 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 40 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DataCollectionLimit",
+			"command": "B5 09",
+			"template": [
+				{"name":"DataCollectionLimit","type":"unumber","length":4}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 41 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 41 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Temp3WayValve",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 42 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 42 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RfWakeupCycle",
+			"command": "B5 09",
+			"template": [
+				{"name":"RfWakeupCycle","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 46 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 46 00"},
+					{"type":"template-block"}
+				]
+			}
+		}
+	]
 }

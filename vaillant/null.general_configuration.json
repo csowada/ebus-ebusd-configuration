@@ -1,36 +1,23 @@
 {
-  "vendor": "Vaillant",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "commands": [
-    {
-      "command": "B5 13",
-      "label": "register value range",
-      "get": {
-        "master": [
-          {
-            "default": "04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "null1",
-            "type": "word"
-          },
-          {
-            "length": 1,
-            "name": "null2",
-            "type": "bytes"
-          },
-          {
-            "name": "null3",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "valuerange"
-    }
-  ]
+	"vendor": "Vaillant",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"label": "register value range",
+			"id": "valuerange",
+			"command": "B5 13",
+			"get": {
+				"master": [
+					{"type":"static","_default":"04"}
+				],
+				"slave": [
+					{"name":"id","type":"word","label":"register number"},
+					{"name":"2","type":"bytes","label":"register value range","length":1},
+					{"name":"cur","type":"word","label":"current value"}
+				]
+			}
+		}
+	]
 }

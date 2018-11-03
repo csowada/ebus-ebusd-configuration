@@ -1,1984 +1,1224 @@
 {
-  "id": "V6100",
-  "vendor": "Vaillant",
-  "label": "Vaillant VR 61",
-  "description": "Vaillant VR 61",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "identification": [
-    "56 36 31 30 30"
-  ],
-  "commands": [
-    {
-      "command": "B5 09",
-      "label": "DesiredLowTemperature",
-      "get": {
-        "master": [
-          {
-            "default": "0D 13 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "TempDesiredLow",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 13 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "lowering temperature setpoint of the second heating circuit",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "DesiredHolidayTemperature",
-      "get": {
-        "master": [
-          {
-            "default": "0D 14 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HolidayTempDesired",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 14 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "data1c"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_ManualOPRoomSetpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 34 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Hc2ManualOPRoomTempDesired",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 34 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "room setpoint in operation mode manual of the second heating circuit",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_QuickVetoTemp",
-      "get": {
-        "master": [
-          {
-            "default": "0D 32 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "manual override setpoint of the second heating circuit",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "Hc2QuickVetoTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "DisplayedRoomSetpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 48 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "DisplayedRoomTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "SunMoonInfo",
-      "get": {
-        "master": [
-          {
-            "default": "0D 47 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "SunMoonInfo"
-    },
-    {
-      "command": "B5 09",
-      "label": "Flow1Sensor",
-      "get": {
-        "master": [
-          {
-            "default": "0D 00 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "second heating circuit\u0027s flow temperature and sensorstate",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "Flow1Sensor"
-    },
-    {
-      "command": "B5 09",
-      "label": "BurnerCircuitPump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 20 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "first heating circuit (burner circuit) pump\u0027s state",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "BoilerCircuitPump"
-    },
-    {
-      "command": "B5 09",
-      "label": "CirculationPump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 01 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "control state of the circulation respectively loading pump (functionality of the pump depends on the configuration)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "CirPump"
-    },
-    {
-      "command": "B5 09",
-      "label": "Hk1P_Kol1P_P1_Port",
-      "get": {
-        "master": [
-          {
-            "default": "0D 42 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "first heating circuit pump\u0027s state",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "Hc1PumpKol1PP1Port"
-    },
-    {
-      "command": "B5 09",
-      "label": "Hk2P_Al_Port",
-      "get": {
-        "master": [
-          {
-            "default": "0D 43 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "second heating circuit (mixer circuit) pump\u0027s state",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "Hc2PumpAlPort"
-    },
-    {
-      "command": "B5 09",
-      "label": "Mixer1DutyCycle",
-      "get": {
-        "master": [
-          {
-            "default": "0D 02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "velocity by which the mixer is driven to its end position (positive value: end position is open, negative value: end position is shut)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.percents"
-          }
-        ]
-      },
-      "id": "Mixer1DutyCycle"
-    },
-    {
-      "command": "B5 09",
-      "label": "Mixer1State",
-      "get": {
-        "master": [
-          {
-            "default": "0D 03 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Mixer1State"
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_CircuitType",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Hc2CircuitType"
-    },
-    {
-      "command": "B5 09",
-      "label": "MinFlowTemp",
-      "get": {
-        "master": [
-          {
-            "default": "0D 10 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FlowTempMin",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 10 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "lower limitation of the second heating circuit\u0027s flow temperature",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "MaxFlowTemp",
-      "get": {
-        "master": [
-          {
-            "default": "0D 11 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FlowTempMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 11 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "upper limitation of the second heating circuit\u0027s flow temperature",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "Heating curve",
-      "get": {
-        "master": [
-          {
-            "default": "0D 15 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HeatingCurve",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 15 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "heating curve of the second heating circuit",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.curve"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_RoomControlMode",
-      "get": {
-        "master": [
-          {
-            "default": "0D 35 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Hc2RoomControlMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 35 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_SummerOffset",
-      "get": {
-        "master": [
-          {
-            "default": "0D 37 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Hc2SummerOffset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 37 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "summer offset of the second heating circuit (if outside temperature \u003e room setpoint + summer offset \u003d\u003e heating is OFF; applies to comfort and night setback setpoint; no influence if room temperature modulation is set to \"thermostat\")",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.calibration1"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "AutoOffMode",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "AutoOffMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "HcParallelTankFillingEnabled",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "enable parallel tank loading",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "HcParallelStorageFillingEnabled"
-    },
-    {
-      "command": "B5 09",
-      "label": "Flow setpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 22 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "flow temperature setpoint of the second heating circuit",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "FlowTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "FloorPavingDryingDay",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FloorPavingDryingDay",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "FloorPavingDryingTemperature",
-      "get": {
-        "master": [
-          {
-            "default": "0D 04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "flow temperature setpoint for the current day of floor pavement drying",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "FloorPavingDryingTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "Date",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "current date",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.date"
-          }
-        ]
-      },
-      "id": "Date"
-    },
-    {
-      "command": "B5 09",
-      "label": "Time",
-      "get": {
-        "master": [
-          {
-            "default": "0D 09 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "current time",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.time"
-          }
-        ]
-      },
-      "id": "Time"
-    },
-    {
-      "command": "B5 09",
-      "label": "ActualDesiredTemp",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "current setpoint for the second heating circuit considering all basic conditions passed to the control algorithms",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "ActualTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "DayNightState",
-      "get": {
-        "master": [
-          {
-            "default": "0D 50 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "DayNightState"
-    },
-    {
-      "command": "B5 09",
-      "label": "FrostProtectDelay",
-      "get": {
-        "master": [
-          {
-            "default": "0D 25 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "delay before frost protection is activated",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.hours"
-          }
-        ]
-      },
-      "id": "FrostProtectDelay"
-    },
-    {
-      "command": "B5 09",
-      "label": "HcPumpIdlePeriod",
-      "get": {
-        "master": [
-          {
-            "default": "0D 28 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "HcPumpIdlePeriod"
-    },
-    {
-      "command": "B5 09",
-      "label": "MaxPreheatingMinutes",
-      "get": {
-        "master": [
-          {
-            "default": "0D 24 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "PreheatingMinutesMax"
-    },
-    {
-      "command": "B5 09",
-      "label": "BoilerMaxPreShutdown",
-      "get": {
-        "master": [
-          {
-            "default": "0D 18 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "BoilerMaxPreShutdown"
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_ContinuosHeating",
-      "get": {
-        "master": [
-          {
-            "default": "0D 36 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "char"
-          }
-        ]
-      },
-      "id": "Hc2ContinuosHeating"
-    },
-    {
-      "command": "B5 09",
-      "label": "HcFlowIncrease",
-      "get": {
-        "master": [
-          {
-            "default": "0D 19 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "excess temperature (flow temperature\u0027s setpoint is increased by this value to keep the mixing valve in its control range)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.calibration1"
-          }
-        ]
-      },
-      "id": "HcFlowIncrease"
-    },
-    {
-      "command": "B5 09",
-      "label": "Holiday function active",
-      "get": {
-        "master": [
-          {
-            "default": "0D 08 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInHoliday"
-    },
-    {
-      "command": "B5 09",
-      "label": "IsInOneDayHoliday",
-      "get": {
-        "master": [
-          {
-            "default": "0D 56 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "indicates that the VR61 is in one day holiday mode",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInOneDayHoliday"
-    },
-    {
-      "command": "B5 09",
-      "label": "IsInBankHoliday",
-      "get": {
-        "master": [
-          {
-            "default": "0D 53 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "indicates that the VR61 is in bank holiday mode",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInBankHoliday"
-    },
-    {
-      "command": "B5 09",
-      "label": "IsInOneDayBankHoliday",
-      "get": {
-        "master": [
-          {
-            "default": "0D 52 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "indicates that the VR61 is in one day bank holiday mode",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInOneDayBankHoliday"
-    },
-    {
-      "command": "B5 09",
-      "label": "IsInParty",
-      "get": {
-        "master": [
-          {
-            "default": "0D 55 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInParty"
-    },
-    {
-      "command": "B5 09",
-      "label": "IsInImpactVentilation",
-      "get": {
-        "master": [
-          {
-            "default": "0D 57 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "indicates that the VR61 is in impact ventilation mode",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInImpactVentilation"
-    },
-    {
-      "command": "B5 09",
-      "label": "IsInSystemOff",
-      "get": {
-        "master": [
-          {
-            "default": "0D 54 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "indicates that the VR61 is in system off mode",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "IsInSystemOff"
-    },
-    {
-      "command": "B5 09",
-      "label": "HC2_QuickVetoActive",
-      "get": {
-        "master": [
-          {
-            "default": "0D 33 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "manual override of the second heating circuit enabled",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "Hc2QuickVetoActive"
-    },
-    {
-      "command": "B5 09",
-      "label": "HcPreHeatingActive",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "bit-array where a set bit indicates that preheating is active for the corresponding heating circuit",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "HcPreHeatingActive"
-    },
-    {
-      "command": "B5 09",
-      "label": "HcPreShutdownActive",
-      "get": {
-        "master": [
-          {
-            "default": "0D 29 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "bit-array where a set bit indicates that early cut off is active for the corresponding heating circuit",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "HcPreShutdownActive"
-    },
-    {
-      "command": "B5 09",
-      "label": "HcPumpIdlePeriodActive",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "bit-array where a set bit indicates that pump\u0027s energy saving function is active for the corresponding heating circuit",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "HcPumpIdlePeriodActive"
-    },
-    {
-      "command": "B5 09",
-      "label": "MonitorEEpromInkonsiNumber",
-      "get": {
-        "master": [
-          {
-            "default": "0D 46 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "char"
-          }
-        ]
-      },
-      "id": "MonitorEEpromInkonsiNumber"
-    },
-    {
-      "command": "B5 09",
-      "label": "Hk2a_LegP_P2_Port",
-      "get": {
-        "master": [
-          {
-            "default": "0D 44 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "port: open mixer",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "Hc2aLegPumpP2Port"
-    },
-    {
-      "command": "B5 09",
-      "label": "Hk2z_Port",
-      "get": {
-        "master": [
-          {
-            "default": "0D 45 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "port: close mixer",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "Hc2zPort"
-    },
-    {
-      "command": "B5 09",
-      "label": "Hk2pDemand",
-      "get": {
-        "master": [
-          {
-            "default": "0D 49 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "Hc2pDemand"
-    },
-    {
-      "command": "B5 09",
-      "label": "SfState",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "SfState"
-    },
-    {
-      "command": "B5 09",
-      "label": "PsSetpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "PsTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "PumpSavingState",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "PumpSavingState"
-    },
-    {
-      "command": "B5 09",
-      "label": "OffConfig",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "OffConfig"
-    },
-    {
-      "command": "B5 09",
-      "label": "FrostProtConfig",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "FrostProtConfig"
-    },
-    {
-      "command": "B5 09",
-      "label": "FrostProtState",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "FrostProtState"
-    },
-    {
-      "command": "B5 09",
-      "label": "ThermostatState",
-      "get": {
-        "master": [
-          {
-            "default": "0D 51 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "ThermostatState"
-    },
-    {
-      "command": "B5 03",
-      "label": "Current errors",
-      "get": {
-        "master": [
-          {
-            "default": "00 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.errors"
-          }
-        ]
-      },
-      "id": "currenterror"
-    },
-    {
-      "command": "B5 03",
-      "label": "Error history",
-      "get": {
-        "master": [
-          {
-            "default": "01 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "null1",
-            "type": "byte"
-          },
-          {
-            "name": "null2",
-            "type": "template-block",
-            "id": "vaillant.errorhistory"
-          }
-        ]
-      },
-      "id": "errorhistory"
-    },
-    {
-      "command": "B5 03",
-      "label": "Clear error history",
-      "id": "clearerrorhistory",
-      "set": {
-        "master": [
-          {
-            "default": "02 01",
-            "type": "static"
-          },
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      }
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Monday",
-      "get": {
-        "master": [
-          {
-            "default": "00 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Monday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "00 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Tuesday",
-      "get": {
-        "master": [
-          {
-            "default": "01 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Tuesday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "01 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Wednesday",
-      "get": {
-        "master": [
-          {
-            "default": "02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Wednesday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "02 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Thursday",
-      "get": {
-        "master": [
-          {
-            "default": "03 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Thursday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "03 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Friday",
-      "get": {
-        "master": [
-          {
-            "default": "04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Friday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "04 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Saturday",
-      "get": {
-        "master": [
-          {
-            "default": "05 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Saturday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "05 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 15",
-      "label": "Periods Sunday",
-      "get": {
-        "master": [
-          {
-            "default": "06 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "hcTimer.Sunday",
-      "set": {
-        "command": "B5 15",
-        "master": [
-          {
-            "default": "06 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.timer"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Monday",
-      "get": {
-        "master": [
-          {
-            "default": "19 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Monday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 01",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Tuesday",
-      "get": {
-        "master": [
-          {
-            "default": "19 02",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Tuesday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 02",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Wednesday",
-      "get": {
-        "master": [
-          {
-            "default": "19 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Wednesday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 03",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Thursday",
-      "get": {
-        "master": [
-          {
-            "default": "19 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Thursday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Friday",
-      "get": {
-        "master": [
-          {
-            "default": "19 05",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Friday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 05",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Saturday",
-      "get": {
-        "master": [
-          {
-            "default": "19 06",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Saturday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 06",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 04",
-      "label": "Temperatures Sunday",
-      "get": {
-        "master": [
-          {
-            "default": "19 07",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Setpoints.Sunday",
-      "set": {
-        "command": "B5 05",
-        "master": [
-          {
-            "default": "2E 07",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp11",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp12",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        },
-        {
-          "name": "temp13",
-          "type": "template",
-          "id": "vaillant.templ.temp1"
-        }
-      ]
-    },
-    {
-      "command": "B5 06",
-      "label": "I/O test",
-      "id": "iotest",
-      "set": {
-        "master": [
-          {
-            "default": "02",
-            "type": "static"
-          },
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      }
-    }
-  ]
+	"id": "V6100",
+	"vendor": "Vaillant",
+	"label": "Vaillant VR 61",
+	"description": "Vaillant VR 61",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"label": "DesiredLowTemperature",
+			"id": "TempDesiredLow",
+			"command": "B5 09",
+			"template": [
+				{"name":"TempDesiredLow","type":"template","label":"lowering temperature setpoint of the second heating circuit","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 13 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 13 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "DesiredHolidayTemperature",
+			"id": "HolidayTempDesired",
+			"command": "B5 09",
+			"template": [
+				{"name":"HolidayTempDesired","type":"data1c","label":"4.5=frostprotect, holiday temperature of the second heating circuit"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 14 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 14 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "HC2_ManualOPRoomSetpoint",
+			"id": "Hc2ManualOPRoomTempDesired",
+			"command": "B5 09",
+			"template": [
+				{"name":"Hc2ManualOPRoomTempDesired","type":"template","label":"room setpoint in operation mode manual of the second heating circuit","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 34 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 34 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "HC2_QuickVetoTemp",
+			"id": "Hc2QuickVetoTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 32 00"}
+				],
+				"slave": [
+					{"name":"Hc2QuickVetoTemp","type":"template","label":"manual override setpoint of the second heating circuit","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "DisplayedRoomSetpoint",
+			"id": "DisplayedRoomTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 48 00"}
+				],
+				"slave": [
+					{"name":"DisplayedRoomTempDesired","type":"template","label":"DisplayedRoomSetpoint","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "SunMoonInfo",
+			"id": "SunMoonInfo",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 47 00"}
+				],
+				"slave": [
+					{"name":"SunMoonInfo","type":"byte","label":"(2 = sun, 4 = moon)"}
+				]
+			}
+		},
+		{
+			"label": "Flow1Sensor",
+			"id": "Flow1Sensor",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 00 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"second heating circuit's flow temperature and sensorstate","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "BurnerCircuitPump",
+			"id": "BoilerCircuitPump",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 20 00"}
+				],
+				"slave": [
+					{"name":"BoilerCircuitPump","type":"template","label":"first heating circuit (burner circuit) pump's state","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "CirculationPump",
+			"id": "CirPump",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 01 00"}
+				],
+				"slave": [
+					{"name":"CirPump","type":"template","label":"control state of the circulation respectively loading pump (functionality of the pump depends on the configuration)","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Hk1P_Kol1P_P1_Port",
+			"id": "Hc1PumpKol1PP1Port",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 42 00"}
+				],
+				"slave": [
+					{"name":"Hc1PumpKol1PP1Port","type":"template","label":"first heating circuit pump's state","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Hk2P_Al_Port",
+			"id": "Hc2PumpAlPort",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 43 00"}
+				],
+				"slave": [
+					{"name":"Hc2PumpAlPort","type":"template","label":"second heating circuit (mixer circuit) pump's state","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Mixer1DutyCycle",
+			"id": "Mixer1DutyCycle",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 02 00"}
+				],
+				"slave": [
+					{"name":"Mixer1DutyCycle","type":"template","label":"velocity by which the mixer is driven to its end position (positive value: end position is open, negative value: end position is shut)","id":"vaillant.templ.percents"}
+				]
+			}
+		},
+		{
+			"label": "Mixer1State",
+			"id": "Mixer1State",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 03 00"}
+				],
+				"slave": [
+					{"name":"Mixer1State","type":"byte","label":"mixer's state"}
+				]
+			}
+		},
+		{
+			"label": "HC2_CircuitType",
+			"id": "Hc2CircuitType",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1E 00"}
+				],
+				"slave": [
+					{"name":"Hc2CircuitType","type":"byte","label":"type of the second heating circuit"}
+				]
+			}
+		},
+		{
+			"label": "MinFlowTemp",
+			"id": "FlowTempMin",
+			"command": "B5 09",
+			"template": [
+				{"name":"FlowTempMin","type":"template","label":"lower limitation of the second heating circuit's flow temperature","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 10 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 10 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "MaxFlowTemp",
+			"id": "FlowTempMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"FlowTempMax","type":"template","label":"upper limitation of the second heating circuit's flow temperature","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 11 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 11 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Heating curve",
+			"id": "HeatingCurve",
+			"command": "B5 09",
+			"template": [
+				{"name":"HeatingCurve","type":"template","label":"heating curve of the second heating circuit","id":"vaillant.templ.curve"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 15 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 15 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "HC2_RoomControlMode",
+			"id": "Hc2RoomControlMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"Hc2RoomControlMode","type":"byte","label":"room temperature modulation of the second heating circuit"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 35 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 35 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "HC2_SummerOffset",
+			"id": "Hc2SummerOffset",
+			"command": "B5 09",
+			"template": [
+				{"name":"Hc2SummerOffset","type":"template","label":"summer offset of the second heating circuit (if outside temperature > room setpoint + summer offset => heating is OFF; applies to comfort and night setback setpoint; no influence if room temperature modulation is set to \"thermostat\")","id":"vaillant.templ.calibration1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 37 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 37 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "AutoOffMode",
+			"id": "AutoOffMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"AutoOffMode","type":"byte","label":"operation during the auto-off period"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "HcParallelTankFillingEnabled",
+			"id": "HcParallelStorageFillingEnabled",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2D 00"}
+				],
+				"slave": [
+					{"name":"HcParallelStorageFillingEnabled","type":"template","label":"enable parallel tank loading","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Flow setpoint",
+			"id": "FlowTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 22 00"}
+				],
+				"slave": [
+					{"name":"FlowTempDesired","type":"template","label":"flow temperature setpoint of the second heating circuit","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "FloorPavingDryingDay",
+			"id": "FloorPavingDryingDay",
+			"command": "B5 09",
+			"template": [
+				{"name":"FloorPavingDryingDay","type":"byte","label":"active day of the floor pavement drying function"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "FloorPavingDryingTemperature",
+			"id": "FloorPavingDryingTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 04 00"}
+				],
+				"slave": [
+					{"name":"FloorPavingDryingTemp","type":"template","label":"flow temperature setpoint for the current day of floor pavement drying","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "Date",
+			"id": "Date",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0A 00"}
+				],
+				"slave": [
+					{"name":"Date","type":"template","label":"current date","id":"vaillant.templ.date"}
+				]
+			}
+		},
+		{
+			"label": "Time",
+			"id": "Time",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 09 00"}
+				],
+				"slave": [
+					{"name":"Time","type":"template","label":"current time","id":"vaillant.templ.time"}
+				]
+			}
+		},
+		{
+			"label": "ActualDesiredTemp",
+			"id": "ActualTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2F 00"}
+				],
+				"slave": [
+					{"name":"ActualTempDesired","type":"template","label":"current setpoint for the second heating circuit considering all basic conditions passed to the control algorithms","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "DayNightState",
+			"id": "DayNightState",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 50 00"}
+				],
+				"slave": [
+					{"name":"DayNightState","type":"byte","label":"0 = day, 1 = night"}
+				]
+			}
+		},
+		{
+			"label": "FrostProtectDelay",
+			"id": "FrostProtectDelay",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 25 00"}
+				],
+				"slave": [
+					{"name":"FrostProtectDelay","type":"template","label":"delay before frost protection is activated","id":"vaillant.templ.hours"}
+				]
+			}
+		},
+		{
+			"label": "HcPumpIdlePeriod",
+			"id": "HcPumpIdlePeriod",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 28 00"}
+				],
+				"slave": [
+					{"name":"HcPumpIdlePeriod","type":"byte","label":"0=off, heating circuit pump's maximum blocking time for pump's energy saving function"}
+				]
+			}
+		},
+		{
+			"label": "MaxPreheatingMinutes",
+			"id": "PreheatingMinutesMax",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 24 00"}
+				],
+				"slave": [
+					{"name":"PreheatingMinutesMax","type":"word","label":"in steps of 10, maximum time of enabling the heating before the heating time window starts"}
+				]
+			}
+		},
+		{
+			"label": "BoilerMaxPreShutdown",
+			"id": "BoilerMaxPreShutdown",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 18 00"}
+				],
+				"slave": [
+					{"name":"BoilerMaxPreShutdown","type":"byte","label":"in steps of 10, maximum time of starting the lowering operation before the heating time window ends"}
+				]
+			}
+		},
+		{
+			"label": "HC2_ContinuosHeating",
+			"id": "Hc2ContinuosHeating",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 36 00"}
+				],
+				"slave": [
+					{"name":"Hc2ContinuosHeating","type":"char","label":"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"}
+				]
+			}
+		},
+		{
+			"label": "HcFlowIncrease",
+			"id": "HcFlowIncrease",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 19 00"}
+				],
+				"slave": [
+					{"name":"HcFlowIncrease","type":"template","label":"excess temperature (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range)","id":"vaillant.templ.calibration1"}
+				]
+			}
+		},
+		{
+			"label": "Holiday function active",
+			"id": "IsInHoliday",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 08 00"}
+				],
+				"slave": [
+					{"name":"IsInHoliday","type":"template","label":"Holiday function active","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "IsInOneDayHoliday",
+			"id": "IsInOneDayHoliday",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 56 00"}
+				],
+				"slave": [
+					{"name":"IsInOneDayHoliday","type":"template","label":"indicates that the VR61 is in one day holiday mode","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "IsInBankHoliday",
+			"id": "IsInBankHoliday",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 53 00"}
+				],
+				"slave": [
+					{"name":"IsInBankHoliday","type":"template","label":"indicates that the VR61 is in bank holiday mode","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "IsInOneDayBankHoliday",
+			"id": "IsInOneDayBankHoliday",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 52 00"}
+				],
+				"slave": [
+					{"name":"IsInOneDayBankHoliday","type":"template","label":"indicates that the VR61 is in one day bank holiday mode","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "IsInParty",
+			"id": "IsInParty",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 55 00"}
+				],
+				"slave": [
+					{"name":"IsInParty","type":"template","label":"IsInParty","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "IsInImpactVentilation",
+			"id": "IsInImpactVentilation",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 57 00"}
+				],
+				"slave": [
+					{"name":"IsInImpactVentilation","type":"template","label":"indicates that the VR61 is in impact ventilation mode","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "IsInSystemOff",
+			"id": "IsInSystemOff",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 54 00"}
+				],
+				"slave": [
+					{"name":"IsInSystemOff","type":"template","label":"indicates that the VR61 is in system off mode","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "HC2_QuickVetoActive",
+			"id": "Hc2QuickVetoActive",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 33 00"}
+				],
+				"slave": [
+					{"name":"Hc2QuickVetoActive","type":"template","label":"manual override of the second heating circuit enabled","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "HcPreHeatingActive",
+			"id": "HcPreHeatingActive",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2A 00"}
+				],
+				"slave": [
+					{"name":"HcPreHeatingActive","type":"template","label":"bit-array where a set bit indicates that preheating is active for the corresponding heating circuit","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "HcPreShutdownActive",
+			"id": "HcPreShutdownActive",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 29 00"}
+				],
+				"slave": [
+					{"name":"HcPreShutdownActive","type":"template","label":"bit-array where a set bit indicates that early cut off is active for the corresponding heating circuit","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "HcPumpIdlePeriodActive",
+			"id": "HcPumpIdlePeriodActive",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2B 00"}
+				],
+				"slave": [
+					{"name":"HcPumpIdlePeriodActive","type":"template","label":"bit-array where a set bit indicates that pump's energy saving function is active for the corresponding heating circuit","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "MonitorEEpromInkonsiNumber",
+			"id": "MonitorEEpromInkonsiNumber",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 46 00"}
+				],
+				"slave": [
+					{"name":"8","type":"char","label":"identification of the last eight EEPROM inconsistencies"}
+				]
+			}
+		},
+		{
+			"label": "Hk2a_LegP_P2_Port",
+			"id": "Hc2aLegPumpP2Port",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 44 00"}
+				],
+				"slave": [
+					{"name":"Hc2aLegPumpP2Port","type":"template","label":"port: open mixer","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Hk2z_Port",
+			"id": "Hc2zPort",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 45 00"}
+				],
+				"slave": [
+					{"name":"Hc2zPort","type":"template","label":"port: close mixer","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Hk2pDemand",
+			"id": "Hc2pDemand",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 49 00"}
+				],
+				"slave": [
+					{"name":"Hc2pDemand","type":"template","label":"Hk2pDemand","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "SfState",
+			"id": "SfState",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4A 00"}
+				],
+				"slave": [
+					{"name":"SfState","type":"byte","label":"0 = _SfsNone, 1 = _SfsForceConsumption, 2 = _SfsFloorPavingDrying, 3 = _SfsSummerSwitchOff, 4 =_SfsTankFilling"}
+				]
+			}
+		},
+		{
+			"label": "PsSetpoint",
+			"id": "PsTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4C 00"}
+				],
+				"slave": [
+					{"name":"PsTempDesired","type":"template","label":"PsSetpoint","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "PumpSavingState",
+			"id": "PumpSavingState",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4D 00"}
+				],
+				"slave": [
+					{"name":"PumpSavingState","type":"byte","label":"0 = _PssInactive, 1 = _PssMonitoring, 2 = _PssCounting, 3 = _PssPostrun, 4 = _PssSaving"}
+				]
+			}
+		},
+		{
+			"label": "OffConfig",
+			"id": "OffConfig",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4E 00"}
+				],
+				"slave": [
+					{"name":"OffConfig","type":"byte","label":"0 = _OffConfig_Off, 1 = _OffConfig_Low"}
+				]
+			}
+		},
+		{
+			"label": "FrostProtConfig",
+			"id": "FrostProtConfig",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4F 00"}
+				],
+				"slave": [
+					{"name":"FrostProtConfig","type":"byte","label":"0 = _FrostProtConfig_Low, 1 = _FrostProtConfig_PumpKick"}
+				]
+			}
+		},
+		{
+			"label": "FrostProtState",
+			"id": "FrostProtState",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4B 00"}
+				],
+				"slave": [
+					{"name":"FrostProtState","type":"byte","label":"0 = _Fps_NoFrost, 1 = _Fps_Delay, 2 = _Fps_PumpKick, 3 = _Fps_KickOff, 4 = _Fps_Active"}
+				]
+			}
+		},
+		{
+			"label": "ThermostatState",
+			"id": "ThermostatState",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 51 00"}
+				],
+				"slave": [
+					{"name":"ThermostatState","type":"byte","label":"0 = _ThermOn, 1 =_ThermOff"}
+				]
+			}
+		},
+		{
+			"label": "Current errors",
+			"id": "currenterror",
+			"command": "B5 04",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01"}
+				],
+				"slave": [
+					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
+				]
+			}
+		},
+		{
+			"label": "Error history",
+			"id": "errorhistory",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 01"}
+				],
+				"slave": [
+					{"name":"index","type":"byte","label":"Error history"},
+					{"type":"template-block","label":"Error history","id":"vaillant.errorhistory"}
+				]
+			}
+		},
+		{
+			"label": "Clear error history",
+			"id": "clearerrorhistory",
+			"command": "B5 03",
+			"set": {
+				"master": [
+					{"type":"static","_default":"02 01"},
+					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "Periods Monday",
+			"id": "hcTimer.Monday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Monday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"00 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"00 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Periods Tuesday",
+			"id": "hcTimer.Tuesday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Tuesday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"01 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Periods Wednesday",
+			"id": "hcTimer.Wednesday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Wednesday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"02 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"02 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Periods Thursday",
+			"id": "hcTimer.Thursday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Thursday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"03 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"03 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Periods Friday",
+			"id": "hcTimer.Friday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Friday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"04 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"04 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Periods Saturday",
+			"id": "hcTimer.Saturday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Saturday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"05 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"05 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Periods Sunday",
+			"id": "hcTimer.Sunday",
+			"command": "B5 15",
+			"template": [
+				{"type":"template-block","label":"Periods Sunday","id":"vaillant.timer"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"06 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 15",
+				"master": [
+					{"type":"static","_default":"06 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Monday",
+			"id": "Setpoints.Monday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Monday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Monday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Monday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 01"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 01"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Tuesday",
+			"id": "Setpoints.Tuesday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Tuesday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Tuesday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Tuesday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 02"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 02"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Wednesday",
+			"id": "Setpoints.Wednesday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Wednesday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Wednesday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Wednesday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 03"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 03"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Thursday",
+			"id": "Setpoints.Thursday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Thursday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Thursday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Thursday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Friday",
+			"id": "Setpoints.Friday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Friday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Friday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Friday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 05"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 05"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Saturday",
+			"id": "Setpoints.Saturday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Saturday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Saturday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Saturday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 06"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 06"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Temperatures Sunday",
+			"id": "Setpoints.Sunday",
+			"command": "B5 04",
+			"template": [
+				{"name":"temp11","type":"template","label":"Temperatures Sunday","id":"vaillant.templ.temp1"},
+				{"name":"temp12","type":"template","label":"Temperatures Sunday","id":"vaillant.templ.temp1"},
+				{"name":"temp13","type":"template","label":"Temperatures Sunday","id":"vaillant.templ.temp1"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"19 07"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 05",
+				"master": [
+					{"type":"static","_default":"2E 07"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "I/O test",
+			"id": "iotest",
+			"command": "B5 06",
+			"set": {
+				"master": [
+					{"type":"static","_default":"02"},
+					{"name":"iotest","type":"byte","label":"I/O test"}
+				]
+			}
+		}
+	]
 }

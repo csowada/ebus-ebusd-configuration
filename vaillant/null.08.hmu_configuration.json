@@ -1,1013 +1,576 @@
 {
-  "vendor": "Vaillant",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "commands": [
-    {
-      "command": "B5 11",
-      "get": {
-        "master": [
-          {
-            "default": "07",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "null1",
-            "type": "byte"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          },
-          {
-            "name": "null3",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "State"
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "EnergyHc"
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "EnergyCool"
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 40",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "Hours"
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 41",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "HoursHc"
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 43",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "HoursCool"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "18 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldTotal"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "18 02",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionTotal"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 01 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear1"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear2"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 03 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear3"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear4"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 05 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear5"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 06 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear6"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 07 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear7"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 08 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear8"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 09 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear9"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 0A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear10"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 0B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear11"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 0C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "YieldThisYear12"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 01 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear1"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear2"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 03 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear3"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear4"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 05 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear5"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 06 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear6"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 07 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear7"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 08 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear8"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 09 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear9"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 0A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear10"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 0B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear11"
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 0C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 1,
-            "name": "null1",
-            "type": "bytes"
-          },
-          {
-            "name": "null2",
-            "type": "template",
-            "id": "vaillant.templ.energy"
-          }
-        ]
-      },
-      "id": "ConsumptionThisYear12"
-    },
-    {
-      "command": "B5 04",
-      "label": "Date Time",
-      "get": {
-        "master": [
-          {
-            "default": "00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "dcfstate",
-            "type": "template",
-            "id": "vaillant.templ.dcfstate"
-          },
-          {
-            "name": "btime",
-            "type": "template",
-            "id": "vaillant.templ.btime"
-          },
-          {
-            "name": "bdate",
-            "type": "template",
-            "id": "vaillant.templ.bdate"
-          },
-          {
-            "name": "temp2",
-            "type": "template",
-            "id": "vaillant.templ.temp2"
-          }
-        ]
-      },
-      "id": "DateTime"
-    },
-    {
-      "command": "B5 04",
-      "label": "Outside temperature",
-      "get": {
-        "master": [
-          {
-            "default": "16",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "Status16"
-    },
-    {
-      "command": "B5 10",
-      "label": "Operation Mode",
-      "get": {
-        "master": [
-          {
-            "default": "00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template",
-            "id": "vaillant.templ.hcmode"
-          },
-          {
-            "name": "flowtempdesired",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "hwctempdesired",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "SetMode"
-    },
-    {
-      "command": "B5 11",
-      "label": "Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus",
-      "get": {
-        "master": [
-          {
-            "default": "01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "temp11",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp12",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp2",
-            "type": "template",
-            "id": "vaillant.templ.temp2"
-          },
-          {
-            "name": "temp13",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp14",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "pumpstate",
-            "type": "template",
-            "id": "vaillant.templ.pumpstate"
-          }
-        ]
-      },
-      "id": "Status01"
-    },
-    {
-      "command": "B5 11",
-      "label": "Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp",
-      "get": {
-        "master": [
-          {
-            "default": "02",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "hwcmode",
-            "type": "template",
-            "id": "vaillant.templ.hwcmode"
-          },
-          {
-            "name": "temp01",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          },
-          {
-            "name": "temp11",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp02",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          },
-          {
-            "name": "temp12",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "Status02"
-    },
-    {
-      "command": "B5 11",
-      "label": "Status",
-      "get": {
-        "master": [
-          {
-            "default": "03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "temp",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          },
-          {
-            "name": "press1",
-            "type": "template",
-            "id": "vaillant.templ.press"
-          },
-          {
-            "name": "press2",
-            "type": "template",
-            "id": "vaillant.templ.press"
-          },
-          {
-            "name": "hcmode2",
-            "type": "template",
-            "id": "vaillant.templ.hcmode2"
-          },
-          {
-            "type": "char"
-          }
-        ]
-      },
-      "id": "Status"
-    },
-    {
-      "command": "B5 03",
-      "label": "Current errors",
-      "get": {
-        "master": [
-          {
-            "default": "00 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.errors"
-          }
-        ]
-      },
-      "id": "currenterror"
-    },
-    {
-      "command": "B5 03",
-      "label": "Error history",
-      "get": {
-        "master": [
-          {
-            "default": "01 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "null1",
-            "type": "byte"
-          },
-          {
-            "name": "null2",
-            "type": "template-block",
-            "id": "vaillant.errorhistory"
-          }
-        ]
-      },
-      "id": "errorhistory"
-    },
-    {
-      "command": "B5 03",
-      "label": "Clear error history",
-      "id": "clearerrorhistory",
-      "set": {
-        "master": [
-          {
-            "default": "02 01",
-            "type": "static"
-          },
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      }
-    }
-  ]
+	"vendor": "Vaillant",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"id": "State",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"07"}
+				],
+				"slave": [
+					{"name":"energy","type":"byte"},
+					{"name":"State","type":"template","id":"vaillant.templ.energy"},
+					{"name":"onoff","type":"byte"}
+				]
+			}
+		},
+		{
+			"id": "EnergyHc",
+			"command": "B5 1A",
+			"get": {
+				"master": [
+					{"type":"static","_default":"05 FF 32 00"}
+				],
+				"slave": [
+					{"name":"EnergyHc","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "EnergyCool",
+			"command": "B5 1A",
+			"get": {
+				"master": [
+					{"type":"static","_default":"05 FF 32 01"}
+				],
+				"slave": [
+					{"name":"EnergyCool","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "Hours",
+			"command": "B5 1A",
+			"get": {
+				"master": [
+					{"type":"static","_default":"05 FF 32 40"}
+				],
+				"slave": [
+					{"name":"Hours","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "HoursHc",
+			"command": "B5 1A",
+			"get": {
+				"master": [
+					{"type":"static","_default":"05 FF 32 41"}
+				],
+				"slave": [
+					{"name":"HoursHc","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "HoursCool",
+			"command": "B5 1A",
+			"get": {
+				"master": [
+					{"type":"static","_default":"05 FF 32 43"}
+				],
+				"slave": [
+					{"name":"HoursCool","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldTotal",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"18 01"}
+				],
+				"slave": [
+					{"name":"YieldTotal","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionTotal",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"18 02"}
+				],
+				"slave": [
+					{"name":"ConsumptionTotal","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear1",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 01 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear1","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear2",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 02 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear2","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear3",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 03 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear3","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear4",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 04 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear4","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear5",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 05 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear5","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear6",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 06 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear6","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear7",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 07 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear7","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear8",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 08 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear8","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear9",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 09 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear9","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear10",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 0A 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear10","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear11",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 0B 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear11","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "YieldThisYear12",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 01 0C 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"YieldThisYear12","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear1",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 02 01 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear1","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear2",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 02 02 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear2","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear3",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 02 03 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear3","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear4",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 02 04 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear4","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear5",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 02 05 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear5","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear6",
+			"command": "B5 16",
+			"get": {
+				"master": [
+					{"type":"static","_default":"1A 02 06 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear6","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear7",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 07 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear7","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear8",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 08 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear8","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear9",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 09 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear9","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear10",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0A 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear10","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear11",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0B 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear11","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"id": "ConsumptionThisYear12",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0C 00"}
+				],
+				"slave": [
+					{"name":"month"},
+					{"name":"1","type":"bytes","length":1},
+					{"name":"ConsumptionThisYear12","type":"template","id":"vaillant.templ.energy"}
+				]
+			}
+		},
+		{
+			"label": "Date Time",
+			"id": "DateTime",
+			"command": "B5 04",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00"}
+				],
+				"slave": [
+					{"name":"dcfstate","type":"template","label":"Date Time","id":"vaillant.templ.dcfstate"},
+					{"name":"btime","type":"template","label":"Date Time","id":"vaillant.templ.btime"},
+					{"name":"bdate","type":"template","label":"Date Time","id":"vaillant.templ.bdate"},
+					{"name":"temp2","type":"template","label":"Date Time","id":"vaillant.templ.temp2"}
+				]
+			}
+		},
+		{
+			"label": "Outside temperature",
+			"id": "Status16",
+			"command": "B5 04",
+			"get": {
+				"master": [
+					{"type":"static","_default":"16"}
+				],
+				"slave": [
+					{"name":"Status16","type":"template","label":"Outside temperature","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "Operation Mode",
+			"id": "SetMode",
+			"command": "B5 10",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00"}
+				],
+				"slave": [
+					{"name":"SetMode","type":"template","label":"Operation Mode","id":"vaillant.templ.hcmode"},
+					{"name":"flowtempdesired","type":"template","label":"Operation Mode","id":"vaillant.templ.temp1"},
+					{"name":"hwctempdesired","type":"template","label":"Operation Mode","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus",
+			"id": "Status01",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01"}
+				],
+				"slave": [
+					{"name":"temp11","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"temp12","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"temp2","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp2"},
+					{"name":"temp13","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"temp14","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"pumpstate","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.pumpstate"}
+				]
+			}
+		},
+		{
+			"label": "Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp",
+			"id": "Status02",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"02"}
+				],
+				"slave": [
+					{"name":"hwcmode","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.hwcmode"},
+					{"name":"temp01","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp0"},
+					{"name":"temp11","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp1"},
+					{"name":"temp02","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp0"},
+					{"name":"temp12","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "Status",
+			"id": "Status",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"03"}
+				],
+				"slave": [
+					{"name":"temp","type":"template","label":"Status","id":"vaillant.templ.temp"},
+					{"name":"press1","type":"template","label":"Status","id":"vaillant.templ.press"},
+					{"name":"press2","type":"template","label":"Status","id":"vaillant.templ.press"},
+					{"name":"hcmode2","type":"template","label":"Status","id":"vaillant.templ.hcmode2"},
+					{"name":"HEX","type":"char","label":"Status"}
+				]
+			}
+		},
+		{
+			"label": "Current errors",
+			"id": "currenterror",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00 01"}
+				],
+				"slave": [
+					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
+				]
+			}
+		},
+		{
+			"label": "Error history",
+			"id": "errorhistory",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 01"}
+				],
+				"slave": [
+					{"name":"index","type":"byte","label":"Error history"},
+					{"type":"template-block","label":"Error history","id":"vaillant.errorhistory"}
+				]
+			}
+		},
+		{
+			"label": "Clear error history",
+			"id": "clearerrorhistory",
+			"command": "B5 03",
+			"set": {
+				"master": [
+					{"type":"static","_default":"02 01"},
+					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
+				]
+			}
+		}
+	]
 }

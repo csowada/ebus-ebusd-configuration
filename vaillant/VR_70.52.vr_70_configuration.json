@@ -1,183 +1,99 @@
 {
-  "id": "VR_70",
-  "vendor": "Vaillant",
-  "label": "Vaillant VR 70",
-  "description": "Vaillant VR 70",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "identification": [
-    "56 52 5F 37 30"
-  ],
-  "commands": [
-    {
-      "command": "B5 23",
-      "id": "SetActorState",
-      "set": {
-        "master": [
-          {
-            "default": "01",
-            "type": "static"
-          },
-          {
-            "name": "null1",
-            "type": "byte"
-          },
-          {
-            "name": "null2",
-            "type": "byte"
-          },
-          {
-            "name": "null3",
-            "type": "byte"
-          }
-        ]
-      }
-    },
-    {
-      "command": "B5 23",
-      "id": "Mc1FlowTempDesired",
-      "set": {
-        "master": [
-          {
-            "default": "02 00",
-            "type": "static"
-          },
-          {
-            "name": "FTStatus",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          },
-          {
-            "name": "FTDesired",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "MixerStatus",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      }
-    },
-    {
-      "command": "B5 23",
-      "id": "Mc2FlowTempDesired",
-      "set": {
-        "master": [
-          {
-            "default": "02 01",
-            "type": "static"
-          },
-          {
-            "name": "FTStatus",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          },
-          {
-            "name": "FTDesired",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "MixerStatus",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      }
-    },
-    {
-      "command": "B5 23",
-      "get": {
-        "master": [
-          {
-            "default": "03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "S1",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          },
-          {
-            "name": "S2",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          },
-          {
-            "name": "S3",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "SensorData"
-    },
-    {
-      "command": "B5 03",
-      "label": "Current errors",
-      "get": {
-        "master": [
-          {
-            "default": "00 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.errors"
-          }
-        ]
-      },
-      "id": "currenterror"
-    },
-    {
-      "command": "B5 03",
-      "label": "Error history",
-      "get": {
-        "master": [
-          {
-            "default": "01 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "null1",
-            "type": "byte"
-          },
-          {
-            "name": "null2",
-            "type": "template-block",
-            "id": "vaillant.errorhistory"
-          }
-        ]
-      },
-      "id": "errorhistory"
-    },
-    {
-      "command": "B5 03",
-      "label": "Clear error history",
-      "id": "clearerrorhistory",
-      "set": {
-        "master": [
-          {
-            "default": "02 01",
-            "type": "static"
-          },
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      }
-    }
-  ]
+	"id": "VR_70",
+	"vendor": "Vaillant",
+	"label": "Vaillant VR 70",
+	"description": "Vaillant VR 70",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"id": "SetActorState",
+			"command": "B5 23",
+			"set": {
+				"master": [
+					{"type":"static","_default":"01"},
+					{"name":"R1","type":"byte"},
+					{"name":"R2","type":"byte"},
+					{"name":"R3","type":"byte"}
+				]
+			}
+		},
+		{
+			"id": "Mc1FlowTempDesired",
+			"command": "B5 23",
+			"set": {
+				"master": [
+					{"type":"static","_default":"02 00"},
+					{"name":"FTStatus","type":"template","id":"vaillant.templ.onoff"},
+					{"name":"FTDesired","type":"template","id":"vaillant.templ.temp1"},
+					{"name":"MixerStatus","type":"template","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"id": "Mc2FlowTempDesired",
+			"command": "B5 05",
+			"set": {
+				"master": [
+					{"type":"static","_default":"09 02 01"},
+					{"name":"FTStatus","type":"template","id":"vaillant.templ.onoff"},
+					{"name":"FTDesired","type":"template","id":"vaillant.templ.temp1"},
+					{"name":"MixerStatus","type":"template","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"id": "SensorData",
+			"command": "B5 04",
+			"get": {
+				"master": [
+					{"type":"static","_default":"03"}
+				],
+				"slave": [
+					{"name":"S1","type":"template","id":"vaillant.templ.temp"},
+					{"name":"S2","type":"template","id":"vaillant.templ.temp"},
+					{"name":"S3","type":"template","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "Current errors",
+			"id": "currenterror",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00 01"}
+				],
+				"slave": [
+					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
+				]
+			}
+		},
+		{
+			"label": "Error history",
+			"id": "errorhistory",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 01"}
+				],
+				"slave": [
+					{"name":"index","type":"byte","label":"Error history"},
+					{"type":"template-block","label":"Error history","id":"vaillant.errorhistory"}
+				]
+			}
+		},
+		{
+			"label": "Clear error history",
+			"id": "clearerrorhistory",
+			"command": "B5 06",
+			"set": {
+				"master": [
+					{"type":"static","_default":"01"},
+					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
+				]
+			}
+		}
+	]
 }

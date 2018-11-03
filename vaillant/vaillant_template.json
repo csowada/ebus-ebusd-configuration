@@ -1,1121 +1,273 @@
 {
-  "id": "vaillant",
-  "templates": [
-    {
-      "name": "templ",
-      "template": [
-        {
-          "label": "start counter",
-          "length": 3,
-          "name": "cntstarts",
-          "type": "bcd"
-        },
-        {
-          "format": "%.1fmin",
-          "label": "operation minutes",
-          "name": "cntminutes",
-          "type": "bcd"
-        },
-        {
-          "format": "%.1fh",
-          "label": "operation hours",
-          "length": 3,
-          "name": "cnthours",
-          "type": "bcd"
-        },
-        {
-          "label": "fuel quantity",
-          "length": 4,
-          "name": "cntfuel",
-          "type": "bcd"
-        },
-        {
-          "label": "unit",
-          "mapping": {
-            "0": "all",
-            "1": "l",
-            "2": "m³"
-          },
-          "name": "unit",
-          "type": "byte"
-        },
-        {
-          "label": "fuel type",
-          "mapping": {
-            "0": "any",
-            "1": "oil",
-            "2": "gas"
-          },
-          "name": "fueltype",
-          "type": "byte"
-        },
-        {
-          "label": "type of meter",
-          "mapping": {
-            "0": "starts",
-            "1": "hours1",
-            "2": "hours2",
-            "3": "hours3",
-            "4": "hours4",
-            "5": "modulating",
-            "16": "fuelquantity"
-          },
-          "name": "countertype",
-          "type": "byte"
-        },
-        {
-          "label": "cyclic transmission",
-          "mapping": {
-            "170": "start",
-            "85": "stop"
-          },
-          "name": "opdatacyclic",
-          "type": "byte"
-        },
-        {
-          "label": "data transmission",
-          "mapping": {
-            "0": "stop",
-            "1": "cyclic",
-            "2": "event",
-            "3": "cyclicandevent"
-          },
-          "name": "opdatatransfer",
-          "type": "byte"
-        },
-        {
-          "label": "heat request",
-          "mapping": {
-            "0": "off",
-            "187": "hotwaterinheating",
-            "1": "none",
-            "221": "qualitycontrol",
-            "68": "controlstopinstage",
-            "102": "hotwaterincontrolstop",
-            "204": "emissioncheck",
-            "238": "controlstop",
-            "170": "heating",
-            "85": "hotwater"
-          },
-          "name": "opdataheat",
-          "type": "byte"
-        },
-        {
-          "mapping": {
-            "0": "none",
-            "1": "stoppump",
-            "2": "startpump",
-            "3": "stopconsumer",
-            "4": "startconsumer"
-          },
-          "name": "opdataaction",
-          "type": "byte"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "desired temperature",
-          "name": "desiredtemp",
-          "type": "byte"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "outside temperature",
-          "name": "outsidetemp",
-          "type": "char"
-        },
-        {
-          "format": "%.1f%%",
-          "name": "percent",
-          "type": "data2c"
-        },
-        {
-          "format": "%.1f%%",
-          "name": "percent0",
-          "type": "byte"
-        },
-        {
-          "format": "%.1f%%",
-          "name": "percent1",
-          "type": "data1c"
-        },
-        {
-          "format": "%.1f%%",
-          "name": "percent2",
-          "type": "data2b"
-        },
-        {
-          "format": "%.1f%%",
-          "name": "percents",
-          "type": "char"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "temp",
-          "type": "data2c"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "temp0",
-          "type": "byte"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "temp1",
-          "type": "data1c"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "temp2",
-          "type": "data2b"
-        },
-        {
-          "format": "%.1fbar",
-          "label": "pressure",
-          "name": "press",
-          "type": "data2b"
-        },
-        {
-          "label": "time",
-          "name": "btime",
-          "type": "time"
-        },
-        {
-          "label": "date",
-          "name": "bdate",
-          "type": "date"
-        },
-        {
-          "label": "device ID",
-          "length": 5,
-          "name": "id",
-          "type": "string"
-        },
-        {
-          "label": "version",
-          "length": 2,
-          "name": "version",
-          "type": "bcd"
-        },
-        {
-          "length": 1,
-          "name": "skip",
-          "type": "bytes"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "temps",
-          "type": "char"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "temps2",
-          "type": "int"
-        },
-        {
-          "format": "%.1f°C",
-          "label": "temperature",
-          "name": "tempv",
-          "type": "float"
-        },
-        {
-          "format": "%.1fbar",
-          "label": "pressure",
-          "name": "press",
-          "type": "int",
-          "factor": 0.001
-        },
-        {
-          "format": "%.1fbar",
-          "label": "pressure",
-          "name": "pressv",
-          "type": "float"
-        },
-        {
-          "label": "date",
-          "name": "date",
-          "type": "date",
-          "variant": "hex_short"
-        },
-        {
-          "label": "days",
-          "mapping": {
-            "0": "selected",
-            "1": "Mo-Fr",
-            "2": "Sa-Su",
-            "3": "Mo-Su"
-          },
-          "name": "daysel",
-          "type": "byte"
-        },
-        {
-          "label": "days",
-          "name": "days",
-          "type": "byte"
-        },
-        {
-          "label": "time",
-          "name": "time",
-          "type": "time",
-          "variant": "hex"
-        },
-        {
-          "label": "time",
-          "name": "time2",
-          "type": "time",
-          "variant": "hex_short"
-        },
-        {
-          "divider": 120,
-          "factor": 0.008,
-          "format": "%.1fmin",
-          "label": "minutes",
-          "length": 4,
-          "name": "minutes",
-          "type": "unumber"
-        },
-        {
-          "format": "%.1fmin",
-          "label": "minutes",
-          "name": "minutes0",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fmin",
-          "label": "minutes",
-          "name": "minutes2",
-          "type": "word"
-        },
-        {
-          "format": "%.1fh",
-          "label": "hours",
-          "length": 4,
-          "name": "hoursum",
-          "type": "unumber"
-        },
-        {
-          "format": "%.1fh",
-          "label": "hours",
-          "name": "hoursum2",
-          "type": "word"
-        },
-        {
-          "format": "%.1fh",
-          "label": "hours",
-          "name": "hours",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fh",
-          "label": "hours",
-          "name": "hours1",
-          "type": "data1c"
-        },
-        {
-          "divider": -12,
-          "factor": -0.083,
-          "format": "%.1fh",
-          "label": "hours",
-          "name": "hours12",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fh",
-          "label": "hour",
-          "name": "hour",
-          "type": "byte"
-        },
-        {
-          "divider": 2,
-          "factor": 0.500,
-          "format": "%.1fs",
-          "label": "seconds",
-          "length": 4,
-          "name": "seconds",
-          "type": "unumber"
-        },
-        {
-          "format": "%.1fs",
-          "label": "seconds",
-          "name": "seconds0",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fs",
-          "label": "seconds",
-          "name": "seconds2",
-          "type": "word"
-        },
-        {
-          "format": "%.1fs",
-          "label": "seconds",
-          "length": 4,
-          "name": "seconds4",
-          "type": "unumber"
-        },
-        {
-          "format": "%.1fK",
-          "name": "calibration",
-          "type": "data2c"
-        },
-        {
-          "format": "%.1fK",
-          "name": "calibration0",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fK",
-          "name": "calibration1",
-          "type": "data1c"
-        },
-        {
-          "divider": 2,
-          "factor": 0.500,
-          "format": "%.1fK",
-          "name": "calibrations",
-          "type": "char"
-        },
-        {
-          "format": "%.1fK",
-          "name": "calibrationv",
-          "type": "float"
-        },
-        {
-          "format": "%.1f°min",
-          "name": "integral",
-          "type": "int"
-        },
-        {
-          "label": "boiler mode",
-          "mapping": {
-            "0": "auto",
-            "1": "off",
-            "2": "water"
-          },
-          "name": "hcmode",
-          "type": "byte"
-        },
-        {
-          "label": "boiler mode",
-          "mapping": {
-            "0": "off",
-            "3": "heat",
-            "4": "water"
-          },
-          "name": "hcmode2",
-          "type": "byte"
-        },
-        {
-          "label": "mixer mode",
-          "mapping": {
-            "0": "disabled",
-            "1": "on",
-            "2": "off",
-            "3": "auto",
-            "4": "eco",
-            "5": "low"
-          },
-          "name": "mcmode",
-          "type": "byte"
-        },
-        {
-          "label": "mixer type",
-          "mapping": {
-            "0": "inactive",
-            "1": "mixer",
-            "2": "fixed",
-            "3": "hwc",
-            "4": "returnincr",
-            "5": "pool"
-          },
-          "name": "mctype",
-          "type": "byte"
-        },
-        {
-          "children": [
-            {
-              "pos": 0,
-              "type": "bit"
-            }
-          ],
-          "label": "mixer type",
-          "mapping": {
-            "0": "inactive",
-            "1": "mixer",
-            "2": "fixed",
-            "3": "hwc",
-            "4": "returnincr",
-            "5": "pool"
-          },
-          "name": "mctype7",
-          "type": "byte"
-        },
-        {
-          "label": "hot water mode",
-          "mapping": {
-            "0": "disabled",
-            "1": "on",
-            "2": "off",
-            "3": "auto"
-          },
-          "name": "hwcmode",
-          "type": "byte"
-        },
-        {
-          "label": "hot water mode",
-          "mapping": {
-            "0": "off",
-            "1": "on",
-            "2": "auto",
-            "3": "manual"
-          },
-          "name": "hwcmode2",
-          "type": "byte"
-        },
-        {
-          "label": "mixer State",
-          "mapping": {
-            "0": "off",
-            "1": "open",
-            "2": "close"
-          },
-          "name": "mixer",
-          "type": "byte"
-        },
-        {
-          "label": "day/night mode",
-          "mapping": {
-            "0": "night",
-            "1": "day",
-            "7": "floorpaving"
-          },
-          "name": "daynight",
-          "type": "byte"
-        },
-        {
-          "label": "Status",
-          "name": "status",
-          "type": "byte"
-        },
-        {
-          "mapping": {
-            "0": "off",
-            "1": "on"
-          },
-          "name": "onoff",
-          "type": "byte"
-        },
-        {
-          "mapping": {
-            "0": "no",
-            "1": "yes"
-          },
-          "name": "yesno",
-          "type": "byte"
-        },
-        {
-          "mapping": {
-            "0": "ok",
-            "1": "error"
-          },
-          "name": "errorok",
-          "type": "byte"
-        },
-        {
-          "label": "sensor status",
-          "mapping": {
-            "0": "ok",
-            "170": "cutoff",
-            "85": "circuit"
-          },
-          "name": "sensor",
-          "type": "byte"
-        },
-        {
-          "name": "tempmirror",
-          "type": "word"
-        },
-        {
-          "format": "%.1fmbar",
-          "label": "pressure",
-          "length": 4,
-          "name": "pressm",
-          "type": "unumber"
-        },
-        {
-          "format": "%.1fmbar",
-          "label": "pressure",
-          "name": "pressm2",
-          "type": "word"
-        },
-        {
-          "divider": 100,
-          "factor": 0.010,
-          "name": "uin100",
-          "type": "word"
-        },
-        {
-          "divider": 100,
-          "factor": 0.010,
-          "label": "heating curve",
-          "name": "curve",
-          "type": "word"
-        },
-        {
-          "children": [
-            {
-              "pos": 0,
-              "type": "bit"
-            }
-          ],
-          "label": "phase 1 state",
-          "mapping": {
-            "0": "missing",
-            "1": "present"
-          },
-          "name": "phase1",
-          "type": "byte"
-        },
-        {
-          "children": [
-            {
-              "pos": 1,
-              "type": "bit"
-            }
-          ],
-          "label": "phase 2 state",
-          "mapping": {
-            "0": "missing",
-            "1": "present"
-          },
-          "name": "phase2",
-          "type": "byte"
-        },
-        {
-          "children": [
-            {
-              "pos": 2,
-              "type": "bit"
-            }
-          ],
-          "label": "phase 3 state",
-          "mapping": {
-            "0": "missing",
-            "1": "present"
-          },
-          "name": "phase3",
-          "type": "byte"
-        },
-        {
-          "length": 2,
-          "name": "code",
-          "type": "bcd"
-        },
-        {
-          "label": "error number",
-          "name": "error",
-          "type": "word"
-        },
-        {
-          "label": "from",
-          "name": "from",
-          "type": "time",
-          "variant": "minutes_short",
-          "minuteMultiplier": 10
-        },
-        {
-          "label": "to",
-          "name": "to",
-          "type": "time",
-          "variant": "minutes_short",
-          "minuteMultiplier": 10
-        },
-        {
-          "mapping": {
-            "0": "not present",
-            "1": "externalheat",
-            "2": "externalwater",
-            "3": "externalheatandwater",
-            "4": "internalheatandwater"
-          },
-          "name": "backtype",
-          "type": "byte"
-        },
-        {
-          "mapping": {
-            "0": "no backup",
-            "1": "withbackup",
-            "2": "onlybackup"
-          },
-          "name": "backmode",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fkW",
-          "name": "power",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fkWh",
-          "name": "energy",
-          "type": "word"
-        },
-        {
-          "format": "%.1fkWh",
-          "name": "energyr",
-          "reverseByteOrder": true,
-          "type": "word"
-        },
-        {
-          "format": "%.1fkWh",
-          "length": 4,
-          "name": "energy4",
-          "type": "unumber"
-        },
-        {
-          "label": "start count",
-          "length": 4,
-          "name": "cntstarts",
-          "type": "unumber"
-        },
-        {
-          "label": "start count",
-          "name": "cntstarts2",
-          "type": "word"
-        },
-        {
-          "label": "pump power",
-          "mapping": {
-            "0": "0",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "off"
-          },
-          "name": "pumppow",
-          "type": "byte"
-        },
-        {
-          "label": "pump state",
-          "mapping": {
-            "0": "off",
-            "1": "on",
-            "2": "overrun"
-          },
-          "name": "pumpstate",
-          "type": "byte"
-        },
-        {
-          "label": "DCF receiver state",
-          "mapping": {
-            "0": "nosignal",
-            "1": "ok",
-            "2": "sync",
-            "3": "valid"
-          },
-          "name": "dcfstate",
-          "type": "byte"
-        },
-        {
-          "label": "phase state",
-          "mapping": {
-            "0": "error",
-            "7": "ok"
-          },
-          "name": "phaseok",
-          "type": "byte"
-        },
-        {
-          "label": "valve position",
-          "mapping": {
-            "0": "heat",
-            "1": "water"
-          },
-          "name": "switchvalve",
-          "type": "byte"
-        },
-        {
-          "label": "valve position",
-          "mapping": {
-            "0": "heat",
-            "100": "water",
-            "254": "standby",
-            "50": "both"
-          },
-          "name": "switchvalve2",
-          "type": "byte"
-        },
-        {
-          "label": "holiday period from",
-          "name": "hfrom",
-          "type": "date",
-          "variant": "hex_short"
-        },
-        {
-          "label": "holiday period to",
-          "name": "hto",
-          "type": "date",
-          "variant": "hex_short"
-        },
-        {
-          "label": "heating state",
-          "mapping": {
-            "0": "off",
-            "3": "heat",
-            "6": "standby",
-            "7": "otshutdown",
-            "8": "water"
-          },
-          "name": "hpstatus",
-          "type": "byte"
-        },
-        {
-          "format": "%.1fHz",
-          "label": "frequency",
-          "name": "frequency",
-          "type": "word"
-        },
-        {
-          "label": "selected zone",
-          "mapping": {
-            "0": "alle",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6"
-          },
-          "name": "zonesel",
-          "type": "word"
-        },
-        {
-          "mapping": {
-            "0": "auto",
-            "1": "ventilation",
-            "2": "party",
-            "3": "veto",
-            "6": "load"
-          },
-          "name": "sfmode",
-          "type": "byte"
-        },
-        {
-          "mapping": {
-            "0": "off",
-            "1": "auto",
-            "2": "day",
-            "3": "night"
-          },
-          "name": "opmode",
-          "type": "word"
-        },
-        {
-          "mapping": {
-            "0": "none",
-            "1": "VRC700",
-            "2": "VR91.1",
-            "3": "VR91.2",
-            "4": "VR91.3"
-          },
-          "name": "zmapping",
-          "type": "word"
-        },
-        {
-          "label": "heat circuit name",
-          "length": 11,
-          "name": "hcname",
-          "type": "string"
-        },
-        {
-          "label": "zone name",
-          "length": 5,
-          "name": "zname",
-          "type": "string"
-        },
-        {
-          "label": "name",
-          "length": 6,
-          "name": "shortname",
-          "type": "string"
-        },
-        {
-          "label": "phone number",
-          "length": 9,
-          "name": "phone",
-          "type": "string"
-        },
-        {
-          "label": "phone number",
-          "length": 6,
-          "name": "shortphone",
-          "type": "string"
-        },
-        {
-          "mapping": {
-            "0": "circulation",
-            "1": "dryer",
-            "2": "zone",
-            "3": "legiopump"
-          },
-          "name": "mamode",
-          "type": "word"
-        },
-        {
-          "mapping": {
-            "0": "eco",
-            "1": "night"
-          },
-          "name": "offmode",
-          "type": "word"
-        },
-        {
-          "mapping": {
-            "0": "off",
-            "1": "modulating",
-            "2": "thermostat"
-          },
-          "name": "rcmode",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "name": "tempsensor",
-      "template": [
-        {
-          "name": "temp",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        },
-        {
-          "name": "sensor",
-          "type": "template",
-          "id": "vaillant.templ.sensor"
-        }
-      ]
-    },
-    {
-      "name": "tempmirrorsensor",
-      "template": [
-        {
-          "name": "temp",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        },
-        {
-          "name": "tempmirror",
-          "type": "template",
-          "id": "vaillant.templ.tempmirror"
-        },
-        {
-          "name": "sensor",
-          "type": "template",
-          "id": "vaillant.templ.sensor"
-        }
-      ]
-    },
-    {
-      "name": "presssensor",
-      "template": [
-        {
-          "name": "press",
-          "type": "template",
-          "id": "vaillant.templ.press"
-        },
-        {
-          "name": "sensor",
-          "type": "template",
-          "id": "vaillant.templ.sensor"
-        }
-      ]
-    },
-    {
-      "name": "phase",
-      "template": [
-        {
-          "name": "phase1",
-          "type": "template",
-          "id": "vaillant.templ.phase1"
-        },
-        {
-          "name": "phase2",
-          "type": "template",
-          "id": "vaillant.templ.phase2"
-        },
-        {
-          "name": "phase3",
-          "type": "template",
-          "id": "vaillant.templ.phase3"
-        }
-      ]
-    },
-    {
-      "name": "errors",
-      "template": [
-        {
-          "name": "error1",
-          "type": "template",
-          "id": "vaillant.templ.error"
-        },
-        {
-          "name": "error2",
-          "type": "template",
-          "id": "vaillant.templ.error"
-        },
-        {
-          "name": "error3",
-          "type": "template",
-          "id": "vaillant.templ.error"
-        },
-        {
-          "name": "error4",
-          "type": "template",
-          "id": "vaillant.templ.error"
-        },
-        {
-          "name": "error5",
-          "type": "template",
-          "id": "vaillant.templ.error"
-        }
-      ]
-    },
-    {
-      "name": "errorhistory",
-      "template": [
-        {
-          "name": "status",
-          "type": "template",
-          "id": "vaillant.templ.status"
-        },
-        {
-          "name": "time2",
-          "type": "template",
-          "id": "vaillant.templ.time2"
-        },
-        {
-          "name": "date",
-          "type": "template",
-          "id": "vaillant.templ.date"
-        },
-        {
-          "name": "error",
-          "type": "template",
-          "id": "vaillant.templ.error"
-        }
-      ]
-    },
-    {
-      "name": "slot1",
-      "template": [
-        {
-          "name": "from",
-          "type": "template",
-          "id": "vaillant.templ.from"
-        },
-        {
-          "name": "to",
-          "type": "template",
-          "id": "vaillant.templ.to"
-        }
-      ]
-    },
-    {
-      "name": "slot2",
-      "template": [
-        {
-          "name": "from",
-          "type": "template",
-          "id": "vaillant.templ.from"
-        },
-        {
-          "name": "to",
-          "type": "template",
-          "id": "vaillant.templ.to"
-        }
-      ]
-    },
-    {
-      "name": "slot3",
-      "template": [
-        {
-          "name": "from",
-          "type": "template",
-          "id": "vaillant.templ.from"
-        },
-        {
-          "name": "to",
-          "type": "template",
-          "id": "vaillant.templ.to"
-        }
-      ]
-    },
-    {
-      "name": "slot1-3",
-      "template": [
-        {
-          "name": "null1",
-          "type": "template-block",
-          "id": "vaillant.slot1"
-        },
-        {
-          "name": "null2",
-          "type": "template-block",
-          "id": "vaillant.slot2"
-        },
-        {
-          "name": "null3",
-          "type": "template-block",
-          "id": "vaillant.slot3"
-        }
-      ]
-    },
-    {
-      "name": "timer",
-      "template": [
-        {
-          "type": "template-block",
-          "id": "vaillant.slot1-3"
-        },
-        {
-          "name": "daysel",
-          "type": "template",
-          "id": "vaillant.templ.daysel"
-        }
-      ]
-    },
-    {
-      "name": "holiday",
-      "template": [
-        {
-          "name": "hfrom1",
-          "type": "template",
-          "id": "vaillant.templ.hfrom"
-        },
-        {
-          "name": "hfrom2",
-          "type": "template",
-          "id": "vaillant.templ.hfrom"
-        },
-        {
-          "name": "hto1",
-          "type": "template",
-          "id": "vaillant.templ.hto"
-        },
-        {
-          "name": "hto2",
-          "type": "template",
-          "id": "vaillant.templ.hto"
-        }
-      ]
-    }
-  ]
+	"id": "vaillant",
+	"templates": [
+		{
+			"name": "templ",
+			"template": [
+				{"name":"cntstarts","type":"bcd","label":"start counter","length":3},
+				{"name":"cntminutes","type":"bcd","label":"operation minutes","format":"%.1fmin"},
+				{"name":"cnthours","type":"bcd","label":"operation hours","format":"%.1fh","length":3},
+				{"name":"cntfuel","type":"bcd","label":"fuel quantity","length":4},
+				{"name":"unit","type":"byte","label":"unit",
+					"mapping": {"0":"all","1":"l","2":"m³"}},
+				{"name":"fueltype","type":"byte","label":"fuel type",
+					"mapping": {"0":"any","1":"oil","2":"gas"}},
+				{"name":"countertype","type":"byte","label":"type of meter",
+					"mapping": {"0":"starts","1":"hours1","2":"hours2","3":"hours3","4":"hours4","5":"modulating","16":"fuelquantity"}},
+				{"name":"opdatacyclic","type":"byte","label":"cyclic transmission",
+					"mapping": {"170":"start","85":"stop"}},
+				{"name":"opdatatransfer","type":"byte","label":"data transmission",
+					"mapping": {"0":"stop","1":"cyclic","2":"event","3":"cyclicandevent"}},
+				{"name":"opdataheat","type":"byte","label":"heat request",
+					"mapping": {"0":"off","187":"hotwaterinheating","1":"none","221":"qualitycontrol","68":"controlstopinstage","102":"hotwaterincontrolstop","204":"emissioncheck","238":"controlstop","170":"heating","85":"hotwater"}},
+				{"name":"opdataaction","type":"byte",
+					"mapping": {"0":"none","1":"stoppump","2":"startpump","3":"stopconsumer","4":"startconsumer"}},
+				{"name":"desiredtemp","type":"byte","label":"desired temperature","format":"%.1f°C"},
+				{"name":"outsidetemp","type":"char","label":"outside temperature","format":"%.1f°C"},
+				{"name":"percent","type":"data2c","format":"%.1f%%"},
+				{"name":"percent0","type":"byte","format":"%.1f%%"},
+				{"name":"percent1","type":"data1c","format":"%.1f%%"},
+				{"name":"percent2","type":"data2b","format":"%.1f%%"},
+				{"name":"percents","type":"char","format":"%.1f%%"},
+				{"name":"temp","type":"data2c","label":"temperature","format":"%.1f°C"},
+				{"name":"temp0","type":"byte","label":"temperature","format":"%.1f°C"},
+				{"name":"temp1","type":"data1c","label":"temperature","format":"%.1f°C"},
+				{"name":"temp2","type":"data2b","label":"temperature","format":"%.1f°C"},
+				{"name":"press","type":"data2b","label":"pressure","format":"%.1fbar"},
+				{"name":"btime","type":"time","label":"time"},
+				{"name":"bdate","type":"date","label":"date"},
+				{"name":"id","type":"string","label":"device ID","length":5},
+				{"name":"version","type":"bcd","label":"version","length":2},
+				{"name":"skip","type":"bytes","length":1},
+				{"name":"temps","type":"char","label":"temperature","format":"%.1f°C"},
+				{"name":"temps2","type":"int","label":"temperature","format":"%.1f°C"},
+				{"name":"tempv","type":"float","label":"temperature","format":"%.1f°C"},
+				{"name":"press","type":"int","label":"pressure","format":"%.1fbar","factor":0.001},
+				{"name":"pressv","type":"float","label":"pressure","format":"%.1fbar"},
+				{"name":"date","type":"date","label":"date","variant":"hex_short"},
+				{"name":"daysel","type":"byte","label":"days",
+					"mapping": {"0":"selected","1":"Mo-Fr","2":"Sa-Su","3":"Mo-Su"}},
+				{"name":"days","type":"byte","label":"days"},
+				{"name":"time","type":"time","label":"time","variant":"hex"},
+				{"name":"time2","type":"time","label":"time","variant":"hex_short"},
+				{"name":"minutes","type":"unumber","label":"minutes","format":"%.1fmin","divider":120,"length":4,"factor":0.008},
+				{"name":"minutes0","type":"byte","label":"minutes","format":"%.1fmin"},
+				{"name":"minutes2","type":"word","label":"minutes","format":"%.1fmin"},
+				{"name":"hoursum","type":"unumber","label":"hours","format":"%.1fh","length":4},
+				{"name":"hoursum2","type":"word","label":"hours","format":"%.1fh"},
+				{"name":"hours","type":"byte","label":"hours","format":"%.1fh"},
+				{"name":"hours1","type":"data1c","label":"hours","format":"%.1fh"},
+				{"name":"hours12","type":"byte","label":"hours","format":"%.1fh","divider":-12,"factor":-0.083},
+				{"name":"hour","type":"byte","label":"hour","format":"%.1fh"},
+				{"name":"seconds","type":"unumber","label":"seconds","format":"%.1fs","divider":2,"length":4,"factor":0.500},
+				{"name":"seconds0","type":"byte","label":"seconds","format":"%.1fs"},
+				{"name":"seconds2","type":"word","label":"seconds","format":"%.1fs"},
+				{"name":"seconds4","type":"unumber","label":"seconds","format":"%.1fs","length":4},
+				{"name":"calibration","type":"data2c","format":"%.1fK"},
+				{"name":"calibration0","type":"byte","format":"%.1fK"},
+				{"name":"calibration1","type":"data1c","format":"%.1fK"},
+				{"name":"calibrations","type":"char","format":"%.1fK","divider":2,"factor":0.500},
+				{"name":"calibrationv","type":"float","format":"%.1fK"},
+				{"name":"integral","type":"int","format":"%.1f°min"},
+				{"name":"hcmode","type":"byte","label":"boiler mode",
+					"mapping": {"0":"auto","1":"off","2":"water"}},
+				{"name":"hcmode2","type":"byte","label":"boiler mode",
+					"mapping": {"0":"off","3":"heat","4":"water"}},
+				{"name":"mcmode","type":"byte","label":"mixer mode",
+					"mapping": {"0":"disabled","1":"on","2":"off","3":"auto","4":"eco","5":"low"}},
+				{"name":"mctype","type":"byte","label":"mixer type",
+					"mapping": {"0":"inactive","1":"mixer","2":"fixed","3":"hwc","4":"returnincr","5":"pool"}},
+				{"name":"mctype7","type":"byte","label":"mixer type",
+					"mapping": {"0":"inactive","1":"mixer","2":"fixed","3":"hwc","4":"returnincr","5":"pool"},
+					"children": [
+						{"type":"bit","pos":0}
+					]
+				},
+				{"name":"hwcmode","type":"byte","label":"hot water mode",
+					"mapping": {"0":"disabled","1":"on","2":"off","3":"auto"}},
+				{"name":"hwcmode2","type":"byte","label":"hot water mode",
+					"mapping": {"0":"off","1":"on","2":"auto","3":"manual"}},
+				{"name":"mixer","type":"byte","label":"mixer State",
+					"mapping": {"0":"off","1":"open","2":"close"}},
+				{"name":"daynight","type":"byte","label":"day/night mode",
+					"mapping": {"0":"night","1":"day","7":"floorpaving"}},
+				{"name":"status","type":"byte","label":"Status"},
+				{"name":"onoff","type":"byte",
+					"mapping": {"0":"off","1":"on"}},
+				{"name":"yesno","type":"byte",
+					"mapping": {"0":"no","1":"yes"}},
+				{"name":"errorok","type":"byte",
+					"mapping": {"0":"ok","1":"error"}},
+				{"name":"sensor","type":"byte","label":"sensor status",
+					"mapping": {"0":"ok","170":"cutoff","85":"circuit"}},
+				{"name":"tempmirror","type":"word"},
+				{"name":"pressm","type":"unumber","label":"pressure","format":"%.1fmbar","length":4},
+				{"name":"pressm2","type":"word","label":"pressure","format":"%.1fmbar"},
+				{"name":"uin100","type":"word","divider":100,"factor":0.010},
+				{"name":"curve","type":"word","label":"heating curve","divider":100,"factor":0.010},
+				{"name":"phase1","type":"byte","label":"phase 1 state",
+					"mapping": {"0":"missing","1":"present"},
+					"children": [
+						{"type":"bit","pos":0}
+					]
+				},
+				{"name":"phase2","type":"byte","label":"phase 2 state",
+					"mapping": {"0":"missing","1":"present"},
+					"children": [
+						{"type":"bit","pos":1}
+					]
+				},
+				{"name":"phase3","type":"byte","label":"phase 3 state",
+					"mapping": {"0":"missing","1":"present"},
+					"children": [
+						{"type":"bit","pos":2}
+					]
+				},
+				{"name":"code","type":"bcd","length":2},
+				{"name":"error","type":"word","label":"error number"},
+				{"name":"from","type":"time","label":"from","variant":"minutes_short","minuteMultiplier":10},
+				{"name":"to","type":"time","label":"to","variant":"minutes_short","minuteMultiplier":10},
+				{"name":"backtype","type":"byte",
+					"mapping": {"0":"not present","1":"externalheat","2":"externalwater","3":"externalheatandwater","4":"internalheatandwater"}},
+				{"name":"backmode","type":"byte",
+					"mapping": {"0":"no backup","1":"withbackup","2":"onlybackup"}},
+				{"name":"power","type":"byte","format":"%.1fkW"},
+				{"name":"energy","type":"word","format":"%.1fkWh"},
+				{"name":"energyr","type":"word","reverseByteOrder":true,"format":"%.1fkWh"},
+				{"name":"energy4","type":"unumber","format":"%.1fkWh","length":4},
+				{"name":"cntstarts","type":"unumber","label":"start count","length":4},
+				{"name":"cntstarts2","type":"word","label":"start count"},
+				{"name":"pumppow","type":"byte","label":"pump power",
+					"mapping": {"0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"off"}},
+				{"name":"pumpstate","type":"byte","label":"pump state",
+					"mapping": {"0":"off","1":"on","2":"overrun"}},
+				{"name":"dcfstate","type":"byte","label":"DCF receiver state",
+					"mapping": {"0":"nosignal","1":"ok","2":"sync","3":"valid"}},
+				{"name":"phaseok","type":"byte","label":"phase state",
+					"mapping": {"0":"error","7":"ok"}},
+				{"name":"switchvalve","type":"byte","label":"valve position",
+					"mapping": {"0":"heat","1":"water"}},
+				{"name":"switchvalve2","type":"byte","label":"valve position",
+					"mapping": {"0":"heat","100":"water","254":"standby","50":"both"}},
+				{"name":"hfrom","type":"date","label":"holiday period from","variant":"hex_short"},
+				{"name":"hto","type":"date","label":"holiday period to","variant":"hex_short"},
+				{"name":"hpstatus","type":"byte","label":"heating state",
+					"mapping": {"0":"off","3":"heat","6":"standby","7":"otshutdown","8":"water"}},
+				{"name":"frequency","type":"word","label":"frequency","format":"%.1fHz"},
+				{"name":"zonesel","type":"word","label":"selected zone",
+					"mapping": {"0":"alle","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6"}},
+				{"name":"sfmode","type":"byte",
+					"mapping": {"0":"auto","1":"ventilation","2":"party","3":"veto","6":"load"}},
+				{"name":"opmode","type":"word",
+					"mapping": {"0":"off","1":"auto","2":"day","3":"night"}},
+				{"name":"zmapping","type":"word",
+					"mapping": {"0":"none","1":"VRC700","2":"VR91.1","3":"VR91.2","4":"VR91.3"}},
+				{"name":"hcname","type":"string","label":"heat circuit name","length":11},
+				{"name":"zname","type":"string","label":"zone name","length":5},
+				{"name":"shortname","type":"string","label":"name","length":6},
+				{"name":"phone","type":"string","label":"phone number","length":9},
+				{"name":"shortphone","type":"string","label":"phone number","length":6},
+				{"name":"mamode","type":"word",
+					"mapping": {"0":"circulation","1":"dryer","2":"zone","3":"legiopump"}},
+				{"name":"offmode","type":"word",
+					"mapping": {"0":"eco","1":"night"}},
+				{"name":"rcmode","type":"word",
+					"mapping": {"0":"off","1":"modulating","2":"thermostat"}}
+			]
+		},
+		{
+			"name": "tempsensor",
+			"template": [
+				{"name":"temp","type":"template","id":"vaillant.templ.temp"},
+				{"name":"sensor","type":"template","id":"vaillant.templ.sensor"}
+			]
+		},
+		{
+			"name": "tempmirrorsensor",
+			"template": [
+				{"name":"temp","type":"template","id":"vaillant.templ.temp"},
+				{"name":"tempmirror","type":"template","id":"vaillant.templ.tempmirror"},
+				{"name":"sensor","type":"template","id":"vaillant.templ.sensor"}
+			]
+		},
+		{
+			"name": "presssensor",
+			"template": [
+				{"name":"press","type":"template","id":"vaillant.templ.press"},
+				{"name":"sensor","type":"template","id":"vaillant.templ.sensor"}
+			]
+		},
+		{
+			"name": "phase",
+			"template": [
+				{"name":"phase1","type":"template","id":"vaillant.templ.phase1"},
+				{"name":"phase2","type":"template","id":"vaillant.templ.phase2"},
+				{"name":"phase3","type":"template","id":"vaillant.templ.phase3"}
+			]
+		},
+		{
+			"name": "errors",
+			"template": [
+				{"name":"error1","type":"template","id":"vaillant.templ.error"},
+				{"name":"error2","type":"template","id":"vaillant.templ.error"},
+				{"name":"error3","type":"template","id":"vaillant.templ.error"},
+				{"name":"error4","type":"template","id":"vaillant.templ.error"},
+				{"name":"error5","type":"template","id":"vaillant.templ.error"}
+			]
+		},
+		{
+			"name": "errorhistory",
+			"template": [
+				{"name":"status","type":"template","id":"vaillant.templ.status"},
+				{"name":"time2","type":"template","id":"vaillant.templ.time2"},
+				{"name":"date","type":"template","id":"vaillant.templ.date"},
+				{"name":"error","type":"template","id":"vaillant.templ.error"}
+			]
+		},
+		{
+			"name": "slot1",
+			"template": [
+				{"name":"from","type":"template","id":"vaillant.templ.from"},
+				{"name":"to","type":"template","id":"vaillant.templ.to"}
+			]
+		},
+		{
+			"name": "slot2",
+			"template": [
+				{"name":"from","type":"template","id":"vaillant.templ.from"},
+				{"name":"to","type":"template","id":"vaillant.templ.to"}
+			]
+		},
+		{
+			"name": "slot3",
+			"template": [
+				{"name":"from","type":"template","id":"vaillant.templ.from"},
+				{"name":"to","type":"template","id":"vaillant.templ.to"}
+			]
+		},
+		{
+			"name": "slot1-3",
+			"template": [
+				{"name":"slot1","type":"template-block","id":"vaillant.slot1"},
+				{"name":"slot2","type":"template-block","id":"vaillant.slot2"},
+				{"name":"slot3","type":"template-block","id":"vaillant.slot3"}
+			]
+		},
+		{
+			"name": "timer",
+			"template": [
+				{"name":"slot1-3","type":"template-block","id":"vaillant.slot1-3"},
+				{"name":"daysel","type":"template","id":"vaillant.templ.daysel"}
+			]
+		},
+		{
+			"name": "holiday",
+			"template": [
+				{"name":"hfrom1","type":"template","id":"vaillant.templ.hfrom"},
+				{"name":"hfrom2","type":"template","id":"vaillant.templ.hfrom"},
+				{"name":"hto1","type":"template","id":"vaillant.templ.hto"},
+				{"name":"hto2","type":"template","id":"vaillant.templ.hto"}
+			]
+		}
+	]
 }

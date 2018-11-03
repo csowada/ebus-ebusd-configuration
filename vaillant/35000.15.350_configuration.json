@@ -1,3456 +1,2131 @@
 {
-  "id": "35000",
-  "vendor": "Vaillant",
-  "label": "Vaillant VRT 350",
-  "description": "Vaillant VRT 350",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "identification": [
-    "33 35 30 30 30"
-  ],
-  "commands": [
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 00 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdStorage1Sensor",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 00 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 01 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdStorage2Sensor",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 01 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdStorage3Sensor",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 02 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 03 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdColl1Sensor",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 03 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdColl2Sensor",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 04 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 05 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "YieldSensor",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 05 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 06 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdCollPump1",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 06 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 07 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualPumpPower",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 07 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 08 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "resvdCollPump2",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 08 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 09 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "UV1State",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 09 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LegioPump",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "CirPump",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ElectronicCartridge",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "C1C2State",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "BypassValve",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 10 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RoomTempOffsetSelfWarming",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 10 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 11 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RoomTempOffset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 11 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "act. outside temperature [°C/sensor state]",
-      "get": {
-        "master": [
-          {
-            "default": "0D 12 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OutsideTemp",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 12 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template-block",
-          "id": "vaillant.tempsensor"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 13 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OutsideTempOffset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 13 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 14 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualTempDesired",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 14 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp0"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 15 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OperatingMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 15 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.mcmode"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 17 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Time",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 17 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.time"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 18 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ReducedNightTemp",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 18 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 19 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PrevOperatingMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 19 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.mcmode"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "TeleSwOperatingMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.mcmode"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HwcState",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "YearCalendarActive",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ClockSwitchSummerWinterDone",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Yield",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "CollPumpHRuntime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "null1",
-          "type": "word"
-        },
-        {
-          "name": "null2",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 20 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Date",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 20 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.date"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 21 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RoomTempSwitchOn",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 21 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 22 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ROCRoomSet",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 22 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 23 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OffsetDesTemp",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 23 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 24 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StateOfRoomCon",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 24 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 25 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LegioProtectionState",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 25 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 26 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StatusDcf",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 26 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.dcfstate"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 27 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DcfDaten",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 27 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 28 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInHoliday",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 28 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 29 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInParty",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 29 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInSingleHwcLoadingMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RestoreOpModeAfterHoliday",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInSavingsFunction",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SavingsFunctionTime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "time",
-          "type": "template",
-          "id": "vaillant.templ.time"
-        },
-        {
-          "name": "onoff",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SwitchOffParty",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInTeleSwitch",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 30 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInFloorPavingDrying",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 30 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 31 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "IsInQuickVeto",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 31 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 32 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "QuickVetoTemp",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 32 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 33 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StackeBUSTaskMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 33 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 34 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StackMainTaskMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 34 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 35 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StackLifeCheckTaskMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 35 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 36 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "Variant",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 36 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "length": 4,
-          "name": "value",
-          "type": "unumber"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 37 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "TimeWindows",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 37 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 38 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "eBUSCRC",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 38 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 39 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HwcTempDesired",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 39 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ComfTempEnabled",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ComfTempDesired",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "temp1",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        },
-        {
-          "name": "temp2",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        },
-        {
-          "name": "temp3",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        },
-        {
-          "name": "temp4",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 3C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FrostProtectDelay",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 3D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HydraulicScheme",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 1A",
-      "get": {
-        "master": [
-          {
-            "default": "05 FF 32 3E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SolHwcMaxLoadTemp",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "18 3F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ONDiff",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 3F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 40 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OffDiff",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 40 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 41 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LegioProtectionEnabled",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 41 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.yesno"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 42 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FillmodeStartTime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 42 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 43 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OperatingmodeStartTime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 43 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 44 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "NumCollPanels",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 44 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 45 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SolPumpBlockingTime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 45 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 46 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LoadingDelayEnabled",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 46 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "label": "Solar flow rate [l/h]",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 47 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SolFlowRate",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 47 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 48 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "EDControlEnabled",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 48 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 49 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ResetYield",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 49 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 4A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ResetOperatingTimes",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 4B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PumpPower",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.power"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 4C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StartCircuitAeration",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 4D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HeatingCurve",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.curve"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 4E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ControlMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "char"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 4F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OtShutdownLimit",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 50 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FlowTempMin",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 50 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 01 51 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DisableAutoSync",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 51 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 52 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ONMINDiff",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 52 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 53 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ONMAXDiff",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 53 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 54 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HydraulicMixer",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 54 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 55 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "eBUSFifoDiffCntMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 55 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 56 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ZweipunktAnalogSlct",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 56 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "label": "Actual roomtemperature setpoint [°C]",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 57 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ActualRoomTempDesired",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 57 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 58 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "WeekDayProgSwitch",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 58 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 59 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "OperatingModeHwc",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 59 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.mcmode"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 5A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RTCAdjustment",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 5A 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "int"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 5B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "EEpromMaxInkonsCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 5B 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 5C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "POCResetCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 5C 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 5D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "WDResetCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 5D 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 5E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LVResetCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 5E 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 5F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "CMResetCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 5F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 60 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "COMErrorCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 60 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "word"
-        }
-      ]
-    },
-    {
-      "command": "B5 16",
-      "get": {
-        "master": [
-          {
-            "default": "1A 02 61 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "VariantDKRefreshCnt",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 61 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    }
-  ]
+	"id": "35000",
+	"vendor": "Vaillant",
+	"label": "Vaillant VRT 350",
+	"description": "Vaillant VRT 350",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"id": "resvdStorage1Sensor",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 00 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 00 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "resvdStorage2Sensor",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 01 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 01 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "resvdStorage3Sensor",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 02 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 02 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "resvdColl1Sensor",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 03 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 03 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "resvdColl2Sensor",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 04 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 04 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "YieldSensor",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 05 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 05 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "resvdCollPump1",
+			"command": "B5 09",
+			"template": [
+				{"name":"resvdCollPump1","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 06 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 06 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ActualPumpPower",
+			"command": "B5 09",
+			"template": [
+				{"name":"2","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 07 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 07 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "resvdCollPump2",
+			"command": "B5 09",
+			"template": [
+				{"name":"resvdCollPump2","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 08 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 08 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "UV1State",
+			"command": "B5 09",
+			"template": [
+				{"name":"UV1State","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 09 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 09 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "LegioPump",
+			"command": "B5 09",
+			"template": [
+				{"name":"LegioPump","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "CirPump",
+			"command": "B5 09",
+			"template": [
+				{"name":"CirPump","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ElectronicCartridge",
+			"command": "B5 09",
+			"template": [
+				{"name":"ElectronicCartridge","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "C1C2State",
+			"command": "B5 09",
+			"template": [
+				{"name":"C1C2State","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "BypassValve",
+			"command": "B5 09",
+			"template": [
+				{"name":"BypassValve","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 0E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RoomTempOffsetSelfWarming",
+			"command": "B5 09",
+			"template": [
+				{"name":"RoomTempOffsetSelfWarming","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 10 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 10 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RoomTempOffset",
+			"command": "B5 09",
+			"template": [
+				{"name":"RoomTempOffset","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 11 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 11 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "act. outside temperature [°C/sensor state]",
+			"id": "OutsideTemp",
+			"command": "B5 09",
+			"template": [
+				{"type":"template-block","label":"act. outside temperature [°C/sensor state]","id":"vaillant.tempsensor"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 12 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 12 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OutsideTempOffset",
+			"command": "B5 09",
+			"template": [
+				{"name":"OutsideTempOffset","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 13 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 13 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ActualTempDesired",
+			"command": "B5 09",
+			"template": [
+				{"name":"ActualTempDesired","type":"template","id":"vaillant.templ.temp0"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 14 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 14 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OperatingMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"OperatingMode","type":"template","id":"vaillant.templ.mcmode"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 15 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 15 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Time",
+			"command": "B5 09",
+			"template": [
+				{"name":"Time","type":"template","id":"vaillant.templ.time"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 17 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 17 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ReducedNightTemp",
+			"command": "B5 09",
+			"template": [
+				{"name":"ReducedNightTemp","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 18 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 18 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "PrevOperatingMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"PrevOperatingMode","type":"template","id":"vaillant.templ.mcmode"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 19 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 19 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "TeleSwOperatingMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"TeleSwOperatingMode","type":"template","id":"vaillant.templ.mcmode"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "HwcState",
+			"command": "B5 09",
+			"template": [
+				{"name":"HwcState","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "YearCalendarActive",
+			"command": "B5 09",
+			"template": [
+				{"name":"YearCalendarActive","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ClockSwitchSummerWinterDone",
+			"command": "B5 09",
+			"template": [
+				{"name":"ClockSwitchSummerWinterDone","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Yield",
+			"command": "B5 09",
+			"template": [
+				{"name":"Yield","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "CollPumpHRuntime",
+			"command": "B5 09",
+			"template": [
+				{"name":"UIN1","type":"word"},
+				{"name":"UIN2","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Date",
+			"command": "B5 09",
+			"template": [
+				{"name":"Date","type":"template","id":"vaillant.templ.date"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 20 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 20 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RoomTempSwitchOn",
+			"command": "B5 09",
+			"template": [
+				{"name":"RoomTempSwitchOn","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 21 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 21 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ROCRoomSet",
+			"command": "B5 09",
+			"template": [
+				{"name":"ROCRoomSet","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 22 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 22 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OffsetDesTemp",
+			"command": "B5 09",
+			"template": [
+				{"name":"OffsetDesTemp","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 23 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 23 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StateOfRoomCon",
+			"command": "B5 09",
+			"template": [
+				{"name":"StateOfRoomCon","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 24 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 24 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "LegioProtectionState",
+			"command": "B5 09",
+			"template": [
+				{"name":"LegioProtectionState","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 25 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 25 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StatusDcf",
+			"command": "B5 09",
+			"template": [
+				{"name":"StatusDcf","type":"template","id":"vaillant.templ.dcfstate"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 26 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 26 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DcfDaten",
+			"command": "B5 09",
+			"template": [
+				{"name":"DcfDaten","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 27 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 27 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInHoliday",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInHoliday","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 28 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 28 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInParty",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInParty","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 29 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 29 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInSingleHwcLoadingMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInSingleHwcLoadingMode","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RestoreOpModeAfterHoliday",
+			"command": "B5 09",
+			"template": [
+				{"name":"RestoreOpModeAfterHoliday","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInSavingsFunction",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInSavingsFunction","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "SavingsFunctionTime",
+			"command": "B5 09",
+			"template": [
+				{"name":"time","type":"template","id":"vaillant.templ.time"},
+				{"name":"onoff","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "SwitchOffParty",
+			"command": "B5 09",
+			"template": [
+				{"name":"SwitchOffParty","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInTeleSwitch",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInTeleSwitch","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 2F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInFloorPavingDrying",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInFloorPavingDrying","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 30 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 30 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "IsInQuickVeto",
+			"command": "B5 09",
+			"template": [
+				{"name":"IsInQuickVeto","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 31 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 31 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "QuickVetoTemp",
+			"command": "B5 09",
+			"template": [
+				{"name":"QuickVetoTemp","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 32 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 32 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StackeBUSTaskMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"StackeBUSTaskMax","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 33 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 33 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StackMainTaskMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"StackMainTaskMax","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 34 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 34 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StackLifeCheckTaskMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"StackLifeCheckTaskMax","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 35 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 35 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "Variant",
+			"command": "B5 09",
+			"template": [
+				{"name":"Variant","type":"unumber","length":4}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 36 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 36 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "TimeWindows",
+			"command": "B5 09",
+			"template": [
+				{"name":"TimeWindows","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 37 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 37 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "eBUSCRC",
+			"command": "B5 09",
+			"template": [
+				{"name":"eBUSCRC","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 38 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 38 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "HwcTempDesired",
+			"command": "B5 09",
+			"template": [
+				{"name":"HwcTempDesired","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 39 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 39 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ComfTempEnabled",
+			"command": "B5 09",
+			"template": [
+				{"name":"ComfTempEnabled","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ComfTempDesired",
+			"command": "B5 09",
+			"template": [
+				{"name":"temp1","type":"template","id":"vaillant.templ.temp"},
+				{"name":"temp2","type":"template","id":"vaillant.templ.temp"},
+				{"name":"temp3","type":"template","id":"vaillant.templ.temp"},
+				{"name":"temp4","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "FrostProtectDelay",
+			"command": "B5 09",
+			"template": [
+				{"name":"FrostProtectDelay","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "HydraulicScheme",
+			"command": "B5 09",
+			"template": [
+				{"name":"HydraulicScheme","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "SolHwcMaxLoadTemp",
+			"command": "B5 09",
+			"template": [
+				{"name":"2","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ONDiff",
+			"command": "B5 09",
+			"template": [
+				{"name":"ONDiff","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 3F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OffDiff",
+			"command": "B5 09",
+			"template": [
+				{"name":"OffDiff","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 40 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 40 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "LegioProtectionEnabled",
+			"command": "B5 09",
+			"template": [
+				{"name":"LegioProtectionEnabled","type":"template","id":"vaillant.templ.yesno"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 41 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 41 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "FillmodeStartTime",
+			"command": "B5 09",
+			"template": [
+				{"name":"FillmodeStartTime","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 42 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 42 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OperatingmodeStartTime",
+			"command": "B5 09",
+			"template": [
+				{"name":"OperatingmodeStartTime","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 43 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 43 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "NumCollPanels",
+			"command": "B5 09",
+			"template": [
+				{"name":"NumCollPanels","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 44 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 44 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "SolPumpBlockingTime",
+			"command": "B5 09",
+			"template": [
+				{"name":"SolPumpBlockingTime","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 45 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 45 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "LoadingDelayEnabled",
+			"command": "B5 09",
+			"template": [
+				{"name":"LoadingDelayEnabled","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 46 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 46 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Solar flow rate [l/h]",
+			"id": "SolFlowRate",
+			"command": "B5 09",
+			"template": [
+				{"name":"SolFlowRate","type":"word","label":"Solar flow rate [l/h]"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 47 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 47 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "EDControlEnabled",
+			"command": "B5 09",
+			"template": [
+				{"name":"EDControlEnabled","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 48 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 48 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ResetYield",
+			"command": "B5 09",
+			"template": [
+				{"name":"ResetYield","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 49 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 49 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ResetOperatingTimes",
+			"command": "B5 09",
+			"template": [
+				{"name":"ResetOperatingTimes","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 4A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "PumpPower",
+			"command": "B5 09",
+			"template": [
+				{"name":"PumpPower","type":"template","id":"vaillant.templ.power"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 4B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "StartCircuitAeration",
+			"command": "B5 09",
+			"template": [
+				{"name":"StartCircuitAeration","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 4C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "HeatingCurve",
+			"command": "B5 09",
+			"template": [
+				{"name":"HeatingCurve","type":"template","id":"vaillant.templ.curve"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 4D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ControlMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"ControlMode","type":"char"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 4E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OtShutdownLimit",
+			"command": "B5 09",
+			"template": [
+				{"name":"OtShutdownLimit","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 4F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "FlowTempMin",
+			"command": "B5 09",
+			"template": [
+				{"name":"FlowTempMin","type":"template","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 50 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 50 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "DisableAutoSync",
+			"command": "B5 09",
+			"template": [
+				{"name":"DisableAutoSync","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 51 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 51 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ONMINDiff",
+			"command": "B5 09",
+			"template": [
+				{"name":"ONMINDiff","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 52 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 52 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ONMAXDiff",
+			"command": "B5 09",
+			"template": [
+				{"name":"ONMAXDiff","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 53 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 53 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "HydraulicMixer",
+			"command": "B5 09",
+			"template": [
+				{"name":"HydraulicMixer","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 54 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 54 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "eBUSFifoDiffCntMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"eBUSFifoDiffCntMax","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 55 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 55 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "ZweipunktAnalogSlct",
+			"command": "B5 09",
+			"template": [
+				{"name":"ZweipunktAnalogSlct","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 56 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 56 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "Actual roomtemperature setpoint [°C]",
+			"id": "ActualRoomTempDesired",
+			"command": "B5 09",
+			"template": [
+				{"name":"ActualRoomTempDesired","type":"template","label":"Actual roomtemperature setpoint [°C]","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 57 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 57 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "WeekDayProgSwitch",
+			"command": "B5 09",
+			"template": [
+				{"name":"WeekDayProgSwitch","type":"template","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 58 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 58 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "OperatingModeHwc",
+			"command": "B5 09",
+			"template": [
+				{"name":"OperatingModeHwc","type":"template","id":"vaillant.templ.mcmode"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 59 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 59 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "RTCAdjustment",
+			"command": "B5 09",
+			"template": [
+				{"name":"RTCAdjustment","type":"int"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5A 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 5A 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "EEpromMaxInkonsCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"EEpromMaxInkonsCnt","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5B 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 5B 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "POCResetCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"POCResetCnt","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5C 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 5C 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "WDResetCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"WDResetCnt","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5D 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 5D 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "LVResetCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"LVResetCnt","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5E 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 5E 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "CMResetCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"CMResetCnt","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 5F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "COMErrorCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"COMErrorCnt","type":"word"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 60 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 60 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"id": "VariantDKRefreshCnt",
+			"command": "B5 09",
+			"template": [
+				{"name":"VariantDKRefreshCnt","type":"byte"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 61 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 61 00"},
+					{"type":"template-block"}
+				]
+			}
+		}
+	]
 }

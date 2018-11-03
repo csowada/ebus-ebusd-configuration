@@ -1,214 +1,132 @@
 {
-  "id": "RC C",
-  "vendor": "Vaillant",
-  "label": "Vaillant VR 90/3",
-  "description": "Vaillant VR 90/3",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "commands": [
-    {
-      "command": "B5 09",
-      "label": "RaumtemperaturIst",
-      "get": {
-        "master": [
-          {
-            "default": "0D 00 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "room temperature",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "RoomTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "RaumtemperaturIstOffset",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RoomTempOffset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 1F 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "RaumTempOffsetEigenErwaerm",
-      "get": {
-        "master": [
-          {
-            "default": "0D 20 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "RoomTempOffsetSelfWarming"
-    },
-    {
-      "command": "B5 09",
-      "label": "HolidayPeriod",
-      "get": {
-        "master": [
-          {
-            "default": "0D 43 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HolidayPeriod",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 43 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "hfrom1",
-          "type": "template",
-          "id": "vaillant.templ.hfrom"
-        },
-        {
-          "name": "hto1",
-          "type": "template",
-          "id": "vaillant.templ.hto"
-        },
-        {
-          "name": "hfrom2",
-          "type": "template",
-          "id": "vaillant.templ.hfrom"
-        },
-        {
-          "name": "hto2",
-          "type": "template",
-          "id": "vaillant.templ.hto"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "RoomSetTempHoliday",
-      "get": {
-        "master": [
-          {
-            "default": "0D 22 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "RoomTempHoliday",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 22 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "LcdContrastPwmValue",
-      "get": {
-        "master": [
-          {
-            "default": "0D 36 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "LcdContrastPwmValue",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 36 00",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    }
-  ]
+	"id": "RC C",
+	"vendor": "Vaillant",
+	"label": "Vaillant VR 90/3",
+	"description": "Vaillant VR 90/3",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"label": "RaumtemperaturIst",
+			"id": "RoomTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 00 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"room temperature","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "RaumtemperaturIstOffset",
+			"id": "RoomTempOffset",
+			"command": "B5 09",
+			"template": [
+				{"name":"RoomTempOffset","type":"template","label":"RaumtemperaturIstOffset","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1F 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 1F 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "RaumTempOffsetEigenErwaerm",
+			"id": "RoomTempOffsetSelfWarming",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 20 00"}
+				],
+				"slave": [
+					{"name":"RoomTempOffsetSelfWarming","type":"template","label":"RaumTempOffsetEigenErwaerm","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "HolidayPeriod",
+			"id": "HolidayPeriod",
+			"command": "B5 09",
+			"template": [
+				{"name":"hfrom1","type":"template","label":"HolidayPeriod","id":"vaillant.templ.hfrom"},
+				{"name":"hto1","type":"template","label":"HolidayPeriod","id":"vaillant.templ.hto"},
+				{"name":"hfrom2","type":"template","label":"HolidayPeriod","id":"vaillant.templ.hfrom"},
+				{"name":"hto2","type":"template","label":"HolidayPeriod","id":"vaillant.templ.hto"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 43 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 43 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "RoomSetTempHoliday",
+			"id": "RoomTempHoliday",
+			"command": "B5 09",
+			"template": [
+				{"name":"RoomTempHoliday","type":"template","label":"RoomSetTempHoliday","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 22 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 22 00"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "LcdContrastPwmValue",
+			"id": "LcdContrastPwmValue",
+			"command": "B5 09",
+			"template": [
+				{"name":"LcdContrastPwmValue","type":"byte","label":"contrast for the display"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 36 00"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 36 00"},
+					{"type":"template-block"}
+				]
+			}
+		}
+	]
 }

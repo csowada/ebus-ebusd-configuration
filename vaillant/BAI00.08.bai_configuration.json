@@ -1,3818 +1,2406 @@
 {
-  "id": "BAI00",
-  "vendor": "Vaillant",
-  "label": "Vaillant generic file for all BAI types",
-  "description": "Vaillant generic file for all BAI types",
-  "authors": [
-    "Ebusd File Converter"
-  ],
-  "identification": [
-    "42 41 49 30 30"
-  ],
-  "commands": [
-    {
-      "command": "B5 09",
-      "label": "d.00 heating partload",
-      "get": {
-        "master": [
-          {
-            "default": "0D 07 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PartloadHcKW",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 07 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Heating part load",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.power"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.01 central heating overruntime",
-      "get": {
-        "master": [
-          {
-            "default": "0D F7 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "WPPostrunTime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E F7 03",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "water pump overrun time for heating mode",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.minutes0"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.02 Max blocking time CH",
-      "get": {
-        "master": [
-          {
-            "default": "0D 09 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "BlockTimeHcMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 09 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "max. burner anti cycling period at 20°C Flow temperature setpoint",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.minutes0"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.03 Temp DHW",
-      "get": {
-        "master": [
-          {
-            "default": "0D 16 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "hot water flow temperature (combination boiler only)",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "HwcTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.04 Temp storage / she",
-      "get": {
-        "master": [
-          {
-            "default": "0D 17 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "current temperature for warm start sensor (combinations boiler only) Current storage tank sensor (system boiler only)",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "StorageTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.05 flow/return setpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 39 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Flow temperature target value or return target value when return regulation is set",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "FlowTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.06 DHW setpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D EA 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Hot water temperature target value",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "HwcTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.07 Storage setpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 04 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Warm start temperature value (combination boiler plus only), Storage temperature target value (system boiler only)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "StorageTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.08 Room thermostat 230 V",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "External controls heat demand (Clamp 3-4)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "ACRoomthermostat"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.09 ext flowsetpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 6E 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "minimum out of Kl.7 and eBus flow setpoint",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "ExtFlowTempDesiredMin"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.10 Central heating pump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 44 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "internal heating pump",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "WP"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.11 external pump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "External heating pump",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "extWP"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.12 storage load pump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 9E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "tank load pump demand",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.percent0"
-          }
-        ]
-      },
-      "id": "Storageloadpump"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.13 Circulation pump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 7B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Hot water circulation pump (via external module)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "CirPump"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.16 room thermostat 24 V",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "External controls heat demand (Clamp 3\u0027-4\u0027)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "DCRoomthermostat"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.22 DHW demand",
-      "get": {
-        "master": [
-          {
-            "default": "0D 58 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "domestic hot water (tapping or tank contact) demand",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "HwcDemand"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.23 operation mode",
-      "get": {
-        "master": [
-          {
-            "default": "0D F2 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Wintermode active",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "HeatingSwitch"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.25 DHW demand enabled",
-      "get": {
-        "master": [
-          {
-            "default": "0D 47 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "hot water release (tank storage) via eBus Control",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "StoragereleaseClock"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.30 Gasvalve",
-      "get": {
-        "master": [
-          {
-            "default": "0D BB 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Gasvalve"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.33 Target fan speed",
-      "get": {
-        "master": [
-          {
-            "default": "0D 24 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "TargetFanSpeed"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.34 Actual fan speed",
-      "get": {
-        "master": [
-          {
-            "default": "0D 83 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "FanSpeed"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.35 Position TWV",
-      "get": {
-        "master": [
-          {
-            "default": "0D 54 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "PositionValveSet"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.36 DHW waterflow",
-      "get": {
-        "master": [
-          {
-            "default": "0D 55 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "domestic hot water flow sensor",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.uin100"
-          }
-        ]
-      },
-      "id": "HwcWaterflow"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.40 TFT_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 18 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "flow temperature",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "FlowTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.41 Temp heating return",
-      "get": {
-        "master": [
-          {
-            "default": "0D 98 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "return temperature",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempmirrorsensor"
-          }
-        ]
-      },
-      "id": "ReturnTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.44 Dig. ionisation voltage",
-      "get": {
-        "master": [
-          {
-            "default": "0D A4 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "int"
-          }
-        ]
-      },
-      "id": "IonisationVoltageLevel"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.47 Temp outside",
-      "get": {
-        "master": [
-          {
-            "default": "0D 76 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Outside temperature (uncorrected value)",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "OutdoorstempSensor"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.67 Remaining burner block time",
-      "get": {
-        "master": [
-          {
-            "default": "0D 38 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Remaining burner anti cycling time",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.minutes0"
-          }
-        ]
-      },
-      "id": "RemainingBoilerblocktime"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.90 Digital control recognized",
-      "get": {
-        "master": [
-          {
-            "default": "0D 00 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Digital regulator status",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "EBusHeatcontrol"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.91 Status DCF 77",
-      "get": {
-        "master": [
-          {
-            "default": "0D 69 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "DCF status",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.dcfstate"
-          }
-        ]
-      },
-      "id": "dcfState"
-    },
-    {
-      "command": "B5 09",
-      "label": "external flowsetpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 25 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Flow target temperature from external regulator to terminal 7-8-9",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "externalFlowTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "DHWSwitch_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 00 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Demand external tank (via contact)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "externalHwcSwitch"
-    },
-    {
-      "command": "B5 09",
-      "label": "Waterpressure",
-      "get": {
-        "master": [
-          {
-            "default": "0D 02 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "water pressure",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.presssensor"
-          }
-        ]
-      },
-      "id": "WaterPressure"
-    },
-    {
-      "command": "B5 09",
-      "label": "Flame",
-      "get": {
-        "master": [
-          {
-            "default": "0D 05 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Flame"
-    },
-    {
-      "command": "B5 09",
-      "label": "Changes_DSN_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "ChangesDSN"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Gasvalve_uC_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "GasvalveUC"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_VolatileLockout_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 10 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "VolatileLockout"
-    },
-    {
-      "command": "B5 09",
-      "label": "Modulationsetpoint_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "int"
-          }
-        ]
-      },
-      "id": "ModulationTempDesired"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Flame_Sensing_ASIC_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "FlameSensingASIC"
-    },
-    {
-      "command": "B5 09",
-      "label": "HZ_UnderHundred_SwiActi_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 30 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "HcUnderHundredStarts"
-    },
-    {
-      "command": "B5 09",
-      "label": "BW_UnderHundred_SwiActi_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 31 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "HwcUnderHundredStarts"
-    },
-    {
-      "command": "B5 09",
-      "label": "EbusSourceOn_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 34 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Activation signal of the eBus source",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "EbusSourceOn"
-    },
-    {
-      "command": "B5 09",
-      "label": "Fluegasvalve_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "flue gasvalve activation signal",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "Fluegasvalve"
-    },
-    {
-      "command": "B5 09",
-      "label": "External_Faultmessage_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "external fault message",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "ExternalFaultmessage"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Gasvalve_ASICFeedback_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 47 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "GasvalveASICFeedback"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Gasvalve_uCFeedback_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 48 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "GasvalveUCFeedback"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Ignitor_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 49 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Ignitor"
-    },
-    {
-      "command": "B5 09",
-      "label": "DHW_Types_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "HwcTypes"
-    },
-    {
-      "command": "B5 09",
-      "label": "DHW impellor switch",
-      "get": {
-        "master": [
-          {
-            "default": "0D 57 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "domestic hot water (tapping) demand",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "HwcImpellorSwitch"
-    },
-    {
-      "command": "B5 09",
-      "label": "WarmstartDemand",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3A 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "aktivation of warmstart",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "WarmstartDemand"
-    },
-    {
-      "command": "B5 09",
-      "label": "BoilerType_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 5E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "BoilerType"
-    },
-    {
-      "command": "B5 09",
-      "label": "ParamToken_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 60 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "ParamToken"
-    },
-    {
-      "command": "B5 09",
-      "label": "ReturnTemperature_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 6B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "external return sensor",
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.tempsensor"
-          }
-        ]
-      },
-      "id": "expertlevel_ReturnTemp"
-    },
-    {
-      "command": "B5 09",
-      "label": "Floor heating contact",
-      "get": {
-        "master": [
-          {
-            "default": "0D 70 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Floor heating contact",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "FloorHeatingContact"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Temperaturelimiter_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 77 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Templimiter"
-    },
-    {
-      "command": "B5 09",
-      "label": "EbusVoltage_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 7F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "feedback signal of the eBus source",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "EbusVoltage"
-    },
-    {
-      "command": "B5 09",
-      "label": "FluegasvalveOpen_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 89 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "feedback of the flue gas valve",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "FluegasvalveOpen"
-    },
-    {
-      "command": "B5 09",
-      "label": "Testbyte_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 99 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Testbyte"
-    },
-    {
-      "command": "B5 09",
-      "label": "DSN_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 9A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "DSN"
-    },
-    {
-      "command": "B5 09",
-      "label": "TargetFan_Speed_Output_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D 9F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "TargetFanSpeedOutput"
-    },
-    {
-      "command": "B5 09",
-      "label": "PowerValue",
-      "get": {
-        "master": [
-          {
-            "default": "0D AA 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "char"
-          }
-        ]
-      },
-      "id": "PowerValue"
-    },
-    {
-      "command": "B5 09",
-      "label": "Statenumber_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D AB 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Statenumber"
-    },
-    {
-      "command": "B5 09",
-      "label": "WaterpressureBranchControlOff_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D AF 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "water pressure branch controll off",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "WaterpressureBranchControlOff"
-    },
-    {
-      "command": "B5 09",
-      "label": "DSN start",
-      "get": {
-        "master": [
-          {
-            "default": "0D 31 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "DSNStart"
-    },
-    {
-      "command": "B5 09",
-      "label": "ExtTankModulCon_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D BF 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "external tank modul connected (VR65)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "ExtStorageModulCon"
-    },
-    {
-      "command": "B5 09",
-      "label": "Partnumber_Box",
-      "get": {
-        "master": [
-          {
-            "default": "0D C0 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "char"
-          }
-        ]
-      },
-      "id": "PartnumberBox"
-    },
-    {
-      "command": "B5 09",
-      "label": "WP_SecondStage_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D ED 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Second stage of the pump activated",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "WPSecondStage"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_STL_with_NTC",
-      "get": {
-        "master": [
-          {
-            "default": "0D D2 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "TemplimiterWithNTC"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_VolatileLockout_IFC_GV_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D D3 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "VolatileLockoutIFCGV"
-    },
-    {
-      "command": "B5 09",
-      "label": "VortexFlowSensor_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D D5 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "VortexFlowSensor"
-    },
-    {
-      "command": "B5 09",
-      "label": "DisplayMode_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D DA 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "DisplayMode"
-    },
-    {
-      "command": "B5 09",
-      "label": "SD_Gasvalve3_uC_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D DB 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "Gasvalve3UC"
-    },
-    {
-      "command": "B5 09",
-      "label": "InitialisationEEPROM",
-      "get": {
-        "master": [
-          {
-            "default": "0D DC 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Initialisation off all EEPROM values (done in the production)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "InitialisationEEPROM"
-    },
-    {
-      "command": "B5 09",
-      "label": "TimerInputCH_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D DE 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "timer input (block heatdemand)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "TimerInputHc"
-    },
-    {
-      "command": "B5 09",
-      "label": "FanMinSpeedOperation",
-      "get": {
-        "master": [
-          {
-            "default": "0D DF 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "FanMinSpeedOperation"
-    },
-    {
-      "command": "B5 09",
-      "label": "FanMaxSpeedOperation",
-      "get": {
-        "master": [
-          {
-            "default": "0D E0 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "FanMaxSpeedOperation"
-    },
-    {
-      "command": "B5 09",
-      "label": "ExternGasvalve_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D E4 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "external gasvalve activated",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "ExternGasvalve"
-    },
-    {
-      "command": "B5 09",
-      "label": "DCF_TimeDate_DK",
-      "get": {
-        "master": [
-          {
-            "default": "0D E5 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "char"
-          }
-        ]
-      },
-      "id": "DCFTimeDate"
-    },
-    {
-      "command": "B5 09",
-      "label": "FlowSetPotmeter",
-      "get": {
-        "master": [
-          {
-            "default": "0D F0 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "flow setpoint potentiometer",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "FlowSetPotmeter"
-    },
-    {
-      "command": "B5 09",
-      "label": "DHWSetPotmeter",
-      "get": {
-        "master": [
-          {
-            "default": "0D F1 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "DHW setpoint potentiometer",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "HwcSetPotmeter"
-    },
-    {
-      "command": "B5 09",
-      "label": "DHWSwitch",
-      "get": {
-        "master": [
-          {
-            "default": "0D F3 03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "DHW on/off",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.onoff"
-          }
-        ]
-      },
-      "id": "HwcSwitch"
-    },
-    {
-      "command": "B5 09",
-      "label": "ProductionByte",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3E 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "ProductionByte"
-    },
-    {
-      "command": "B5 09",
-      "label": "SerialNumber",
-      "get": {
-        "master": [
-          {
-            "default": "0D 3F 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "char"
-          }
-        ]
-      },
-      "id": "SerialNumber"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.17 Return regulation",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0C 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ReturnRegulation",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0C 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "heating flow/return regulation activation",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.onoff"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.18 CH pump mode",
-      "get": {
-        "master": [
-          {
-            "default": "0D 49 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HcPumpMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 49 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.19 Mode of 2 speed pump",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0B 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SecondPumpMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0B 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.20 Max value tanksetpoint",
-      "get": {
-        "master": [
-          {
-            "default": "0D 43 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HwcTempMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 43 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Adjustment of maximum tank setpoint range (maximum endposition of potmeter)",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.27 Option relais 1",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4B 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "AccessoriesOne",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4B 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.28 Option relais 2",
-      "get": {
-        "master": [
-          {
-            "default": "0D 4C 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "AccessoriesTwo",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 4C 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.50 MinFanSpeedOffset",
-      "get": {
-        "master": [
-          {
-            "default": "0D 24 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FanSpeedOffsetMin",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 24 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "int"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.51 MaxFanSpeedOffset",
-      "get": {
-        "master": [
-          {
-            "default": "0D 25 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FanSpeedOffsetMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 25 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "int"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.58 solar function",
-      "get": {
-        "master": [
-          {
-            "default": "0D 73 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SolPostHeat",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 73 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.60 Number STL cut off",
-      "get": {
-        "master": [
-          {
-            "default": "0D 20 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "DeactivationsTemplimiter"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.61 Number ignition device cut off",
-      "get": {
-        "master": [
-          {
-            "default": "0D 1F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "DeactivationsIFC"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.64 average ignition time",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "averageIgnitiontime"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.65 Max ignition time",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "maxIgnitiontime"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.68 ignition attempts 1",
-      "get": {
-        "master": [
-          {
-            "default": "0D 6E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "unsuccessfull ignitions in the first attempt",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "CounterStartattempts1"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.69 ignition attempts 2",
-      "get": {
-        "master": [
-          {
-            "default": "0D 6F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "unsuccessfull ignitions in the second attempt",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "CounterStartattempts2"
-    },
-    {
-      "command": "B5 09",
-      "label": "d.70 diverter valve position",
-      "get": {
-        "master": [
-          {
-            "default": "0D 2A 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "ValveMode",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 2A 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.71 Max value flow temp",
-      "get": {
-        "master": [
-          {
-            "default": "0D 0E 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FlowsetHcMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0E 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Adjustment of maximum central heating setpoint range (maximum endposition of potmeter)",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.72 postrun time storage",
-      "get": {
-        "master": [
-          {
-            "default": "0D 11 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HwcPostrunTime",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 11 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 09",
-      "label": "d.73 Warmstart offset",
-      "get": {
-        "master": [
-          {
-            "default": "0D 10 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "WarmstartOffset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 10 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Offset for warm start target value (combination boilers only)",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "d.75 Max load time storage",
-      "get": {
-        "master": [
-          {
-            "default": "12 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "StorageLoadTimeMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 12 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Maximum charging time for a storage without own control",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.minutes0"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "d.77 hot water partload",
-      "get": {
-        "master": [
-          {
-            "default": "08 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "PartloadHwcKW",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 08 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "storage part load (storage charging capacity limit)",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.power"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "d.78 Max value flow temp storage",
-      "get": {
-        "master": [
-          {
-            "default": "0F 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "FlowsetHwcMax",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 0F 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "storage charging temperature limit (target flow temperature in storage mode)",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.temp"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "d.80 operating hours CH",
-      "get": {
-        "master": [
-          {
-            "default": "28 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "central heating operation hours",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.hoursum2"
-          }
-        ]
-      },
-      "id": "HcHours"
-    },
-    {
-      "command": "B5 11",
-      "label": "d.81 Operating hours DHW",
-      "get": {
-        "master": [
-          {
-            "default": "22 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "water heating operation hours",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.hoursum2"
-          }
-        ]
-      },
-      "id": "HwcHours"
-    },
-    {
-      "command": "B5 11",
-      "label": "d.82 Burner starts heating",
-      "get": {
-        "master": [
-          {
-            "default": "29 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "HcStarts"
-    },
-    {
-      "command": "B5 11",
-      "label": "d.83 Burner starts DHW",
-      "get": {
-        "master": [
-          {
-            "default": "23 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "HwcStarts"
-    },
-    {
-      "command": "B5 11",
-      "label": "d.84 Hours till next service",
-      "get": {
-        "master": [
-          {
-            "default": "20 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "HoursTillService",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 20 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Maintenance indicator:Number of hours until the next maintenance",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.hoursum2"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "d.93 Device specific number",
-      "get": {
-        "master": [
-          {
-            "default": "30 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "DSNOffset",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 30 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "name": "value",
-          "type": "byte"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "d.96 Set factory settings",
-      "get": {
-        "master": [
-          {
-            "default": "68 04",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "id": "SetFactoryValues",
-      "set": {
-        "command": "B5 09",
-        "master": [
-          {
-            "default": "0E 68 04",
-            "type": "static"
-          },
-          {
-            "type": "template-block"
-          }
-        ]
-      },
-      "template": [
-        {
-          "label": "Factory settings",
-          "name": "value",
-          "type": "template",
-          "id": "vaillant.templ.yesno"
-        }
-      ]
-    },
-    {
-      "command": "B5 11",
-      "label": "TempGradientFailure_DK",
-      "get": {
-        "master": [
-          {
-            "default": "11 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Number of cut offs of the boilers cause of to high gradient (S.54)",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "TempGradientFailure"
-    },
-    {
-      "command": "B5 11",
-      "label": "TempDiffBlock_DK",
-      "get": {
-        "master": [
-          {
-            "default": "12 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Number of modulationblocking of the boilers cause of to high/incorrect difference of flow/return temperatures",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "TempDiffBlock"
-    },
-    {
-      "command": "B5 11",
-      "label": "TempDiffFailure_DK",
-      "get": {
-        "master": [
-          {
-            "default": "13 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Number of cut offs of the boilers cause of to high/incorrect differences of flow/return temperatures",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "TempDiffFailure"
-    },
-    {
-      "command": "B5 11",
-      "label": "Pump operation hours",
-      "get": {
-        "master": [
-          {
-            "default": "14 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "pump operation hours",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.hoursum2"
-          }
-        ]
-      },
-      "id": "PumpHours"
-    },
-    {
-      "command": "B5 11",
-      "label": "CH_PumpCommunt_DK",
-      "get": {
-        "master": [
-          {
-            "default": "15 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "pump switchings",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.cntstarts2"
-          }
-        ]
-      },
-      "id": "HcPumpStarts"
-    },
-    {
-      "command": "B5 11",
-      "label": "TWV_Communt_DK",
-      "get": {
-        "master": [
-          {
-            "default": "1A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "commutations of the three way valve",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.cntstarts2"
-          }
-        ]
-      },
-      "id": "ValveStarts"
-    },
-    {
-      "command": "B5 11",
-      "label": "Fan operation hours",
-      "get": {
-        "master": [
-          {
-            "default": "1B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "fan operation hours",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.hoursum2"
-          }
-        ]
-      },
-      "id": "FanHours"
-    },
-    {
-      "command": "B5 11",
-      "label": "FanCommunt_DK",
-      "get": {
-        "master": [
-          {
-            "default": "1C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "commutations of the fan",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.cntstarts2"
-          }
-        ]
-      },
-      "id": "FanStarts"
-    },
-    {
-      "command": "B5 11",
-      "label": "OverflowCounter_DK",
-      "get": {
-        "master": [
-          {
-            "default": "1E 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Predictive Maintenance counter have got an overflow",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      },
-      "id": "OverflowCounter"
-    },
-    {
-      "command": "B5 11",
-      "label": "MaxTempDiffExtTFT_DK",
-      "get": {
-        "master": [
-          {
-            "default": "27 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Predictive maintenance data",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "TempMaxDiffExtTFT"
-    },
-    {
-      "command": "B5 11",
-      "label": "min_Ignitiontime_DK",
-      "get": {
-        "master": [
-          {
-            "default": "2B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "minIgnitiontime"
-    },
-    {
-      "command": "B5 11",
-      "label": "Temp DHW max",
-      "get": {
-        "master": [
-          {
-            "default": "35 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "maximum temperature measured by the domestic hot water outlet sensor",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "maintenancedata_HwcTempMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "Temp storage max",
-      "get": {
-        "master": [
-          {
-            "default": "36 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "maximum temperature measured by the external tank sensor",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "StorageTempMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "TFT_max_DK",
-      "get": {
-        "master": [
-          {
-            "default": "37 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "maximum temperature measured by the flow sensor",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "FlowTempMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "Fan_PWM_Sum_DK",
-      "get": {
-        "master": [
-          {
-            "default": "3A 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "FanPWMSum"
-    },
-    {
-      "command": "B5 11",
-      "label": "Fan_PWM_Test_DK",
-      "get": {
-        "master": [
-          {
-            "default": "3B 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "FanPWMTest"
-    },
-    {
-      "command": "B5 11",
-      "label": "MaxDeltaFlowReturn_DK",
-      "get": {
-        "master": [
-          {
-            "default": "3D 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Predictive Maintenance data",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "DeltaFlowReturnMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "TankLoadPumpOperationHours_DK",
-      "get": {
-        "master": [
-          {
-            "default": "4C 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Preditive maintenance data",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.hoursum2"
-          }
-        ]
-      },
-      "id": "StorageLoadPumpHours"
-    },
-    {
-      "command": "B5 11",
-      "label": "TankloadPumpCommunt_DK",
-      "get": {
-        "master": [
-          {
-            "default": "4F 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Preditive maintenance data",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.cntstarts2"
-          }
-        ]
-      },
-      "id": "StorageloadPumpStarts"
-    },
-    {
-      "command": "B5 11",
-      "label": "DHW Waterflow_max_DK",
-      "get": {
-        "master": [
-          {
-            "default": "56 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "domestic hot water flow sensor maximum value",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.uin100"
-          }
-        ]
-      },
-      "id": "HwcWaterflowMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "CounterStartAttempts3_DK",
-      "get": {
-        "master": [
-          {
-            "default": "81 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "unsuccessfull ignitions in the third attempt",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "CounterStartAttempts3"
-    },
-    {
-      "command": "B5 11",
-      "label": "CounterStartAttempts4_DK",
-      "get": {
-        "master": [
-          {
-            "default": "82 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "unsuccessfull ignitions in the fourth attempt",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          }
-        ]
-      },
-      "id": "CounterStartAttempts4"
-    },
-    {
-      "command": "B5 11",
-      "label": "TRT_max_DK",
-      "get": {
-        "master": [
-          {
-            "default": "BE 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "max. return temperature",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "ReturnTempMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "PumpDHWFlowSum_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C1 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "PumpHwcFlowSum"
-    },
-    {
-      "command": "B5 11",
-      "label": "PumpDHWFlowNumber_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C2 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "PumpHwcFlowNumber"
-    },
-    {
-      "command": "B5 11",
-      "label": "SHE_MaxFlowTemp_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C3 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "maximum flow temperature DHW",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "SHEMaxFlowTemp"
-    },
-    {
-      "command": "B5 11",
-      "label": "SHE_MaxDeltaFlowDHW_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C4 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "maximum difference between flow and DHW outlet temperature",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "SHEMaxDeltaHwcFlow"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergySumDHW1_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C5 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergySumHwc1"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergyCountDHW1_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C6 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergyCountHwc1"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergySumDHW2_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C7 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergySumHwc2"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergyCountDHW2_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C8 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergyCountHwc2"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergySumDHW3_DK",
-      "get": {
-        "master": [
-          {
-            "default": "C9 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergySumHwc3"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergyCountDHW3_DK",
-      "get": {
-        "master": [
-          {
-            "default": "CA 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergyCountHwc3"
-    },
-    {
-      "command": "B5 11",
-      "label": "MaxWaterFlowCH_DK",
-      "get": {
-        "master": [
-          {
-            "default": "D0 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "word"
-          }
-        ]
-      },
-      "id": "WaterHcFlowMax"
-    },
-    {
-      "command": "B5 11",
-      "label": "WaterpressureVariantSum_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F0 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Predictive Maintenance data",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.pressm2"
-          }
-        ]
-      },
-      "id": "WaterpressureVariantSum"
-    },
-    {
-      "command": "B5 11",
-      "label": "WaterpressureMeasureCounter_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F1 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "WaterpressureMeasureCounter"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrAPSCounter_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F2 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "byte"
-          }
-        ]
-      },
-      "id": "PrAPSCounter"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrAPSSum_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F3 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "label": "Predictive Maintenance data",
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.seconds2"
-          }
-        ]
-      },
-      "id": "PrAPSSum"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrVortexFlowSensorValue_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F4 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "int"
-          }
-        ]
-      },
-      "id": "PrVortexFlowSensorValue"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergySumCH1_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F5 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergySumHc1"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergyCountCH1_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F6 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergyCountHc1"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergySumCH2_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F7 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergySumHc2"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergyCountCH2_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F8 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergyCountHc2"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergySumCH3_DK",
-      "get": {
-        "master": [
-          {
-            "default": "F9 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergySumHc3"
-    },
-    {
-      "command": "B5 11",
-      "label": "PrEnergyCountCH3_DK",
-      "get": {
-        "master": [
-          {
-            "default": "FA 00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "length": 4,
-            "name": "value",
-            "type": "unumber"
-          }
-        ]
-      },
-      "id": "PrEnergyCountHc3"
-    },
-    {
-      "command": "B5 03",
-      "label": "Current errors",
-      "get": {
-        "master": [
-          {
-            "default": "00 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template-block",
-            "id": "vaillant.errors"
-          }
-        ]
-      },
-      "id": "currenterror"
-    },
-    {
-      "command": "B5 03",
-      "label": "Error history",
-      "get": {
-        "master": [
-          {
-            "default": "01 01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "null1",
-            "type": "byte"
-          },
-          {
-            "name": "null2",
-            "type": "template-block",
-            "id": "vaillant.errorhistory"
-          }
-        ]
-      },
-      "id": "errorhistory"
-    },
-    {
-      "command": "B5 03",
-      "label": "Clear error history",
-      "id": "clearerrorhistory",
-      "set": {
-        "master": [
-          {
-            "default": "02 01",
-            "type": "static"
-          },
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.yesno"
-          }
-        ]
-      }
-    },
-    {
-      "command": "B5 04",
-      "label": "Date Time",
-      "get": {
-        "master": [
-          {
-            "default": "00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "dcfstate",
-            "type": "template",
-            "id": "vaillant.templ.dcfstate"
-          },
-          {
-            "name": "btime",
-            "type": "template",
-            "id": "vaillant.templ.btime"
-          },
-          {
-            "name": "bdate",
-            "type": "template",
-            "id": "vaillant.templ.bdate"
-          },
-          {
-            "name": "temp2",
-            "type": "template",
-            "id": "vaillant.templ.temp2"
-          }
-        ]
-      },
-      "id": "DateTime"
-    },
-    {
-      "command": "B5 04",
-      "label": "Outside temperature",
-      "get": {
-        "master": [
-          {
-            "default": "16",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "value",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          }
-        ]
-      },
-      "id": "Status16"
-    },
-    {
-      "command": "B5 10",
-      "label": "Operation Mode",
-      "get": {
-        "master": [
-          {
-            "default": "00",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "type": "template",
-            "id": "vaillant.templ.hcmode"
-          },
-          {
-            "name": "flowtempdesired",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "hwctempdesired",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "SetMode"
-    },
-    {
-      "command": "B5 11",
-      "label": "Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus",
-      "get": {
-        "master": [
-          {
-            "default": "01",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "temp11",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp12",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp2",
-            "type": "template",
-            "id": "vaillant.templ.temp2"
-          },
-          {
-            "name": "temp13",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp14",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "pumpstate",
-            "type": "template",
-            "id": "vaillant.templ.pumpstate"
-          }
-        ]
-      },
-      "id": "Status01"
-    },
-    {
-      "command": "B5 11",
-      "label": "Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp",
-      "get": {
-        "master": [
-          {
-            "default": "02",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "hwcmode",
-            "type": "template",
-            "id": "vaillant.templ.hwcmode"
-          },
-          {
-            "name": "temp01",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          },
-          {
-            "name": "temp11",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          },
-          {
-            "name": "temp02",
-            "type": "template",
-            "id": "vaillant.templ.temp0"
-          },
-          {
-            "name": "temp12",
-            "type": "template",
-            "id": "vaillant.templ.temp1"
-          }
-        ]
-      },
-      "id": "Status02"
-    },
-    {
-      "command": "B5 11",
-      "label": "Status",
-      "get": {
-        "master": [
-          {
-            "default": "03",
-            "type": "static"
-          }
-        ],
-        "slave": [
-          {
-            "name": "temp",
-            "type": "template",
-            "id": "vaillant.templ.temp"
-          },
-          {
-            "name": "press1",
-            "type": "template",
-            "id": "vaillant.templ.press"
-          },
-          {
-            "name": "press2",
-            "type": "template",
-            "id": "vaillant.templ.press"
-          },
-          {
-            "name": "hcmode2",
-            "type": "template",
-            "id": "vaillant.templ.hcmode2"
-          },
-          {
-            "type": "char"
-          }
-        ]
-      },
-      "id": "Status"
-    }
-  ]
+	"id": "BAI00",
+	"vendor": "Vaillant",
+	"label": "Vaillant generic file for all BAI types",
+	"description": "Vaillant generic file for all BAI types",
+	"authors": [
+		"Ebusd File Converter"
+	],
+	"commands": [
+		{
+			"label": "d.00 heating partload",
+			"id": "PartloadHcKW",
+			"command": "B5 09",
+			"template": [
+				{"name":"PartloadHcKW","type":"template","label":"Heating part load","id":"vaillant.templ.power"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 07 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 07 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.01 central heating overruntime",
+			"id": "WPPostrunTime",
+			"command": "B5 09",
+			"template": [
+				{"name":"WPPostrunTime","type":"template","label":"water pump overrun time for heating mode","id":"vaillant.templ.minutes0"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D F7 03"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E F7 03"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.02 Max blocking time CH",
+			"id": "BlockTimeHcMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"BlockTimeHcMax","type":"template","label":"max. burner anti cycling period at 20°C Flow temperature setpoint","id":"vaillant.templ.minutes0"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 09 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 09 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.03 Temp DHW",
+			"id": "HwcTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 16 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"hot water flow temperature (combination boiler only)","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "d.04 Temp storage / she",
+			"id": "StorageTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 17 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"current temperature for warm start sensor (combinations boiler only) Current storage tank sensor (system boiler only)","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "d.05 flow/return setpoint",
+			"id": "FlowTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 39 00"}
+				],
+				"slave": [
+					{"name":"FlowTempDesired","type":"template","label":"Flow temperature target value or return target value when return regulation is set","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "d.06 DHW setpoint",
+			"id": "HwcTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D EA 03"}
+				],
+				"slave": [
+					{"name":"HwcTempDesired","type":"template","label":"Hot water temperature target value","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "d.07 Storage setpoint",
+			"id": "StorageTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 04 00"}
+				],
+				"slave": [
+					{"name":"StorageTempDesired","type":"template","label":"Warm start temperature value (combination boiler plus only), Storage temperature target value (system boiler only)","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "d.08 Room thermostat 230 V",
+			"id": "ACRoomthermostat",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2A 00"}
+				],
+				"slave": [
+					{"name":"ACRoomthermostat","type":"template","label":"External controls heat demand (Clamp 3-4)","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "d.09 ext flowsetpoint",
+			"id": "ExtFlowTempDesiredMin",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 6E 04"}
+				],
+				"slave": [
+					{"name":"ExtFlowTempDesiredMin","type":"template","label":"minimum out of Kl.7 and eBus flow setpoint","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "d.10 Central heating pump",
+			"id": "WP",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 44 00"}
+				],
+				"slave": [
+					{"name":"WP","type":"template","label":"internal heating pump","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "d.11 external pump",
+			"id": "extWP",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3F 00"}
+				],
+				"slave": [
+					{"name":"extWP","type":"template","label":"External heating pump","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "d.12 storage load pump",
+			"id": "Storageloadpump",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 9E 00"}
+				],
+				"slave": [
+					{"name":"Storageloadpump","type":"template","label":"tank load pump demand","id":"vaillant.templ.percent0"}
+				]
+			}
+		},
+		{
+			"label": "d.13 Circulation pump",
+			"id": "CirPump",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 7B 00"}
+				],
+				"slave": [
+					{"name":"CirPump","type":"template","label":"Hot water circulation pump (via external module)","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "d.16 room thermostat 24 V",
+			"id": "DCRoomthermostat",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0E 00"}
+				],
+				"slave": [
+					{"name":"DCRoomthermostat","type":"template","label":"External controls heat demand (Clamp 3'-4')","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "d.22 DHW demand",
+			"id": "HwcDemand",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 58 00"}
+				],
+				"slave": [
+					{"name":"HwcDemand","type":"template","label":"domestic hot water (tapping or tank contact) demand","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "d.23 operation mode",
+			"id": "HeatingSwitch",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D F2 03"}
+				],
+				"slave": [
+					{"name":"HeatingSwitch","type":"template","label":"Wintermode active","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "d.25 DHW demand enabled",
+			"id": "StoragereleaseClock",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 47 04"}
+				],
+				"slave": [
+					{"name":"StoragereleaseClock","type":"template","label":"hot water release (tank storage) via eBus Control","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "d.30 Gasvalve",
+			"id": "Gasvalve",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D BB 00"}
+				],
+				"slave": [
+					{"name":"Gasvalve","type":"byte","label":"Gasvalve activation signal"}
+				]
+			}
+		},
+		{
+			"label": "d.33 Target fan speed",
+			"id": "TargetFanSpeed",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 24 00"}
+				],
+				"slave": [
+					{"name":"TargetFanSpeed","type":"word","label":"Fan speed setpoint"}
+				]
+			}
+		},
+		{
+			"label": "d.34 Actual fan speed",
+			"id": "FanSpeed",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 83 00"}
+				],
+				"slave": [
+					{"name":"FanSpeed","type":"word","label":"fan speed actual value"}
+				]
+			}
+		},
+		{
+			"label": "d.35 Position TWV",
+			"id": "PositionValveSet",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 54 00"}
+				],
+				"slave": [
+					{"name":"PositionValveSet","type":"byte","label":"Position of diverter valve; 100 = DHW, 0 = heating, 40 = middle position"}
+				]
+			}
+		},
+		{
+			"label": "d.36 DHW waterflow",
+			"id": "HwcWaterflow",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 55 00"}
+				],
+				"slave": [
+					{"name":"HwcWaterflow","type":"template","label":"domestic hot water flow sensor","id":"vaillant.templ.uin100"}
+				]
+			}
+		},
+		{
+			"label": "d.40 TFT_DK",
+			"id": "FlowTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 18 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"flow temperature","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "d.41 Temp heating return",
+			"id": "ReturnTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 98 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"return temperature","id":"vaillant.tempmirrorsensor"}
+				]
+			}
+		},
+		{
+			"label": "d.44 Dig. ionisation voltage",
+			"id": "IonisationVoltageLevel",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D A4 00"}
+				],
+				"slave": [
+					{"name":"IonisationVoltageLevel","type":"int","label":"digital ionisation voltage> 80 no flame< 40 good flame"}
+				]
+			}
+		},
+		{
+			"label": "d.47 Temp outside",
+			"id": "OutdoorstempSensor",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 76 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"Outside temperature (uncorrected value)","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "d.67 Remaining burner block time",
+			"id": "RemainingBoilerblocktime",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 38 00"}
+				],
+				"slave": [
+					{"name":"RemainingBoilerblocktime","type":"template","label":"Remaining burner anti cycling time","id":"vaillant.templ.minutes0"}
+				]
+			}
+		},
+		{
+			"label": "d.90 Digital control recognized",
+			"id": "EBusHeatcontrol",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 00 04"}
+				],
+				"slave": [
+					{"name":"EBusHeatcontrol","type":"template","label":"Digital regulator status","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "d.91 Status DCF 77",
+			"id": "dcfState",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 69 00"}
+				],
+				"slave": [
+					{"name":"dcfState","type":"template","label":"DCF status","id":"vaillant.templ.dcfstate"}
+				]
+			}
+		},
+		{
+			"label": "external flowsetpoint",
+			"id": "externalFlowTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 25 00"}
+				],
+				"slave": [
+					{"name":"externalFlowTempDesired","type":"template","label":"Flow target temperature from external regulator to terminal 7-8-9","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "DHWSwitch_DK",
+			"id": "externalHwcSwitch",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 00 00"}
+				],
+				"slave": [
+					{"name":"externalHwcSwitch","type":"template","label":"Demand external tank (via contact)","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Waterpressure",
+			"id": "WaterPressure",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 02 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"water pressure","id":"vaillant.presssensor"}
+				]
+			}
+		},
+		{
+			"label": "Flame",
+			"id": "Flame",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 05 00"}
+				],
+				"slave": [
+					{"name":"Flame","type":"byte","label":"flame"}
+				]
+			}
+		},
+		{
+			"label": "Changes_DSN_DK",
+			"id": "ChangesDSN",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0C 00"}
+				],
+				"slave": [
+					{"name":"ChangesDSN","type":"byte","label":"Numbers adjusting (storing) the DSN"}
+				]
+			}
+		},
+		{
+			"label": "SD_Gasvalve_uC_DK",
+			"id": "GasvalveUC",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0D 00"}
+				],
+				"slave": [
+					{"name":"GasvalveUC","type":"byte","label":"Activation signal of the gasvalve (activated via micrcontroller)"}
+				]
+			}
+		},
+		{
+			"label": "SD_VolatileLockout_DK",
+			"id": "VolatileLockout",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 10 00"}
+				],
+				"slave": [
+					{"name":"VolatileLockout","type":"byte","label":"TRUE: STB failures is volatileFALSE: STB failure is not volataile"}
+				]
+			}
+		},
+		{
+			"label": "Modulationsetpoint_DK",
+			"id": "ModulationTempDesired",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2E 00"}
+				],
+				"slave": [
+					{"name":"ModulationTempDesired","type":"int","label":"Modulation set point"}
+				]
+			}
+		},
+		{
+			"label": "SD_Flame_Sensing_ASIC_DK",
+			"id": "FlameSensingASIC",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2F 00"}
+				],
+				"slave": [
+					{"name":"FlameSensingASIC","type":"word","label":"ioni/adc value from the flame control circuit"}
+				]
+			}
+		},
+		{
+			"label": "HZ_UnderHundred_SwiActi_DK",
+			"id": "HcUnderHundredStarts",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 30 00"}
+				],
+				"slave": [
+					{"name":"HcUnderHundredStarts","type":"byte","label":"Heat switch cycles under hundred"}
+				]
+			}
+		},
+		{
+			"label": "BW_UnderHundred_SwiActi_DK",
+			"id": "HwcUnderHundredStarts",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 31 00"}
+				],
+				"slave": [
+					{"name":"HwcUnderHundredStarts","type":"byte","label":"DHW switch cycles under hundred"}
+				]
+			}
+		},
+		{
+			"label": "EbusSourceOn_DK",
+			"id": "EbusSourceOn",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 34 00"}
+				],
+				"slave": [
+					{"name":"EbusSourceOn","type":"template","label":"Activation signal of the eBus source","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Fluegasvalve_DK",
+			"id": "Fluegasvalve",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3C 00"}
+				],
+				"slave": [
+					{"name":"Fluegasvalve","type":"template","label":"flue gasvalve activation signal","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "External_Faultmessage_DK",
+			"id": "ExternalFaultmessage",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3E 00"}
+				],
+				"slave": [
+					{"name":"ExternalFaultmessage","type":"template","label":"external fault message","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "SD_Gasvalve_ASICFeedback_DK",
+			"id": "GasvalveASICFeedback",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 47 00"}
+				],
+				"slave": [
+					{"name":"GasvalveASICFeedback","type":"byte","label":"feedback gasvalve (from ASIC)"}
+				]
+			}
+		},
+		{
+			"label": "SD_Gasvalve_uCFeedback_DK",
+			"id": "GasvalveUCFeedback",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 48 00"}
+				],
+				"slave": [
+					{"name":"GasvalveUCFeedback","type":"byte","label":"feedback gasvalve (from Microcontroller)"}
+				]
+			}
+		},
+		{
+			"label": "SD_Ignitor_DK",
+			"id": "Ignitor",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 49 00"}
+				],
+				"slave": [
+					{"name":"Ignitor","type":"byte","label":"igniton activated"}
+				]
+			}
+		},
+		{
+			"label": "DHW_Types_DK",
+			"id": "HwcTypes",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4B 00"}
+				],
+				"slave": [
+					{"name":"HwcTypes","type":"byte","label":"DHW type of the appliance"}
+				]
+			}
+		},
+		{
+			"label": "DHW impellor switch",
+			"id": "HwcImpellorSwitch",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 57 00"}
+				],
+				"slave": [
+					{"name":"HwcImpellorSwitch","type":"template","label":"domestic hot water (tapping) demand","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "WarmstartDemand",
+			"id": "WarmstartDemand",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3A 04"}
+				],
+				"slave": [
+					{"name":"WarmstartDemand","type":"template","label":"aktivation of warmstart","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "BoilerType_DK",
+			"id": "BoilerType",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 5E 00"}
+				],
+				"slave": [
+					{"name":"BoilerType","type":"byte","label":"Boiler typ of the bmu"}
+				]
+			}
+		},
+		{
+			"label": "ParamToken_DK",
+			"id": "ParamToken",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 60 00"}
+				],
+				"slave": [
+					{"name":"ParamToken","type":"byte","label":"token for parameter managment"}
+				]
+			}
+		},
+		{
+			"label": "ReturnTemperature_DK",
+			"id": "expertlevel_ReturnTemp",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 6B 00"}
+				],
+				"slave": [
+					{"type":"template-block","label":"external return sensor","id":"vaillant.tempsensor"}
+				]
+			}
+		},
+		{
+			"label": "Floor heating contact",
+			"id": "FloorHeatingContact",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 70 00"}
+				],
+				"slave": [
+					{"name":"FloorHeatingContact","type":"template","label":"Floor heating contact","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "SD_Temperaturelimiter_DK",
+			"id": "Templimiter",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 77 00"}
+				],
+				"slave": [
+					{"name":"Templimiter","type":"byte","label":"feedback signal of the temperature limiter"}
+				]
+			}
+		},
+		{
+			"label": "EbusVoltage_DK",
+			"id": "EbusVoltage",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 7F 00"}
+				],
+				"slave": [
+					{"name":"EbusVoltage","type":"template","label":"feedback signal of the eBus source","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "FluegasvalveOpen_DK",
+			"id": "FluegasvalveOpen",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 89 00"}
+				],
+				"slave": [
+					{"name":"FluegasvalveOpen","type":"template","label":"feedback of the flue gas valve","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "Testbyte_DK",
+			"id": "Testbyte",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 99 00"}
+				],
+				"slave": [
+					{"name":"Testbyte","type":"byte","label":"Testbyte (relevant for the Tester)"}
+				]
+			}
+		},
+		{
+			"label": "DSN_DK",
+			"id": "DSN",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 9A 00"}
+				],
+				"slave": [
+					{"name":"DSN","type":"word","label":"DSN: Device Specific number"}
+				]
+			}
+		},
+		{
+			"label": "TargetFan_Speed_Output_DK",
+			"id": "TargetFanSpeedOutput",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 9F 00"}
+				],
+				"slave": [
+					{"name":"TargetFanSpeedOutput","type":"word","label":"output fan speed"}
+				]
+			}
+		},
+		{
+			"label": "PowerValue",
+			"id": "PowerValue",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D AA 00"}
+				],
+				"slave": [
+					{"name":"6","type":"char","label":"Power Values of the Boiler (min Power, max Power)"}
+				]
+			}
+		},
+		{
+			"label": "Statenumber_DK",
+			"id": "Statenumber",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D AB 00"}
+				],
+				"slave": [
+					{"name":"Statenumber","type":"byte","label":"status number"}
+				]
+			}
+		},
+		{
+			"label": "WaterpressureBranchControlOff_DK",
+			"id": "WaterpressureBranchControlOff",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D AF 00"}
+				],
+				"slave": [
+					{"name":"WaterpressureBranchControlOff","type":"template","label":"water pressure branch controll off","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "DSN start",
+			"id": "DSNStart",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 31 04"}
+				],
+				"slave": [
+					{"name":"DSNStart","type":"word","label":"DSN Start adress"}
+				]
+			}
+		},
+		{
+			"label": "ExtTankModulCon_DK",
+			"id": "ExtStorageModulCon",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D BF 00"}
+				],
+				"slave": [
+					{"name":"ExtStorageModulCon","type":"template","label":"external tank modul connected (VR65)","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "Partnumber_Box",
+			"id": "PartnumberBox",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D C0 00"}
+				],
+				"slave": [
+					{"name":"5","type":"char","label":"part number of the eBox"}
+				]
+			}
+		},
+		{
+			"label": "WP_SecondStage_DK",
+			"id": "WPSecondStage",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D ED 00"}
+				],
+				"slave": [
+					{"name":"WPSecondStage","type":"template","label":"Second stage of the pump activated","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "SD_STL_with_NTC",
+			"id": "TemplimiterWithNTC",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D D2 00"}
+				],
+				"slave": [
+					{"name":"TemplimiterWithNTC","type":"byte","label":"Safety temperature limit concept:1 = safety temp. Limit check with NTC0 = safety temp. Limit check with contact"}
+				]
+			}
+		},
+		{
+			"label": "SD_VolatileLockout_IFC_GV_DK",
+			"id": "VolatileLockoutIFCGV",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D D3 00"}
+				],
+				"slave": [
+					{"name":"VolatileLockoutIFCGV","type":"byte","label":"all IFC faults are volataile"}
+				]
+			}
+		},
+		{
+			"label": "VortexFlowSensor_DK",
+			"id": "VortexFlowSensor",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D D5 00"}
+				],
+				"slave": [
+					{"name":"VortexFlowSensor","type":"word","label":"Predictive Maintenance data, CH water flow"}
+				]
+			}
+		},
+		{
+			"label": "DisplayMode_DK",
+			"id": "DisplayMode",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D DA 00"}
+				],
+				"slave": [
+					{"name":"DisplayMode","type":"byte","label":"Display mode of the aplliance"}
+				]
+			}
+		},
+		{
+			"label": "SD_Gasvalve3_uC_DK",
+			"id": "Gasvalve3UC",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D DB 00"}
+				],
+				"slave": [
+					{"name":"Gasvalve3UC","type":"byte","label":"Gasvalve activation signal (from Microcontroller)"}
+				]
+			}
+		},
+		{
+			"label": "InitialisationEEPROM",
+			"id": "InitialisationEEPROM",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D DC 00"}
+				],
+				"slave": [
+					{"name":"InitialisationEEPROM","type":"template","label":"Initialisation off all EEPROM values (done in the production)","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "TimerInputCH_DK",
+			"id": "TimerInputHc",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D DE 00"}
+				],
+				"slave": [
+					{"name":"TimerInputHc","type":"template","label":"timer input (block heatdemand)","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "FanMinSpeedOperation",
+			"id": "FanMinSpeedOperation",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D DF 00"}
+				],
+				"slave": [
+					{"name":"FanMinSpeedOperation","type":"word","label":"Minimum Fan speed of the appliance"}
+				]
+			}
+		},
+		{
+			"label": "FanMaxSpeedOperation",
+			"id": "FanMaxSpeedOperation",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D E0 00"}
+				],
+				"slave": [
+					{"name":"FanMaxSpeedOperation","type":"word","label":"Maximum Fan speed of the appliance"}
+				]
+			}
+		},
+		{
+			"label": "ExternGasvalve_DK",
+			"id": "ExternGasvalve",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D E4 00"}
+				],
+				"slave": [
+					{"name":"ExternGasvalve","type":"template","label":"external gasvalve activated","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "DCF_TimeDate_DK",
+			"id": "DCFTimeDate",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D E5 00"}
+				],
+				"slave": [
+					{"name":"8","type":"char","label":"DCF Time / date stamp struct { uchar sec; uchar min; uchar std; uchar tag; uchar mon; uchar wtg; uchar jah; } Tdcf77_time;"}
+				]
+			}
+		},
+		{
+			"label": "FlowSetPotmeter",
+			"id": "FlowSetPotmeter",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D F0 03"}
+				],
+				"slave": [
+					{"name":"FlowSetPotmeter","type":"template","label":"flow setpoint potentiometer","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "DHWSetPotmeter",
+			"id": "HwcSetPotmeter",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D F1 03"}
+				],
+				"slave": [
+					{"name":"HwcSetPotmeter","type":"template","label":"DHW setpoint potentiometer","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "DHWSwitch",
+			"id": "HwcSwitch",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D F3 03"}
+				],
+				"slave": [
+					{"name":"HwcSwitch","type":"template","label":"DHW on/off","id":"vaillant.templ.onoff"}
+				]
+			}
+		},
+		{
+			"label": "ProductionByte",
+			"id": "ProductionByte",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3E 04"}
+				],
+				"slave": [
+					{"name":"ProductionByte","type":"byte","label":"ProductionByte"}
+				]
+			}
+		},
+		{
+			"label": "SerialNumber",
+			"id": "SerialNumber",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 3F 04"}
+				],
+				"slave": [
+					{"name":"8","type":"char","label":"serial number of AI"}
+				]
+			}
+		},
+		{
+			"label": "d.17 Return regulation",
+			"id": "ReturnRegulation",
+			"command": "B5 09",
+			"template": [
+				{"name":"ReturnRegulation","type":"template","label":"heating flow/return regulation activation","id":"vaillant.templ.onoff"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0C 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"0C 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.18 CH pump mode",
+			"id": "HcPumpMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"HcPumpMode","type":"byte","label":"Pump mode"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 49 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"49 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.19 Mode of 2 speed pump",
+			"id": "SecondPumpMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"SecondPumpMode","type":"byte","label":"Operating mode of the two-stage heating pump0: burner mode = 2, pre/post-run = 1; 1: CH + post-run = 1, DHW = 2, 2: as 1 but rotation speed in CH is dependent of heating part load, (defaultsetting)3: always stage 2"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0B 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"0B 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.20 Max value tanksetpoint",
+			"id": "HwcTempMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"HwcTempMax","type":"template","label":"Adjustment of maximum tank setpoint range (maximum endposition of potmeter)","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 43 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"43 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.27 Option relais 1",
+			"id": "AccessoriesOne",
+			"command": "B5 09",
+			"template": [
+				{"name":"AccessoriesOne","type":"byte","label":"Accesory relay 1 function"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4B 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"4B 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.28 Option relais 2",
+			"id": "AccessoriesTwo",
+			"command": "B5 09",
+			"template": [
+				{"name":"AccessoriesTwo","type":"byte","label":"Accesory relay 2 function"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 4C 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"4C 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.50 MinFanSpeedOffset",
+			"id": "FanSpeedOffsetMin",
+			"command": "B5 09",
+			"template": [
+				{"name":"FanSpeedOffsetMin","type":"int","label":"Offset for minimum fan speed"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 24 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"24 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.51 MaxFanSpeedOffset",
+			"id": "FanSpeedOffsetMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"FanSpeedOffsetMax","type":"int","label":"Offset for maximum fan speed"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 25 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"25 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.58 solar function",
+			"id": "SolPostHeat",
+			"command": "B5 09",
+			"template": [
+				{"name":"SolPostHeat","type":"byte","label":"special DHW functions0: solar function deactivated (default)1: solar function activated and DHW setpoint minimum 60°C2: solar function activated and DHW setpoint like combi standard (min 35°)3: DHW setpoint minimum 60°C (poti)"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 73 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"73 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.60 Number STL cut off",
+			"id": "DeactivationsTemplimiter",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 20 00"}
+				],
+				"slave": [
+					{"name":"DeactivationsTemplimiter","type":"byte","label":"Number of safety temperature limiter cut offs"}
+				]
+			}
+		},
+		{
+			"label": "d.61 Number ignition device cut off",
+			"id": "DeactivationsIFC",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 1F 00"}
+				],
+				"slave": [
+					{"name":"DeactivationsIFC","type":"byte","label":"number of lock outs (unsuccessfull ignitons in the last attempt, flame failure)"}
+				]
+			}
+		},
+		{
+			"label": "d.64 average ignition time",
+			"id": "averageIgnitiontime",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2D 00"}
+				],
+				"slave": [
+					{"name":"averageIgnitiontime","type":"byte","label":"average ignition time"}
+				]
+			}
+		},
+		{
+			"label": "d.65 Max ignition time",
+			"id": "maxIgnitiontime",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2C 00"}
+				],
+				"slave": [
+					{"name":"maxIgnitiontime","type":"byte","label":"maximum ignition time"}
+				]
+			}
+		},
+		{
+			"label": "d.68 ignition attempts 1",
+			"id": "CounterStartattempts1",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 6E 00"}
+				],
+				"slave": [
+					{"name":"CounterStartattempts1","type":"template","label":"unsuccessfull ignitions in the first attempt","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "d.69 ignition attempts 2",
+			"id": "CounterStartattempts2",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 6F 00"}
+				],
+				"slave": [
+					{"name":"CounterStartattempts2","type":"template","label":"unsuccessfull ignitions in the second attempt","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "d.70 diverter valve position",
+			"id": "ValveMode",
+			"command": "B5 09",
+			"template": [
+				{"name":"ValveMode","type":"byte","label":"Set diverter valve position 0=normal mode, 1=middle position (GB), 2=permanent CH position"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 2A 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"2A 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.71 Max value flow temp",
+			"id": "FlowsetHcMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"FlowsetHcMax","type":"template","label":"Adjustment of maximum central heating setpoint range (maximum endposition of potmeter)","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0E 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"0E 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.72 postrun time storage",
+			"id": "HwcPostrunTime",
+			"command": "B5 09",
+			"template": [
+				{"name":"HwcPostrunTime","type":"byte","label":"Pump overrun time after charging a storage (charging through C1-C2, external/internal tank with tank sensor)"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 11 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"11 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.73 Warmstart offset",
+			"id": "WarmstartOffset",
+			"command": "B5 09",
+			"template": [
+				{"name":"WarmstartOffset","type":"template","label":"Offset for warm start target value (combination boilers only)","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 10 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"10 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.75 Max load time storage",
+			"id": "StorageLoadTimeMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"StorageLoadTimeMax","type":"template","label":"Maximum charging time for a storage without own control","id":"vaillant.templ.minutes0"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 12 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"12 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.77 hot water partload",
+			"id": "PartloadHwcKW",
+			"command": "B5 09",
+			"template": [
+				{"name":"PartloadHwcKW","type":"template","label":"storage part load (storage charging capacity limit)","id":"vaillant.templ.power"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 08 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"08 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.78 Max value flow temp storage",
+			"id": "FlowsetHwcMax",
+			"command": "B5 09",
+			"template": [
+				{"name":"FlowsetHwcMax","type":"template","label":"storage charging temperature limit (target flow temperature in storage mode)","id":"vaillant.templ.temp"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 0F 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"0F 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.80 operating hours CH",
+			"id": "HcHours",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 28 00"}
+				],
+				"slave": [
+					{"name":"HcHours","type":"template","label":"central heating operation hours","id":"vaillant.templ.hoursum2"}
+				]
+			}
+		},
+		{
+			"label": "d.81 Operating hours DHW",
+			"id": "HwcHours",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 22 00"}
+				],
+				"slave": [
+					{"name":"HwcHours","type":"template","label":"water heating operation hours","id":"vaillant.templ.hoursum2"}
+				]
+			}
+		},
+		{
+			"label": "d.82 Burner starts heating",
+			"id": "HcStarts",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 29 00"}
+				],
+				"slave": [
+					{"name":"HcStarts","type":"word","label":"cycles in heating mode"}
+				]
+			}
+		},
+		{
+			"label": "d.83 Burner starts DHW",
+			"id": "HwcStarts",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 23 00"}
+				],
+				"slave": [
+					{"name":"HwcStarts","type":"word","label":"Cycles in hot water operation"}
+				]
+			}
+		},
+		{
+			"label": "d.84 Hours till next service",
+			"id": "HoursTillService",
+			"command": "B5 09",
+			"template": [
+				{"name":"HoursTillService","type":"template","label":"Maintenance indicator:Number of hours until the next maintenance","id":"vaillant.templ.hoursum2"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 20 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"20 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.93 Device specific number",
+			"id": "DSNOffset",
+			"command": "B5 09",
+			"template": [
+				{"name":"DSNOffset","type":"byte","label":"DSN aplliance variant setting"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 30 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 09",
+				"master": [
+					{"type":"static","_default":"0E 30 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "d.96 Set factory settings",
+			"id": "SetFactoryValues",
+			"command": "B5 09",
+			"template": [
+				{"name":"SetFactoryValues","type":"template","label":"Factory settings","id":"vaillant.templ.yesno"}
+			],
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 68 04"}
+				],
+				"slave": [
+					{"type":"template-block"}
+				]
+			},
+			"set": {
+				"command": "B5 06",
+				"master": [
+					{"type":"static","_default":"68 04"},
+					{"type":"template-block"}
+				]
+			}
+		},
+		{
+			"label": "TempGradientFailure_DK",
+			"id": "TempGradientFailure",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 11 00"}
+				],
+				"slave": [
+					{"name":"TempGradientFailure","type":"template","label":"Number of cut offs of the boilers cause of to high gradient (S.54)","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "TempDiffBlock_DK",
+			"id": "TempDiffBlock",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 12 00"}
+				],
+				"slave": [
+					{"name":"TempDiffBlock","type":"template","label":"Number of modulationblocking of the boilers cause of to high/incorrect difference of flow/return temperatures","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "TempDiffFailure_DK",
+			"id": "TempDiffFailure",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 13 00"}
+				],
+				"slave": [
+					{"name":"TempDiffFailure","type":"template","label":"Number of cut offs of the boilers cause of to high/incorrect differences of flow/return temperatures","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "Pump operation hours",
+			"id": "PumpHours",
+			"command": "B5 09",
+			"get": {
+				"master": [
+					{"type":"static","_default":"0D 14 00"}
+				],
+				"slave": [
+					{"name":"PumpHours","type":"template","label":"pump operation hours","id":"vaillant.templ.hoursum2"}
+				]
+			}
+		},
+		{
+			"label": "CH_PumpCommunt_DK",
+			"id": "HcPumpStarts",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 15 00"}
+				],
+				"slave": [
+					{"name":"HcPumpStarts","type":"template","label":"pump switchings","id":"vaillant.templ.cntstarts2"}
+				]
+			}
+		},
+		{
+			"label": "TWV_Communt_DK",
+			"id": "ValveStarts",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 1A 00"}
+				],
+				"slave": [
+					{"name":"ValveStarts","type":"template","label":"commutations of the three way valve","id":"vaillant.templ.cntstarts2"}
+				]
+			}
+		},
+		{
+			"label": "Fan operation hours",
+			"id": "FanHours",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 1B 00"}
+				],
+				"slave": [
+					{"name":"FanHours","type":"template","label":"fan operation hours","id":"vaillant.templ.hoursum2"}
+				]
+			}
+		},
+		{
+			"label": "FanCommunt_DK",
+			"id": "FanStarts",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 1C 00"}
+				],
+				"slave": [
+					{"name":"FanStarts","type":"template","label":"commutations of the fan","id":"vaillant.templ.cntstarts2"}
+				]
+			}
+		},
+		{
+			"label": "OverflowCounter_DK",
+			"id": "OverflowCounter",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 1E 00"}
+				],
+				"slave": [
+					{"name":"OverflowCounter","type":"template","label":"Predictive Maintenance counter have got an overflow","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "MaxTempDiffExtTFT_DK",
+			"id": "TempMaxDiffExtTFT",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 27 00"}
+				],
+				"slave": [
+					{"name":"TempMaxDiffExtTFT","type":"template","label":"Predictive maintenance data","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "min_Ignitiontime_DK",
+			"id": "minIgnitiontime",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 2B 00"}
+				],
+				"slave": [
+					{"name":"minIgnitiontime","type":"byte","label":"minimum ignition time"}
+				]
+			}
+		},
+		{
+			"label": "Temp DHW max",
+			"id": "maintenancedata_HwcTempMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 35 00"}
+				],
+				"slave": [
+					{"name":"maintenancedata_HwcTempMax","type":"template","label":"maximum temperature measured by the domestic hot water outlet sensor","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "Temp storage max",
+			"id": "StorageTempMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 36 00"}
+				],
+				"slave": [
+					{"name":"StorageTempMax","type":"template","label":"maximum temperature measured by the external tank sensor","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "TFT_max_DK",
+			"id": "FlowTempMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 37 00"}
+				],
+				"slave": [
+					{"name":"FlowTempMax","type":"template","label":"maximum temperature measured by the flow sensor","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "Fan_PWM_Sum_DK",
+			"id": "FanPWMSum",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 3A 00"}
+				],
+				"slave": [
+					{"name":"FanPWMSum","type":"word","label":"Predictive Maintenance data for the fan damage recognition"}
+				]
+			}
+		},
+		{
+			"label": "Fan_PWM_Test_DK",
+			"id": "FanPWMTest",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 3B 00"}
+				],
+				"slave": [
+					{"name":"FanPWMTest","type":"byte","label":"Predictive Maintenance data for the fan damage recognition"}
+				]
+			}
+		},
+		{
+			"label": "MaxDeltaFlowReturn_DK",
+			"id": "DeltaFlowReturnMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 3D 00"}
+				],
+				"slave": [
+					{"name":"DeltaFlowReturnMax","type":"template","label":"Predictive Maintenance data","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "TankLoadPumpOperationHours_DK",
+			"id": "StorageLoadPumpHours",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 4C 00"}
+				],
+				"slave": [
+					{"name":"StorageLoadPumpHours","type":"template","label":"Preditive maintenance data","id":"vaillant.templ.hoursum2"}
+				]
+			}
+		},
+		{
+			"label": "TankloadPumpCommunt_DK",
+			"id": "StorageloadPumpStarts",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 4F 00"}
+				],
+				"slave": [
+					{"name":"StorageloadPumpStarts","type":"template","label":"Preditive maintenance data","id":"vaillant.templ.cntstarts2"}
+				]
+			}
+		},
+		{
+			"label": "DHW Waterflow_max_DK",
+			"id": "HwcWaterflowMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 56 00"}
+				],
+				"slave": [
+					{"name":"HwcWaterflowMax","type":"template","label":"domestic hot water flow sensor maximum value","id":"vaillant.templ.uin100"}
+				]
+			}
+		},
+		{
+			"label": "CounterStartAttempts3_DK",
+			"id": "CounterStartAttempts3",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 81 00"}
+				],
+				"slave": [
+					{"name":"CounterStartAttempts3","type":"template","label":"unsuccessfull ignitions in the third attempt","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "CounterStartAttempts4_DK",
+			"id": "CounterStartAttempts4",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 82 00"}
+				],
+				"slave": [
+					{"name":"CounterStartAttempts4","type":"template","label":"unsuccessfull ignitions in the fourth attempt","id":"vaillant.templ.temp0"}
+				]
+			}
+		},
+		{
+			"label": "TRT_max_DK",
+			"id": "ReturnTempMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 BE 00"}
+				],
+				"slave": [
+					{"name":"ReturnTempMax","type":"template","label":"max. return temperature","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "PumpDHWFlowSum_DK",
+			"id": "PumpHwcFlowSum",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C1 00"}
+				],
+				"slave": [
+					{"name":"PumpHwcFlowSum","type":"word","label":"summed up DHW flow rate"}
+				]
+			}
+		},
+		{
+			"label": "PumpDHWFlowNumber_DK",
+			"id": "PumpHwcFlowNumber",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C2 00"}
+				],
+				"slave": [
+					{"name":"PumpHwcFlowNumber","type":"byte","label":"number of times DHW flow rate was detected"}
+				]
+			}
+		},
+		{
+			"label": "SHE_MaxFlowTemp_DK",
+			"id": "SHEMaxFlowTemp",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C3 00"}
+				],
+				"slave": [
+					{"name":"SHEMaxFlowTemp","type":"template","label":"maximum flow temperature DHW","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "SHE_MaxDeltaFlowDHW_DK",
+			"id": "SHEMaxDeltaHwcFlow",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C4 00"}
+				],
+				"slave": [
+					{"name":"SHEMaxDeltaHwcFlow","type":"template","label":"maximum difference between flow and DHW outlet temperature","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "PrEnergySumDHW1_DK",
+			"id": "PrEnergySumHwc1",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C5 00"}
+				],
+				"slave": [
+					{"name":"PrEnergySumHwc1","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergyCountDHW1_DK",
+			"id": "PrEnergyCountHwc1",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C6 00"}
+				],
+				"slave": [
+					{"name":"PrEnergyCountHwc1","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergySumDHW2_DK",
+			"id": "PrEnergySumHwc2",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C7 00"}
+				],
+				"slave": [
+					{"name":"PrEnergySumHwc2","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergyCountDHW2_DK",
+			"id": "PrEnergyCountHwc2",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C8 00"}
+				],
+				"slave": [
+					{"name":"PrEnergyCountHwc2","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergySumDHW3_DK",
+			"id": "PrEnergySumHwc3",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 C9 00"}
+				],
+				"slave": [
+					{"name":"PrEnergySumHwc3","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergyCountDHW3_DK",
+			"id": "PrEnergyCountHwc3",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 CA 00"}
+				],
+				"slave": [
+					{"name":"PrEnergyCountHwc3","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "MaxWaterFlowCH_DK",
+			"id": "WaterHcFlowMax",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 D0 00"}
+				],
+				"slave": [
+					{"name":"WaterHcFlowMax","type":"word","label":"Predictive Maintenance data"}
+				]
+			}
+		},
+		{
+			"label": "WaterpressureVariantSum_DK",
+			"id": "WaterpressureVariantSum",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F0 00"}
+				],
+				"slave": [
+					{"name":"WaterpressureVariantSum","type":"template","label":"Predictive Maintenance data","id":"vaillant.templ.pressm2"}
+				]
+			}
+		},
+		{
+			"label": "WaterpressureMeasureCounter_DK",
+			"id": "WaterpressureMeasureCounter",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F1 00"}
+				],
+				"slave": [
+					{"name":"WaterpressureMeasureCounter","type":"byte","label":"Predictive Maintenance data"}
+				]
+			}
+		},
+		{
+			"label": "PrAPSCounter_DK",
+			"id": "PrAPSCounter",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F2 00"}
+				],
+				"slave": [
+					{"name":"PrAPSCounter","type":"byte","label":"Predictive Maintenance data"}
+				]
+			}
+		},
+		{
+			"label": "PrAPSSum_DK",
+			"id": "PrAPSSum",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F3 00"}
+				],
+				"slave": [
+					{"name":"PrAPSSum","type":"template","label":"Predictive Maintenance data","id":"vaillant.templ.seconds2"}
+				]
+			}
+		},
+		{
+			"label": "PrVortexFlowSensorValue_DK",
+			"id": "PrVortexFlowSensorValue",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F4 00"}
+				],
+				"slave": [
+					{"name":"PrVortexFlowSensorValue","type":"int","label":"Predictive Maintenance data"}
+				]
+			}
+		},
+		{
+			"label": "PrEnergySumCH1_DK",
+			"id": "PrEnergySumHc1",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F5 00"}
+				],
+				"slave": [
+					{"name":"PrEnergySumHc1","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergyCountCH1_DK",
+			"id": "PrEnergyCountHc1",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F6 00"}
+				],
+				"slave": [
+					{"name":"PrEnergyCountHc1","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergySumCH2_DK",
+			"id": "PrEnergySumHc2",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F7 00"}
+				],
+				"slave": [
+					{"name":"PrEnergySumHc2","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergyCountCH2_DK",
+			"id": "PrEnergyCountHc2",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F8 00"}
+				],
+				"slave": [
+					{"name":"PrEnergyCountHc2","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergySumCH3_DK",
+			"id": "PrEnergySumHc3",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 F9 00"}
+				],
+				"slave": [
+					{"name":"PrEnergySumHc3","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "PrEnergyCountCH3_DK",
+			"id": "PrEnergyCountHc3",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 FA 00"}
+				],
+				"slave": [
+					{"name":"PrEnergyCountHc3","type":"unumber","label":"Predictive Maintenance data","length":4}
+				]
+			}
+		},
+		{
+			"label": "Current errors",
+			"id": "currenterror",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00 01"}
+				],
+				"slave": [
+					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
+				]
+			}
+		},
+		{
+			"label": "Error history",
+			"id": "errorhistory",
+			"command": "B5 03",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01 01"}
+				],
+				"slave": [
+					{"name":"index","type":"byte","label":"Error history"},
+					{"type":"template-block","label":"Error history","id":"vaillant.errorhistory"}
+				]
+			}
+		},
+		{
+			"label": "Clear error history",
+			"id": "clearerrorhistory",
+			"command": "B5 03",
+			"set": {
+				"master": [
+					{"type":"static","_default":"02 01"},
+					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
+				]
+			}
+		},
+		{
+			"label": "Date Time",
+			"id": "DateTime",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00"}
+				],
+				"slave": [
+					{"name":"dcfstate","type":"template","label":"Date Time","id":"vaillant.templ.dcfstate"},
+					{"name":"btime","type":"template","label":"Date Time","id":"vaillant.templ.btime"},
+					{"name":"bdate","type":"template","label":"Date Time","id":"vaillant.templ.bdate"},
+					{"name":"temp2","type":"template","label":"Date Time","id":"vaillant.templ.temp2"}
+				]
+			}
+		},
+		{
+			"label": "Outside temperature",
+			"id": "Status16",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"16"}
+				],
+				"slave": [
+					{"name":"Status16","type":"template","label":"Outside temperature","id":"vaillant.templ.temp"}
+				]
+			}
+		},
+		{
+			"label": "Operation Mode",
+			"id": "SetMode",
+			"command": "B5 10",
+			"get": {
+				"master": [
+					{"type":"static","_default":"00"}
+				],
+				"slave": [
+					{"name":"SetMode","type":"template","label":"Operation Mode","id":"vaillant.templ.hcmode"},
+					{"name":"flowtempdesired","type":"template","label":"Operation Mode","id":"vaillant.templ.temp1"},
+					{"name":"hwctempdesired","type":"template","label":"Operation Mode","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus",
+			"id": "Status01",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"01"}
+				],
+				"slave": [
+					{"name":"temp11","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"temp12","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"temp2","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp2"},
+					{"name":"temp13","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"temp14","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
+					{"name":"pumpstate","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.pumpstate"}
+				]
+			}
+		},
+		{
+			"label": "Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp",
+			"id": "Status02",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"02"}
+				],
+				"slave": [
+					{"name":"hwcmode","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.hwcmode"},
+					{"name":"temp01","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp0"},
+					{"name":"temp11","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp1"},
+					{"name":"temp02","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp0"},
+					{"name":"temp12","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.temp1"}
+				]
+			}
+		},
+		{
+			"label": "Status",
+			"id": "Status",
+			"command": "B5 11",
+			"get": {
+				"master": [
+					{"type":"static","_default":"03"}
+				],
+				"slave": [
+					{"name":"temp","type":"template","label":"Status","id":"vaillant.templ.temp"},
+					{"name":"press1","type":"template","label":"Status","id":"vaillant.templ.press"},
+					{"name":"press2","type":"template","label":"Status","id":"vaillant.templ.press"},
+					{"name":"hcmode2","type":"template","label":"Status","id":"vaillant.templ.hcmode2"},
+					{"name":"HEX","type":"char","label":"Status"}
+				]
+			}
+		}
+	]
 }
