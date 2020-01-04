@@ -16,7 +16,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"13 00"}
+					{"type":"static","default":"13 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -25,7 +25,7 @@
 			"set": {
 				"command": "B5 05",
 				"master": [
-					{"type":"static","_default":"13 00"},
+					{"type":"static","default":"13 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -39,7 +39,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"4E 00"}
+					{"type":"static","default":"4E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -48,7 +48,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 4E 00"},
+					{"type":"static","default":"0E 4E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -62,7 +62,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"4F 00"}
+					{"type":"static","default":"4F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -71,7 +71,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 4F 00"},
+					{"type":"static","default":"0E 4F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -82,7 +82,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"5D 00"}
+					{"type":"static","default":"5D 00"}
 				],
 				"slave": [
 					{"name":"SolGainPressLowDelay","type":"template","label":"Set TRUE for LP delay in case of solar gain","id":"vaillant.templ.yesno"}
@@ -95,7 +95,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0B 00"}
+					{"type":"static","default":"0B 00"}
 				],
 				"slave": [
 					{"name":"IsInHoliday","type":"template","label":"TRUE if holiday is active","id":"vaillant.templ.yesno"}
@@ -108,7 +108,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"5F 00"}
+					{"type":"static","default":"5F 00"}
 				],
 				"slave": [
 					{"name":"IsInBankHoliday","type":"template","label":"TRUE if BankHoliday is active","id":"vaillant.templ.yesno"}
@@ -121,7 +121,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"60 00"}
+					{"type":"static","default":"60 00"}
 				],
 				"slave": [
 					{"name":"IsInSystemOff","type":"template","label":"TRUE if SystemOff is active","id":"vaillant.templ.yesno"}
@@ -134,7 +134,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"16 00"}
+					{"type":"static","default":"16 00"}
 				],
 				"slave": [
 					{"name":"FlowTempDesired","type":"template","label":"Flow temperature setpoint calculated by VR68","id":"vaillant.templ.temp1"}
@@ -147,7 +147,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1F 00"}
+					{"type":"static","default":"1F 00"}
 				],
 				"slave": [
 					{"name":"ActualTempDesired","type":"template","label":"Current tank setpoint. Depends on the programmed period and current time, operating mode …","id":"vaillant.templ.temp1"}
@@ -163,7 +163,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"47 00"}
+					{"type":"static","default":"47 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -172,7 +172,7 @@
 			"set": {
 				"command": "B5 05",
 				"master": [
-					{"type":"static","_default":"47 00"},
+					{"type":"static","default":"47 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -183,7 +183,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"46 00"}
+					{"type":"static","default":"46 00"}
 				],
 				"slave": [
 					{"name":"QuickVetoTempDesired","type":"template","label":"DHW setpoint in case of quick veto","id":"vaillant.templ.temp"}
@@ -196,7 +196,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"07 00"}
+					{"type":"static","default":"07 00"}
 				],
 				"slave": [
 					{"name":"LegionellaPump","type":"template","label":"Legionella pump","id":"vaillant.templ.onoff"}
@@ -209,7 +209,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"41 00"}
+					{"type":"static","default":"41 00"}
 				],
 				"slave": [
 					{"name":"RuntimeLegionellaPump","type":"template","label":"RuntimeLegionellaPump","id":"vaillant.templ.hoursum2"}
@@ -222,7 +222,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1A 00"}
+					{"type":"static","default":"1A 00"}
 				],
 				"slave": [
 					{"name":"HwcLegioProtectionMaxTimer","type":"template","label":"Maximal time the legio protection state is hold (indepent of reached temperature)","id":"vaillant.templ.minutes0"}
@@ -235,7 +235,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"49 00"}
+					{"type":"static","default":"49 00"}
 				],
 				"slave": [
 					{"name":"LegionellaProtectionActive","type":"template","label":"TRUE if legionella protection is active","id":"vaillant.templ.yesno"}
@@ -251,7 +251,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"50 00"}
+					{"type":"static","default":"50 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -260,7 +260,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 50 00"},
+					{"type":"static","default":"0E 50 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -274,7 +274,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"22 00"}
+					{"type":"static","default":"22 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -283,7 +283,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 22 00"},
+					{"type":"static","default":"0E 22 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -294,7 +294,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"5C 00"}
+					{"type":"static","default":"5C 00"}
 				],
 				"slave": [
 					{"name":"HwcLoadingHysteresis","type":"template","label":"Hysteresis for DHW tank loading, if there is no special hysteresis (legionella, frost protection...).","id":"vaillant.templ.desiredtemp"}
@@ -307,7 +307,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1C 00"}
+					{"type":"static","default":"1C 00"}
 				],
 				"slave": [
 					{"name":"HwcLoadingRequest","type":"template","label":"Flag: Loading request to the energy manager for DHW","id":"vaillant.templ.yesno"}
@@ -320,7 +320,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1D 00"}
+					{"type":"static","default":"1D 00"}
 				],
 				"slave": [
 					{"name":"HwcLoadingEnabled","type":"template","label":"Flag: Loading enabled by the energy manager","id":"vaillant.templ.yesno"}
@@ -333,7 +333,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"20 00"}
+					{"type":"static","default":"20 00"}
 				],
 				"slave": [
 					{"name":"HwcLegioTempOkTimer","type":"template","label":"Time for which the temperature for legio protection should be hold","id":"vaillant.templ.temp0"}
@@ -346,7 +346,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"4B 00"}
+					{"type":"static","default":"4B 00"}
 				],
 				"slave": [
 					{"name":"IsInQuickVeto","type":"template","label":"Flag: Quick veto active","id":"vaillant.templ.yesno"}
@@ -359,7 +359,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"4A 00"}
+					{"type":"static","default":"4A 00"}
 				],
 				"slave": [
 					{"name":"IsInOneOffLoading","type":"template","label":"TRUE if one off loading is active","id":"vaillant.templ.yesno"}
@@ -372,7 +372,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 00"}
+					{"type":"static","default":"01 00"}
 				],
 				"slave": [
 					{"name":"dcfstate","type":"template","label":"Date time","id":"vaillant.templ.dcfstate"},
@@ -388,7 +388,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"temp0","type":"template","label":"Operation mode","id":"vaillant.templ.temp0"},
@@ -407,7 +407,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"01"},
+					{"type":"static","default":"01"},
 					{"name":"SetTempDesired","type":"template","label":"Set desired temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -418,7 +418,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02"},
+					{"type":"static","default":"02"},
 					{"name":"SetMode","type":"template","label":"Set operation mode","id":"vaillant.templ.hwcmode"}
 				]
 			}
@@ -429,7 +429,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"0E"},
+					{"type":"static","default":"0E"},
 					{"name":"SetFlowTempMin","type":"template","label":"Set min flow temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -440,7 +440,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"0F"},
+					{"type":"static","default":"0F"},
 					{"name":"SetFlowTempMax","type":"template","label":"Set max flow temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -451,7 +451,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 09"}
+					{"type":"static","default":"01 09"}
 				],
 				"slave": [
 					{"name":"temp0","type":"template","label":"Parameters","id":"vaillant.templ.temp0"},
@@ -471,7 +471,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 0A"}
+					{"type":"static","default":"01 0A"}
 				],
 				"slave": [
 					{"name":"flowtemp","type":"template","label":"Status flow temperature/mixer/pump/desired flow temperature","id":"vaillant.templ.temp"},
@@ -488,7 +488,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 0D"}
+					{"type":"static","default":"01 0D"}
 				],
 				"slave": [
 					{"name":"temp01","type":"template","label":"Desired flow/status/flow/desired temperature","id":"vaillant.templ.temp0"},
@@ -504,7 +504,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 16"}
+					{"type":"static","default":"01 16"}
 				],
 				"slave": [
 					{"name":"Status16","type":"template","label":"Outside temperature","id":"vaillant.templ.temp"}
@@ -517,7 +517,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02"}
+					{"type":"static","default":"02"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Monday","id":"vaillant.timer"}
@@ -530,7 +530,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"03"}
+					{"type":"static","default":"03"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Tuesday","id":"vaillant.timer"}
@@ -543,7 +543,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"04"}
+					{"type":"static","default":"04"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Wednesday","id":"vaillant.timer"}
@@ -556,7 +556,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"05"}
+					{"type":"static","default":"05"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Thursday","id":"vaillant.timer"}
@@ -569,7 +569,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"06"}
+					{"type":"static","default":"06"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Friday","id":"vaillant.timer"}
@@ -582,7 +582,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"07"}
+					{"type":"static","default":"07"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Saturday","id":"vaillant.timer"}
@@ -595,7 +595,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"08"}
+					{"type":"static","default":"08"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Sunday","id":"vaillant.timer"}
@@ -608,7 +608,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 01"},
+					{"type":"static","default":"09 01"},
 					{"type":"template-block","label":"Periods Monday","id":"vaillant.timer"}
 				]
 			}
@@ -619,7 +619,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 02"},
+					{"type":"static","default":"09 02"},
 					{"type":"template-block","label":"Periods Tuesday","id":"vaillant.timer"}
 				]
 			}
@@ -630,7 +630,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 03"},
+					{"type":"static","default":"09 03"},
 					{"type":"template-block","label":"Periods Wednesday","id":"vaillant.timer"}
 				]
 			}
@@ -641,7 +641,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 04"},
+					{"type":"static","default":"09 04"},
 					{"type":"template-block","label":"Periods Thursday","id":"vaillant.timer"}
 				]
 			}
@@ -652,7 +652,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 05"},
+					{"type":"static","default":"09 05"},
 					{"type":"template-block","label":"Periods Friday","id":"vaillant.timer"}
 				]
 			}
@@ -663,7 +663,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 06"},
+					{"type":"static","default":"09 06"},
 					{"type":"template-block","label":"Periods Saturday","id":"vaillant.timer"}
 				]
 			}
@@ -674,7 +674,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 07"},
+					{"type":"static","default":"09 07"},
 					{"type":"template-block","label":"Periods Sunday","id":"vaillant.timer"}
 				]
 			}
@@ -685,7 +685,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 01"}
+					{"type":"static","default":"00 01"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
@@ -698,7 +698,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"index","type":"byte","label":"Error history"},
@@ -712,7 +712,7 @@
 			"command": "B5 03",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02 01"},
+					{"type":"static","default":"02 01"},
 					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
 				]
 			}
@@ -723,7 +723,7 @@
 			"command": "B5 06",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02"},
+					{"type":"static","default":"02"},
 					{"name":"iotest","type":"byte","label":"I/O test"}
 				]
 			}

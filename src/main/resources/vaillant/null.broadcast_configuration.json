@@ -10,7 +10,7 @@
 			"command": "B5 16",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00"}
+					{"type":"static","default":"00"}
 				],
 				"slave": [
 					{"name":"time","type":"time","label":"date/time"},
@@ -24,7 +24,7 @@
 			"command": "B5 16",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01"}
+					{"type":"static","default":"01"}
 				],
 				"slave": [
 					{"name":"outsidetemp","type":"template","label":"outside temperature","id":"vaillant.templ.temp2"}
@@ -37,7 +37,7 @@
 			"command": "B5 05",
 			"get": {
 				"master": [
-					{"type":"static","_default":"27"}
+					{"type":"static","default":"27"}
 				],
 				"slave": [
 					{"name":"hwcStatus1","type":"template","label":"state hot water","id":"vaillant.templ.onoff"},
@@ -52,7 +52,7 @@
 			"command": "B5 05",
 			"get": {
 				"master": [
-					{"type":"static","_default":"06"}
+					{"type":"static","default":"06"}
 				],
 				"slave": [
 					{"name":"load","type":"template","label":"quick - hot water tank filling","id":"vaillant.templ.onoff"}

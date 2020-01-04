@@ -13,7 +13,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CB 00"}
+					{"type":"static","default":"0D CB 00"}
 				],
 				"slave": [
 					{"name":"SolCollPumpDcIntegrator","type":"int","label":"-50..50"}
@@ -29,7 +29,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CD 00"}
+					{"type":"static","default":"0D CD 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -38,7 +38,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E CD 00"},
+					{"type":"static","default":"0E CD 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -52,7 +52,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CE 00"}
+					{"type":"static","default":"0D CE 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -61,7 +61,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E CE 00"},
+					{"type":"static","default":"0E CE 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -75,7 +75,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CF 00"}
+					{"type":"static","default":"0D CF 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -84,7 +84,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E CF 00"},
+					{"type":"static","default":"0E CF 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -95,7 +95,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D0 00"}
+					{"type":"static","default":"0D D0 00"}
 				],
 				"slave": [
 					{"name":"SolConfigFlags","type":"byte","label":"SolarConfigFlags"}
@@ -108,7 +108,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D1 00"}
+					{"type":"static","default":"0D D1 00"}
 				],
 				"slave": [
 					{"name":"SolCollPumpED","type":"byte","label":"0..100%"}
@@ -124,7 +124,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D2 00"}
+					{"type":"static","default":"0D D2 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -133,7 +133,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E D2 00"},
+					{"type":"static","default":"0E D2 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -147,7 +147,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D3 00"}
+					{"type":"static","default":"0D D3 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -156,7 +156,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E D3 00"},
+					{"type":"static","default":"0E D3 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -170,7 +170,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D4 00"}
+					{"type":"static","default":"0D D4 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -179,7 +179,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E D4 00"},
+					{"type":"static","default":"0E D4 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -193,7 +193,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D5 00"}
+					{"type":"static","default":"0D D5 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -202,7 +202,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E D5 00"},
+					{"type":"static","default":"0E D5 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -216,7 +216,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D6 00"}
+					{"type":"static","default":"0D D6 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -225,7 +225,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E D6 00"},
+					{"type":"static","default":"0E D6 00"},
 					{"type":"template-block"}
 				]
 			}

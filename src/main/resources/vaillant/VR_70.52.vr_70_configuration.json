@@ -12,7 +12,7 @@
 			"command": "B5 23",
 			"set": {
 				"master": [
-					{"type":"static","_default":"01"},
+					{"type":"static","default":"01"},
 					{"name":"R1","type":"byte"},
 					{"name":"R2","type":"byte"},
 					{"name":"R3","type":"byte"}
@@ -24,7 +24,7 @@
 			"command": "B5 23",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02 00"},
+					{"type":"static","default":"02 00"},
 					{"name":"FTStatus","type":"template","id":"vaillant.templ.onoff"},
 					{"name":"FTDesired","type":"template","id":"vaillant.templ.temp1"},
 					{"name":"MixerStatus","type":"template","id":"vaillant.templ.onoff"}
@@ -36,7 +36,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 02 01"},
+					{"type":"static","default":"09 02 01"},
 					{"name":"FTStatus","type":"template","id":"vaillant.templ.onoff"},
 					{"name":"FTDesired","type":"template","id":"vaillant.templ.temp1"},
 					{"name":"MixerStatus","type":"template","id":"vaillant.templ.onoff"}
@@ -48,7 +48,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"03"}
+					{"type":"static","default":"03"}
 				],
 				"slave": [
 					{"name":"S1","type":"template","id":"vaillant.templ.temp"},
@@ -63,7 +63,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 01"}
+					{"type":"static","default":"00 01"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
@@ -76,7 +76,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"index","type":"byte","label":"Error history"},
@@ -90,7 +90,7 @@
 			"command": "B5 06",
 			"set": {
 				"master": [
-					{"type":"static","_default":"01"},
+					{"type":"static","default":"01"},
 					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
 				]
 			}

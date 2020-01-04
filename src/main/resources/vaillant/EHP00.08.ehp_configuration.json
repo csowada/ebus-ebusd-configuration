@@ -13,7 +13,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A8 00"}
+					{"type":"static","default":"0D A8 00"}
 				],
 				"slave": [
 					{"name":"CompStartsHwc","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -26,7 +26,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A9 00"}
+					{"type":"static","default":"0D A9 00"}
 				],
 				"slave": [
 					{"name":"CompStartsHc","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -39,7 +39,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D AC 00"}
+					{"type":"static","default":"0D AC 00"}
 				],
 				"slave": [
 					{"name":"SourceStarts","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -52,7 +52,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D AD 00"}
+					{"type":"static","default":"0D AD 00"}
 				],
 				"slave": [
 					{"name":"Hc1PumpStarts","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -65,7 +65,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D AE 00"}
+					{"type":"static","default":"0D AE 00"}
 				],
 				"slave": [
 					{"name":"HwcPumpStarts","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -78,7 +78,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D AF 00"}
+					{"type":"static","default":"0D AF 00"}
 				],
 				"slave": [
 					{"name":"BackupStartsHwc","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -91,7 +91,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B0 00"}
+					{"type":"static","default":"0D B0 00"}
 				],
 				"slave": [
 					{"name":"BackupStartsHc","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -104,7 +104,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B3 00"}
+					{"type":"static","default":"0D B3 00"}
 				],
 				"slave": [
 					{"name":"HwcHcValveStarts","type":"template","label":"Number of commutations of","id":"vaillant.templ.cntstarts"}
@@ -117,7 +117,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B4 00"}
+					{"type":"static","default":"0D B4 00"}
 				],
 				"slave": [
 					{"name":"CompCutPressHighCount","type":"unumber","label":"shows how often the compressor has been stopped by high pressure switch","length":4}
@@ -130,7 +130,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B5 00"}
+					{"type":"static","default":"0D B5 00"}
 				],
 				"slave": [
 					{"name":"CompCutPressLowCount","type":"unumber","label":"shows how often the compressor has been stopped by low pressure switch","length":4}
@@ -143,7 +143,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B6 00"}
+					{"type":"static","default":"0D B6 00"}
 				],
 				"slave": [
 					{"name":"CompCutTempCount","type":"unumber","label":"shows how often the compressor has been stopped due to outlet temperature exceeding","length":4}
@@ -160,7 +160,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 BC 00"}
+					{"type":"static","default":"29 BC 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -169,7 +169,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E BC 00"},
+					{"type":"static","default":"0E BC 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -184,7 +184,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 0F 00"}
+					{"type":"static","default":"29 0F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -201,7 +201,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 14 00"}
+					{"type":"static","default":"29 14 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -218,7 +218,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 15 00"}
+					{"type":"static","default":"29 15 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -231,7 +231,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 8D 00"}
+					{"type":"static","default":"0D 8D 00"}
 				],
 				"slave": [
 					{"name":"Superheat","type":"template","label":"superheat of refrigerant circuit","id":"vaillant.templ.temp"}
@@ -244,7 +244,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 8E 00"}
+					{"type":"static","default":"0D 8E 00"}
 				],
 				"slave": [
 					{"name":"Subcooling","type":"template","label":"subcooling of refrigerant circuit","id":"vaillant.templ.temp"}
@@ -257,7 +257,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 80 00"}
+					{"type":"static","default":"0D 80 00"}
 				],
 				"slave": [
 					{"name":"Integral","type":"template","label":"actual energy balancing integral","id":"vaillant.templ.integral"}
@@ -274,7 +274,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 02 00"}
+					{"type":"static","default":"29 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -291,7 +291,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 04 00"}
+					{"type":"static","default":"29 04 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -308,7 +308,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 25 00"}
+					{"type":"static","default":"29 25 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -325,7 +325,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 1D 00"}
+					{"type":"static","default":"29 1D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -342,7 +342,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 5F 00"}
+					{"type":"static","default":"29 5F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -355,7 +355,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 09 00"}
+					{"type":"static","default":"0D 09 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Internal Flow temperature sensor","id":"vaillant.tempsensor"}
@@ -372,7 +372,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 0A 00"}
+					{"type":"static","default":"29 0A 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -385,7 +385,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 12 00"}
+					{"type":"static","default":"0D 12 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Heating Circuit Pressure sensor","id":"vaillant.presssensor"}
@@ -402,7 +402,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 17 00"}
+					{"type":"static","default":"29 17 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -419,7 +419,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 01 00"}
+					{"type":"static","default":"29 01 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -436,7 +436,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 07 00"}
+					{"type":"static","default":"29 07 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -453,7 +453,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 03 00"}
+					{"type":"static","default":"29 03 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -466,7 +466,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0E 00"}
+					{"type":"static","default":"0D 0E 00"}
 				],
 				"slave": [
 					{"name":"Mixer1DutyCycle","type":"template","label":"Opening/Closing status of mixing valve HK2, -100%...+100%","id":"vaillant.templ.percents"}
@@ -479,7 +479,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 18 00"}
+					{"type":"static","default":"0D 18 00"}
 				],
 				"slave": [
 					{"name":"Hc2Pump","type":"template","label":"external CH pump (HK2P)","id":"vaillant.templ.onoff"}
@@ -496,7 +496,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 00 00"}
+					{"type":"static","default":"29 00 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -513,7 +513,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 0C 00"}
+					{"type":"static","default":"29 0C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -530,7 +530,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 10 00"}
+					{"type":"static","default":"29 10 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -543,7 +543,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0B 00"}
+					{"type":"static","default":"0D 0B 00"}
 				],
 				"slave": [
 					{"name":"HwcSwitch","type":"template","label":"one time circulation switch Main PCB input","id":"vaillant.templ.onoff"}
@@ -556,7 +556,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 11 00"}
+					{"type":"static","default":"0D 11 00"}
 				],
 				"slave": [
 					{"name":"PowerCut","type":"template","label":"indicator that EVU has cut the power (according EWD)","id":"vaillant.templ.yesno"}
@@ -573,7 +573,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 88 00"}
+					{"type":"static","default":"29 88 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -590,7 +590,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 57 01"}
+					{"type":"static","default":"29 57 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -607,7 +607,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 3F 00"}
+					{"type":"static","default":"29 3F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -620,7 +620,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 06 00"}
+					{"type":"static","default":"0D 06 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"External outside temperature sensor","id":"vaillant.tempsensor"}
@@ -637,7 +637,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 BA 00"}
+					{"type":"static","default":"29 BA 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -654,7 +654,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 BB 00"}
+					{"type":"static","default":"29 BB 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -667,7 +667,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 37 01"}
+					{"type":"static","default":"0D 37 01"}
 				],
 				"slave": [
 					{"name":"SourcePort","type":"template","label":"port feedback; only needed by UI in actuator test","id":"vaillant.templ.onoff"}
@@ -680,7 +680,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 38 01"}
+					{"type":"static","default":"0D 38 01"}
 				],
 				"slave": [
 					{"name":"Hc1PumpPort","type":"template","label":"port feedback; only needed by UI in actuator test","id":"vaillant.templ.onoff"}
@@ -693,7 +693,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1F 00"}
+					{"type":"static","default":"0D 1F 00"}
 				],
 				"slave": [
 					{"name":"Injection","type":"template","label":"injection","id":"vaillant.templ.onoff"}
@@ -706,7 +706,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 29 00"}
+					{"type":"static","default":"0D 29 00"}
 				],
 				"slave": [
 					{"name":"Date","type":"template","label":"Actual Date","id":"vaillant.templ.date"}
@@ -719,7 +719,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 54 00"}
+					{"type":"static","default":"0D 54 00"}
 				],
 				"slave": [
 					{"name":"CompDemand","type":"template","label":"shows that regulation wants to start the heat source","id":"vaillant.templ.yesno"}
@@ -732,7 +732,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 28 00"}
+					{"type":"static","default":"0D 28 00"}
 				],
 				"slave": [
 					{"name":"Time","type":"template","label":"Actual Time","id":"vaillant.templ.time"}
@@ -749,7 +749,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 D0 00"}
+					{"type":"static","default":"29 D0 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -765,7 +765,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 92 00"}
+					{"type":"static","default":"0D 92 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -774,7 +774,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 92 00"},
+					{"type":"static","default":"0E 92 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -788,7 +788,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 65 00"}
+					{"type":"static","default":"0D 65 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -797,7 +797,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 65 00"},
+					{"type":"static","default":"0E 65 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -811,7 +811,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 7E 00"}
+					{"type":"static","default":"0D 7E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -820,7 +820,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 7E 00"},
+					{"type":"static","default":"0E 7E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -834,7 +834,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 7F 00"}
+					{"type":"static","default":"0D 7F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -843,7 +843,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 7F 00"},
+					{"type":"static","default":"0E 7F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -857,7 +857,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 63 00"}
+					{"type":"static","default":"0D 63 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -866,7 +866,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 63 00"},
+					{"type":"static","default":"0E 63 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -880,7 +880,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 64 00"}
+					{"type":"static","default":"0D 64 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -889,7 +889,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 64 00"},
+					{"type":"static","default":"0E 64 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -903,7 +903,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 86 00"}
+					{"type":"static","default":"0D 86 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -912,7 +912,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 86 00"},
+					{"type":"static","default":"0E 86 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -926,7 +926,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 7D 00"}
+					{"type":"static","default":"0D 7D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -935,7 +935,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 7D 00"},
+					{"type":"static","default":"0E 7D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -949,7 +949,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 7C 00"}
+					{"type":"static","default":"0D 7C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -958,7 +958,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 7C 00"},
+					{"type":"static","default":"0E 7C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -972,7 +972,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 74 00"}
+					{"type":"static","default":"0D 74 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -981,7 +981,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 74 00"},
+					{"type":"static","default":"0E 74 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -995,7 +995,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 73 00"}
+					{"type":"static","default":"0D 73 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1004,7 +1004,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 73 00"},
+					{"type":"static","default":"0E 73 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1015,7 +1015,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 9B 00"}
+					{"type":"static","default":"0D 9B 00"}
 				],
 				"slave": [
 					{"name":"CompHoursHc","type":"template","label":"operating hours of compressor for CH mode","id":"vaillant.templ.hoursum"}
@@ -1028,7 +1028,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 9A 00"}
+					{"type":"static","default":"0D 9A 00"}
 				],
 				"slave": [
 					{"name":"CompHours","type":"template","label":"operating hours of compressor (overall)","id":"vaillant.templ.hoursum"}
@@ -1041,7 +1041,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 9C 00"}
+					{"type":"static","default":"0D 9C 00"}
 				],
 				"slave": [
 					{"name":"CompHoursHwc","type":"template","label":"operating hours of compressor for DHW mode","id":"vaillant.templ.hoursum"}
@@ -1054,7 +1054,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D AA 00"}
+					{"type":"static","default":"0D AA 00"}
 				],
 				"slave": [
 					{"name":"CompStarts","type":"template","label":"Number of commutations of compressor","id":"vaillant.templ.cntstarts"}
@@ -1067,7 +1067,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A1 00"}
+					{"type":"static","default":"0D A1 00"}
 				],
 				"slave": [
 					{"name":"BackupHours","type":"template","label":"operating hours of Backup Heater","id":"vaillant.templ.hoursum"}
@@ -1080,7 +1080,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A2 00"}
+					{"type":"static","default":"0D A2 00"}
 				],
 				"slave": [
 					{"name":"BackupHoursHc","type":"template","label":"operating hours of Backup Heater for CH","id":"vaillant.templ.hoursum"}
@@ -1093,7 +1093,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A3 00"}
+					{"type":"static","default":"0D A3 00"}
 				],
 				"slave": [
 					{"name":"BackupHoursHwc","type":"template","label":"operating hours of Backup Heater for DHW","id":"vaillant.templ.hoursum"}
@@ -1106,7 +1106,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B1 00"}
+					{"type":"static","default":"0D B1 00"}
 				],
 				"slave": [
 					{"name":"BackupStarts","type":"template","label":"Number of commutations of backup heater","id":"vaillant.templ.cntstarts"}
@@ -1123,7 +1123,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 43 01"}
+					{"type":"static","default":"29 43 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1132,7 +1132,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 43 01"},
+					{"type":"static","default":"0E 43 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -1143,7 +1143,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 76 01"}
+					{"type":"static","default":"0D 76 01"}
 				],
 				"slave": [
 					{"name":"HeatpumpType","type":"byte","label":"heatpump type"}
@@ -1160,7 +1160,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 87 00"}
+					{"type":"static","default":"29 87 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1169,7 +1169,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 87 00"},
+					{"type":"static","default":"0E 87 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1184,7 +1184,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 CF 00"}
+					{"type":"static","default":"29 CF 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1201,7 +1201,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 66 00"}
+					{"type":"static","default":"29 66 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1210,7 +1210,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 66 00"},
+					{"type":"static","default":"0E 66 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1224,7 +1224,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 97 00"}
+					{"type":"static","default":"0D 97 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1233,7 +1233,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 97 00"},
+					{"type":"static","default":"0E 97 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1247,7 +1247,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 98 00"}
+					{"type":"static","default":"0D 98 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1256,7 +1256,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 98 00"},
+					{"type":"static","default":"0E 98 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1270,7 +1270,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 24 00"}
+					{"type":"static","default":"0D 24 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1279,7 +1279,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 24 00"},
+					{"type":"static","default":"0E 24 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1293,7 +1293,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 60 00"}
+					{"type":"static","default":"0D 60 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1302,7 +1302,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 60 00"},
+					{"type":"static","default":"0E 60 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1313,7 +1313,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 61 00"}
+					{"type":"static","default":"0D 61 00"}
 				],
 				"slave": [
 					{"name":"HwcLaggingTime","type":"byte","label":"Backup heater use for CH"}
@@ -1326,7 +1326,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 62 00"}
+					{"type":"static","default":"0D 62 00"}
 				],
 				"slave": [
 					{"name":"HwcLoadingDelay","type":"byte","label":"Backup heater use for DHW"}
@@ -1339,7 +1339,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 9D 00"}
+					{"type":"static","default":"0D 9D 00"}
 				],
 				"slave": [
 					{"name":"SourceHours","type":"template","label":"operating hours of Fan_Brine","id":"vaillant.templ.hoursum"}
@@ -1352,7 +1352,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 9E 00"}
+					{"type":"static","default":"0D 9E 00"}
 				],
 				"slave": [
 					{"name":"Source2PumpHours","type":"template","label":"operating hours of Sk2P","id":"vaillant.templ.hoursum"}
@@ -1365,7 +1365,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 18 01"}
+					{"type":"static","default":"0D 18 01"}
 				],
 				"slave": [
 					{"name":"SoftwareCode","type":"byte","label":"4 Bytes holding several software status info"}
@@ -1378,7 +1378,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 9F 00"}
+					{"type":"static","default":"0D 9F 00"}
 				],
 				"slave": [
 					{"name":"Hc1PumpHours","type":"template","label":"operating hours of CH1P","id":"vaillant.templ.hoursum"}
@@ -1391,7 +1391,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A0 00"}
+					{"type":"static","default":"0D A0 00"}
 				],
 				"slave": [
 					{"name":"Hc2PumpHours","type":"template","label":"operating hours of HK2P","id":"vaillant.templ.hoursum"}
@@ -1404,7 +1404,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A4 00"}
+					{"type":"static","default":"0D A4 00"}
 				],
 				"slave": [
 					{"name":"HcModeDemandHours","type":"template","label":"total time EHP was in CH mode (energy manager)","id":"vaillant.templ.hoursum"}
@@ -1417,7 +1417,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A5 00"}
+					{"type":"static","default":"0D A5 00"}
 				],
 				"slave": [
 					{"name":"HcModeFulfilledHours","type":"template","label":"total time EHP was in CH mode AND compr. Or backup heater was running","id":"vaillant.templ.hoursum"}
@@ -1430,7 +1430,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A6 00"}
+					{"type":"static","default":"0D A6 00"}
 				],
 				"slave": [
 					{"name":"HwcModeDemandHours","type":"template","label":"total time EHP was in DHW mode (energy manager)","id":"vaillant.templ.hoursum"}
@@ -1443,7 +1443,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D A7 00"}
+					{"type":"static","default":"0D A7 00"}
 				],
 				"slave": [
 					{"name":"HwcModeFulfilledHours","type":"template","label":"total time EHP was in DHW mode AND compr. Or backup heater was running","id":"vaillant.templ.hoursum"}
@@ -1456,7 +1456,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D E4 00"}
+					{"type":"static","default":"0D E4 00"}
 				],
 				"slave": [
 					{"name":"CompState","type":"byte","label":"compressor and ICL state machine status number"}
@@ -1469,7 +1469,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D E6 00"}
+					{"type":"static","default":"0D E6 00"}
 				],
 				"slave": [
 					{"name":"TimeCompOnMin","type":"template","label":"minimum time that compressor must run in 0,5s steps","id":"vaillant.templ.seconds"}
@@ -1482,7 +1482,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D E7 00"}
+					{"type":"static","default":"0D E7 00"}
 				],
 				"slave": [
 					{"name":"TimeCompOffMin","type":"template","label":"minimum time the compressor must be off before restart in 0,5s steps","id":"vaillant.templ.seconds"}
@@ -1495,7 +1495,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D E8 00"}
+					{"type":"static","default":"0D E8 00"}
 				],
 				"slave": [
 					{"name":"TimeBetweenTwoCompStartsMin","type":"template","label":"calculated from menu item \"compressor starts per hour\" in 0,5s steps","id":"vaillant.templ.seconds"}
@@ -1508,7 +1508,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D E9 00"}
+					{"type":"static","default":"0D E9 00"}
 				],
 				"slave": [
 					{"name":"CompControlState","type":"byte","label":"number of status of compressor control state machine"}
@@ -1521,7 +1521,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D F5 00"}
+					{"type":"static","default":"0D F5 00"}
 				],
 				"slave": [
 					{"name":"RebootCounter","type":"word","label":"number of appliance starts"}
@@ -1534,7 +1534,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2B 01"}
+					{"type":"static","default":"0D 2B 01"}
 				],
 				"slave": [
 					{"name":"T19MaxToCompOff","type":"template","label":"limit on compressor outlet temp that leads to an overpressure situation","id":"vaillant.templ.temp"}
@@ -1549,7 +1549,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D1 00"}
+					{"type":"static","default":"0D D1 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1558,7 +1558,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E D1 00"},
+					{"type":"static","default":"0E D1 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1572,7 +1572,7 @@
 			"get": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"29 D3 00"}
+					{"type":"static","default":"29 D3 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1584,7 +1584,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D F4 00"}
+					{"type":"static","default":"0D F4 00"}
 				],
 				"slave": [
 					{"name":"PowerCutPreloading","type":"template","id":"vaillant.templ.onoff"}
@@ -1596,7 +1596,7 @@
 			"command": "B5 09",
 			"set": {
 				"master": [
-					{"type":"static","_default":"0E F4 00"},
+					{"type":"static","default":"0E F4 00"},
 					{"name":"PowerCutPreloading","type":"template","id":"vaillant.templ.onoff"}
 				]
 			}
@@ -1607,7 +1607,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 55 00"}
+					{"type":"static","default":"0D 55 00"}
 				],
 				"slave": [
 					{"name":"HcParallelStorageFillingEnabled","type":"template","label":"BMR: indicates that heating circuits can keep running at dhw loading; for heatpumps, this is 1 if there is a heat buffer, 0 otherwise","id":"vaillant.templ.yesno"}
@@ -1623,7 +1623,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C3 00"}
+					{"type":"static","default":"0D C3 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1632,7 +1632,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E C3 00"},
+					{"type":"static","default":"0E C3 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1646,7 +1646,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CD 00"}
+					{"type":"static","default":"0D CD 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1655,7 +1655,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E CD 00"},
+					{"type":"static","default":"0E CD 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1669,7 +1669,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C4 00"}
+					{"type":"static","default":"0D C4 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1678,7 +1678,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E C4 00"},
+					{"type":"static","default":"0E C4 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1692,7 +1692,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CA 00"}
+					{"type":"static","default":"0D CA 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1701,7 +1701,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E CA 00"},
+					{"type":"static","default":"0E CA 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1715,7 +1715,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C5 00"}
+					{"type":"static","default":"0D C5 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1724,7 +1724,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E C5 00"},
+					{"type":"static","default":"0E C5 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1738,7 +1738,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C6 00"}
+					{"type":"static","default":"0D C6 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1747,7 +1747,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E C6 00"},
+					{"type":"static","default":"0E C6 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1761,7 +1761,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 C7 00"}
+					{"type":"static","default":"00 C7 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1770,7 +1770,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E C7 00"},
+					{"type":"static","default":"0E C7 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1784,7 +1784,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 CB 00"}
+					{"type":"static","default":"00 CB 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1793,7 +1793,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E CB 00"},
+					{"type":"static","default":"0E CB 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1807,7 +1807,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 34 01"}
+					{"type":"static","default":"00 34 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1816,7 +1816,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 34 01"},
+					{"type":"static","default":"0E 34 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -1830,7 +1830,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 33 01"}
+					{"type":"static","default":"00 33 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1839,7 +1839,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 33 01"},
+					{"type":"static","default":"0E 33 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -1850,7 +1850,7 @@
 			"command": "B5 06",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02"},
+					{"type":"static","default":"02"},
 					{"name":"iotest","type":"byte","label":"I/O test"}
 				]
 			}
@@ -1861,7 +1861,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 01"}
+					{"type":"static","default":"00 01"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
@@ -1874,7 +1874,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"index","type":"byte","label":"Error history"},
@@ -1888,7 +1888,7 @@
 			"command": "B5 03",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02 01"},
+					{"type":"static","default":"02 01"},
 					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
 				]
 			}
@@ -1899,7 +1899,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00"}
+					{"type":"static","default":"00"}
 				],
 				"slave": [
 					{"name":"dcfstate","type":"template","label":"Date Time","id":"vaillant.templ.dcfstate"},
@@ -1915,7 +1915,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"16"}
+					{"type":"static","default":"16"}
 				],
 				"slave": [
 					{"name":"Status16","type":"template","label":"Outside temperature","id":"vaillant.templ.temp"}
@@ -1928,7 +1928,7 @@
 			"command": "B5 10",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00"}
+					{"type":"static","default":"00"}
 				],
 				"slave": [
 					{"name":"SetMode","type":"template","label":"Operation Mode","id":"vaillant.templ.hcmode"},
@@ -1943,7 +1943,7 @@
 			"command": "B5 11",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01"}
+					{"type":"static","default":"01"}
 				],
 				"slave": [
 					{"name":"temp11","type":"template","label":"Vorlauftemperatur/Rücklauftemperatur/Aussentemperatur/WW Temperatur/Speichertemperatur/Pumpenstatus","id":"vaillant.templ.temp1"},
@@ -1961,7 +1961,7 @@
 			"command": "B5 11",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02"}
+					{"type":"static","default":"02"}
 				],
 				"slave": [
 					{"name":"hwcmode","type":"template","label":"Betriebsart/Maximaltemperatur/ReglerCurrentTEMP/Maximaltemperatur/ReglerCurrentTemp","id":"vaillant.templ.hwcmode"},
@@ -1978,7 +1978,7 @@
 			"command": "B5 11",
 			"get": {
 				"master": [
-					{"type":"static","_default":"03"}
+					{"type":"static","default":"03"}
 				],
 				"slave": [
 					{"name":"temp","type":"template","label":"Status","id":"vaillant.templ.temp"},

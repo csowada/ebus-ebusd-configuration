@@ -13,7 +13,7 @@
 			"command": "B5 16",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1A 02 00 00"}
+					{"type":"static","default":"1A 02 00 00"}
 				],
 				"slave": [
 					{"name":"Ntc1RawData","type":"word","label":"Ntc1RawData"}
@@ -26,7 +26,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 01 00"}
+					{"type":"static","default":"0D 01 00"}
 				],
 				"slave": [
 					{"name":"Ntc2RawData","type":"word","label":"Ntc2RawData"}
@@ -39,7 +39,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 02 00"}
+					{"type":"static","default":"0D 02 00"}
 				],
 				"slave": [
 					{"name":"Ntc3RawData","type":"word","label":"Ntc3RawData"}
@@ -52,7 +52,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 03 00"}
+					{"type":"static","default":"0D 03 00"}
 				],
 				"slave": [
 					{"name":"Ntc4RawData","type":"word","label":"Ntc4RawData"}
@@ -65,7 +65,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 05 00"}
+					{"type":"static","default":"0D 05 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Temperature in solar flow (from solar collector)","id":"vaillant.tempsensor"}
@@ -78,7 +78,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 06 00"}
+					{"type":"static","default":"0D 06 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Temperature in solar back flow (to solar collector)","id":"vaillant.tempsensor"}
@@ -91,7 +91,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 07 00"}
+					{"type":"static","default":"0D 07 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Temperature in buffer flow (to buffer)","id":"vaillant.tempsensor"}
@@ -104,7 +104,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 08 00"}
+					{"type":"static","default":"0D 08 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Temperature in buffer back flow (from buffer)","id":"vaillant.tempsensor"}
@@ -120,7 +120,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0F 00"}
+					{"type":"static","default":"0D 0F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -129,7 +129,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 0F 00"},
+					{"type":"static","default":"0E 0F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -143,7 +143,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 10 00"}
+					{"type":"static","default":"0D 10 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -152,7 +152,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 10 00"},
+					{"type":"static","default":"0E 10 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -166,7 +166,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 11 00"}
+					{"type":"static","default":"0D 11 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -175,7 +175,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 11 00"},
+					{"type":"static","default":"0E 11 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -186,7 +186,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 17 00"}
+					{"type":"static","default":"0D 17 00"}
 				],
 				"slave": [
 					{"name":"MonitorMatlabLast5minSolAverage","type":"int","label":"MonitorMatlab_Last5minSolarAverage"}
@@ -199,7 +199,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 18 00"}
+					{"type":"static","default":"0D 18 00"}
 				],
 				"slave": [
 					{"name":"CurrentSolTempDesired","type":"word","label":"Temperature target in solar flow at sensor Ntc1Sensor"}
@@ -212,7 +212,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 19 00"}
+					{"type":"static","default":"0D 19 00"}
 				],
 				"slave": [
 					{"name":"CurrentVPMLoadingMode","type":"byte","label":"1. DHW-Support (stand alone), 2. CH-Support (stand alone), 3. +10K (stand alone), 4. SwimmingPool, 5.DHW-Support (with external control), 6. CH-Support (with external control), 7. +10K (with external control)"}
@@ -225,7 +225,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1A 00"}
+					{"type":"static","default":"0D 1A 00"}
 				],
 				"slave": [
 					{"name":"RunTimePump1Minutes","type":"template","label":"Runtime of solar pump in minutes","id":"vaillant.templ.minutes0"}
@@ -238,7 +238,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1B 00"}
+					{"type":"static","default":"0D 1B 00"}
 				],
 				"slave": [
 					{"name":"RunTimePump1Hours","type":"template","label":"Runtime of solar pump in hours","id":"vaillant.templ.hoursum2"}
@@ -251,7 +251,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1C 00"}
+					{"type":"static","default":"0D 1C 00"}
 				],
 				"slave": [
 					{"name":"ExternalHwcRequest","type":"template","label":"0: No request; 1: Request","id":"vaillant.templ.onoff"}
@@ -264,7 +264,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1D 00"}
+					{"type":"static","default":"0D 1D 00"}
 				],
 				"slave": [
 					{"name":"ExternalHcRequest","type":"template","label":"0: No request; 1: Request","id":"vaillant.templ.onoff"}
@@ -277,7 +277,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1E 00"}
+					{"type":"static","default":"0D 1E 00"}
 				],
 				"slave": [
 					{"name":"ExternalHwcTempDesired","type":"template","label":"Requested temperature for DHW","id":"vaillant.templ.desiredtemp"}
@@ -290,7 +290,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1F 00"}
+					{"type":"static","default":"0D 1F 00"}
 				],
 				"slave": [
 					{"name":"ExternalHcTempDesired","type":"template","label":"Requested temperature for CH","id":"vaillant.templ.desiredtemp"}
@@ -303,7 +303,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 20 00"}
+					{"type":"static","default":"0D 20 00"}
 				],
 				"slave": [
 					{"name":"CurrentASCStateforExternals","type":"byte","label":"1:OFF 2: Proofing 3:DHWLoading 4:CHLoading 5:Overtemperature"}
@@ -316,7 +316,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 21 00"}
+					{"type":"static","default":"0D 21 00"}
 				],
 				"slave": [
 					{"name":"CurrentASCStateforASI","type":"byte","label":"1: Standby 2:Proofing 3:StorageLoading 4:Error_System_blocked"}
@@ -329,7 +329,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 22 00"}
+					{"type":"static","default":"0D 22 00"}
 				],
 				"slave": [
 					{"name":"DateAndTimeIsSet","type":"template","label":"0: Date and Time is not set; 1: Date and Time is set","id":"vaillant.templ.onoff"}
@@ -345,7 +345,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 23 00"}
+					{"type":"static","default":"0D 23 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -354,7 +354,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 23 00"},
+					{"type":"static","default":"0E 23 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -368,7 +368,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 24 00"}
+					{"type":"static","default":"0D 24 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -377,7 +377,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 24 00"},
+					{"type":"static","default":"0E 24 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -388,7 +388,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 25 00"}
+					{"type":"static","default":"0D 25 00"}
 				],
 				"slave": [
 					{"name":"BufferControlPress","type":"int","label":"P_BufferControl"}
@@ -401,7 +401,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 26 00"}
+					{"type":"static","default":"0D 26 00"}
 				],
 				"slave": [
 					{"name":"BufferControlInt","type":"int","label":"I_BufferControl"}
@@ -414,7 +414,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 27 00"}
+					{"type":"static","default":"0D 27 00"}
 				],
 				"slave": [
 					{"name":"BufferControlDiff","type":"int","label":"D_BufferControl"}
@@ -427,7 +427,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 28 00"}
+					{"type":"static","default":"0D 28 00"}
 				],
 				"slave": [
 					{"name":"SolControlPress","type":"int","label":"P_SolarControl"}
@@ -440,7 +440,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 29 00"}
+					{"type":"static","default":"0D 29 00"}
 				],
 				"slave": [
 					{"name":"SolControlInt","type":"int","label":"I_SolarControl"}
@@ -453,7 +453,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2A 00"}
+					{"type":"static","default":"0D 2A 00"}
 				],
 				"slave": [
 					{"name":"SolControlDiff","type":"int","label":"D_SolarControl"}
@@ -466,7 +466,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2B 00"}
+					{"type":"static","default":"0D 2B 00"}
 				],
 				"slave": [
 					{"name":"MonitorBufferPIDValue","type":"int","label":"MonitorBufferPIDValue"}
@@ -479,7 +479,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2C 00"}
+					{"type":"static","default":"0D 2C 00"}
 				],
 				"slave": [
 					{"name":"MonitorSolPIDValue","type":"int","label":"MonitorSolarPIDValue"}
@@ -492,7 +492,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2D 00"}
+					{"type":"static","default":"0D 2D 00"}
 				],
 				"slave": [
 					{"name":"FlowSensorFrequency","type":"word","label":"FlowSensorFrequency"}
@@ -505,7 +505,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2E 00"}
+					{"type":"static","default":"0D 2E 00"}
 				],
 				"slave": [
 					{"name":"CurrentFlow","type":"word","label":"Flow thru buffer circuit if loading the storage"}
@@ -518,7 +518,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 30 00"}
+					{"type":"static","default":"0D 30 00"}
 				],
 				"slave": [
 					{"name":"Variante","type":"byte","label":"1: VMS 30 2: VPM 20 S 3: VPM 60 S (identified by resistor in harness)"}
@@ -531,7 +531,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 33 00"}
+					{"type":"static","default":"0D 33 00"}
 				],
 				"slave": [
 					{"name":"CurrentSystemMode","type":"byte","label":"1: Standalone, 3: With external control"}
@@ -544,7 +544,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 35 00"}
+					{"type":"static","default":"0D 35 00"}
 				],
 				"slave": [
 					{"name":"InternalHwcTempDesired","type":"byte","label":"Temperature target for DHW loading if solar module is in stand alone appliccation without external control"}
@@ -557,7 +557,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 36 00"}
+					{"type":"static","default":"0D 36 00"}
 				],
 				"slave": [
 					{"name":"InternalHcTempDesired","type":"byte","label":"Temperature target for CW loading if solar module is in stand alone appliccation without external control"}
@@ -570,7 +570,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 38 00"}
+					{"type":"static","default":"0D 38 00"}
 				],
 				"slave": [
 					{"name":"ASIDetected","type":"template","label":"ASIDetected","id":"vaillant.templ.onoff"}
@@ -586,7 +586,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 39 00"}
+					{"type":"static","default":"0D 39 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -595,7 +595,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 39 00"},
+					{"type":"static","default":"0E 39 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -606,7 +606,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 3A 00"}
+					{"type":"static","default":"0D 3A 00"}
 				],
 				"slave": [
 					{"name":"RequestForExternalDateTimeSetting","type":"template","label":"0: Time and Date is set; 1: Time and Date is not set","id":"vaillant.templ.onoff"}
@@ -622,7 +622,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 3B 00"}
+					{"type":"static","default":"0D 3B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -631,7 +631,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 3B 00"},
+					{"type":"static","default":"0E 3B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -642,7 +642,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 3F 00"}
+					{"type":"static","default":"0D 3F 00"}
 				],
 				"slave": [
 					{"name":"PowerOnCounter","type":"word","label":"PowerOnCounter"}
@@ -655,7 +655,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 40 00"}
+					{"type":"static","default":"0D 40 00"}
 				],
 				"slave": [
 					{"name":"RTCLowVoltageCounter","type":"word","label":"RTCLowVoltageCounter"}
@@ -668,7 +668,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 47 00"}
+					{"type":"static","default":"0D 47 00"}
 				],
 				"slave": [
 					{"name":"ForceStartSolPumpKick","type":"template","label":"Start solar pump for max. 5min to check collector temperature 0: OFF, 1: ON","id":"vaillant.templ.onoff"}
@@ -681,7 +681,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 48 00"}
+					{"type":"static","default":"0D 48 00"}
 				],
 				"slave": [
 					{"name":"MonitorMatlabState","type":"byte","label":"main states: 201: Waiting; 209: Loading; 41: Night Modus"}
@@ -694,7 +694,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 49 00"}
+					{"type":"static","default":"0D 49 00"}
 				],
 				"slave": [
 					{"name":"CurrentBufferTempDesired","type":"int","label":"Temperature target in buffer circuit at sensor Ntc3Sensor"}
@@ -707,7 +707,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 4B 00"}
+					{"type":"static","default":"0D 4B 00"}
 				],
 				"slave": [
 					{"name":"RunTimeBufferPumpMinutes","type":"template","label":"Runtime of buffer pump in minutes","id":"vaillant.templ.minutes0"}
@@ -720,7 +720,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 4C 00"}
+					{"type":"static","default":"0D 4C 00"}
 				],
 				"slave": [
 					{"name":"RunTimeBufferPumpHours","type":"template","label":"Runtime of buffer pump in hours","id":"vaillant.templ.hoursum2"}
@@ -733,7 +733,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 4F 00"}
+					{"type":"static","default":"0D 4F 00"}
 				],
 				"slave": [
 					{"name":"MonitorOverheatState","type":"byte","label":"111: Waiting; 112 and 113: Temperature to high; 220 and 221: In Overheat protection"}
@@ -746,7 +746,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 53 00"}
+					{"type":"static","default":"0D 53 00"}
 				],
 				"slave": [
 					{"name":"MonitorMatlabHwcCalculation","type":"int","label":"Monitor_Matlab_DHW_Calculation"}
@@ -759,7 +759,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 54 00"}
+					{"type":"static","default":"0D 54 00"}
 				],
 				"slave": [
 					{"name":"MonitorMatlabHcCalculation","type":"int","label":"Monitor_Matlab_CH_Calculation"}
@@ -775,7 +775,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 56 00"}
+					{"type":"static","default":"0D 56 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -784,7 +784,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 56 00"},
+					{"type":"static","default":"0E 56 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -795,7 +795,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 01"}
+					{"type":"static","default":"00 01"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
@@ -808,7 +808,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"index","type":"byte","label":"Error history"},
@@ -822,7 +822,7 @@
 			"command": "B5 03",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02 01"},
+					{"type":"static","default":"02 01"},
 					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
 				]
 			}

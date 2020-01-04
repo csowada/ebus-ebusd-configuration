@@ -16,7 +16,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 02 00"}
+					{"type":"static","default":"02 00 00 00 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -25,7 +25,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 02 00"},
+					{"type":"static","default":"02 01 00 00 02 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -39,7 +39,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 03 00"}
+					{"type":"static","default":"02 00 00 00 03 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -48,7 +48,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 03 00"},
+					{"type":"static","default":"02 01 00 00 03 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -62,7 +62,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 0A 00"}
+					{"type":"static","default":"02 00 00 00 0A 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -71,7 +71,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 0A 00"},
+					{"type":"static","default":"02 01 00 00 0A 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -85,7 +85,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 0E 00"}
+					{"type":"static","default":"02 00 00 00 0E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -94,7 +94,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 0E 00"},
+					{"type":"static","default":"02 01 00 00 0E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -108,7 +108,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 14 00"}
+					{"type":"static","default":"02 00 00 00 14 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -117,7 +117,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 14 00"},
+					{"type":"static","default":"02 01 00 00 14 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -131,7 +131,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 17 00"}
+					{"type":"static","default":"02 00 00 00 17 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -140,7 +140,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 17 00"},
+					{"type":"static","default":"02 01 00 00 17 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -154,7 +154,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 18 00"}
+					{"type":"static","default":"02 00 00 00 18 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -163,7 +163,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 18 00"},
+					{"type":"static","default":"02 01 00 00 18 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -177,7 +177,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 1B 00"}
+					{"type":"static","default":"02 00 00 00 1B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -186,7 +186,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 1B 00"},
+					{"type":"static","default":"02 01 00 00 1B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -200,7 +200,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 27 00"}
+					{"type":"static","default":"02 00 00 00 27 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -209,7 +209,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 27 00"},
+					{"type":"static","default":"02 01 00 00 27 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -223,7 +223,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 29 00"}
+					{"type":"static","default":"02 00 00 00 29 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -232,7 +232,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 29 00"},
+					{"type":"static","default":"02 01 00 00 29 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -246,7 +246,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 2C 00"}
+					{"type":"static","default":"02 00 00 00 2C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -255,7 +255,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 2C 00"},
+					{"type":"static","default":"02 01 00 00 2C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -269,7 +269,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 34 00"}
+					{"type":"static","default":"02 00 00 00 34 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -278,7 +278,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 34 00"},
+					{"type":"static","default":"02 01 00 00 34 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -292,7 +292,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 35 00"}
+					{"type":"static","default":"02 00 00 00 35 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -301,7 +301,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 35 00"},
+					{"type":"static","default":"02 01 00 00 35 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -315,7 +315,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 36 00"}
+					{"type":"static","default":"02 00 00 00 36 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -324,7 +324,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 36 00"},
+					{"type":"static","default":"02 01 00 00 36 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -335,7 +335,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 39 00"}
+					{"type":"static","default":"02 00 00 00 39 00"}
 				],
 				"slave": [
 					{"name":"WaterPressure","type":"template","label":"Wasserdruck","id":"vaillant.templ.pressv"}
@@ -351,7 +351,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 3D 00"}
+					{"type":"static","default":"02 00 00 00 3D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -360,7 +360,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 3D 00"},
+					{"type":"static","default":"02 01 00 00 3D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -374,7 +374,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 3E 00"}
+					{"type":"static","default":"02 00 00 00 3E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -383,7 +383,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 3E 00"},
+					{"type":"static","default":"02 01 00 00 3E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -397,7 +397,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 46 00"}
+					{"type":"static","default":"02 00 00 00 46 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -406,7 +406,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 46 00"},
+					{"type":"static","default":"02 01 00 00 46 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -417,7 +417,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 4B 00"}
+					{"type":"static","default":"02 00 00 00 4B 00"}
 				],
 				"slave": [
 					{"name":"SystemFlowTemp","type":"template","label":"Systemvorlauf","id":"vaillant.templ.tempv"}
@@ -433,7 +433,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 4D 00"}
+					{"type":"static","default":"02 00 00 00 4D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -442,7 +442,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 4D 00"},
+					{"type":"static","default":"02 01 00 00 4D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -456,7 +456,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 4F 00"}
+					{"type":"static","default":"02 00 00 00 4F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -465,7 +465,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 4F 00"},
+					{"type":"static","default":"02 01 00 00 4F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -479,7 +479,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 50 00"}
+					{"type":"static","default":"02 00 00 00 50 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -488,7 +488,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 50 00"},
+					{"type":"static","default":"02 01 00 00 50 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -502,7 +502,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 53 00"}
+					{"type":"static","default":"02 00 00 00 53 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -511,7 +511,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 53 00"},
+					{"type":"static","default":"02 01 00 00 53 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -525,7 +525,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 54 00"}
+					{"type":"static","default":"02 00 00 00 54 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -534,7 +534,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 54 00"},
+					{"type":"static","default":"02 01 00 00 54 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -548,7 +548,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 57 00"}
+					{"type":"static","default":"02 00 00 00 57 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -557,7 +557,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 57 00"},
+					{"type":"static","default":"02 01 00 00 57 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -571,7 +571,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 58 00"}
+					{"type":"static","default":"02 00 00 00 58 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -580,7 +580,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 58 00"},
+					{"type":"static","default":"02 01 00 00 58 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -594,7 +594,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 5C 00"}
+					{"type":"static","default":"02 00 00 00 5C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -603,7 +603,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 5C 00"},
+					{"type":"static","default":"02 01 00 00 5C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -617,7 +617,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 69 00"}
+					{"type":"static","default":"02 00 00 00 69 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -626,7 +626,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 69 00"},
+					{"type":"static","default":"02 01 00 00 69 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -640,7 +640,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 6C 00"}
+					{"type":"static","default":"02 00 00 00 6C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -649,7 +649,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 6C 00"},
+					{"type":"static","default":"02 01 00 00 6C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -663,7 +663,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 6D 00"}
+					{"type":"static","default":"02 00 00 00 6D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -672,7 +672,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 6D 00"},
+					{"type":"static","default":"02 01 00 00 6D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -686,7 +686,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 6F 00"}
+					{"type":"static","default":"02 00 00 00 6F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -695,7 +695,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 6F 00"},
+					{"type":"static","default":"02 01 00 00 6F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -709,7 +709,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 70 00"}
+					{"type":"static","default":"02 00 00 00 70 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -718,7 +718,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 70 00"},
+					{"type":"static","default":"02 01 00 00 70 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -732,7 +732,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 71 00"}
+					{"type":"static","default":"02 00 00 00 71 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -741,7 +741,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 71 00"},
+					{"type":"static","default":"02 01 00 00 71 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -755,7 +755,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 72 00"}
+					{"type":"static","default":"02 00 00 00 72 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -764,7 +764,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 72 00"},
+					{"type":"static","default":"02 01 00 00 72 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -775,7 +775,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 73 00"}
+					{"type":"static","default":"02 00 00 00 73 00"}
 				],
 				"slave": [
 					{"name":"DisplayedOutsideTemp","type":"template","label":"Außentemperatur","id":"vaillant.templ.tempv"}
@@ -791,7 +791,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 74 00"}
+					{"type":"static","default":"02 00 00 00 74 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -800,7 +800,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 74 00"},
+					{"type":"static","default":"02 01 00 00 74 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -814,7 +814,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 76 00"}
+					{"type":"static","default":"02 00 00 00 76 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -823,7 +823,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 76 00"},
+					{"type":"static","default":"02 01 00 00 76 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -837,7 +837,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 7B 00"}
+					{"type":"static","default":"02 00 00 00 7B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -846,7 +846,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 7B 00"},
+					{"type":"static","default":"02 01 00 00 7B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -860,7 +860,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 82 00"}
+					{"type":"static","default":"02 00 00 00 82 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -869,7 +869,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 82 00"},
+					{"type":"static","default":"02 01 00 00 82 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -883,7 +883,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 83 00"}
+					{"type":"static","default":"02 00 00 00 83 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -892,7 +892,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 83 00"},
+					{"type":"static","default":"02 01 00 00 83 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -906,7 +906,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 84 00"}
+					{"type":"static","default":"02 00 00 00 84 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -915,7 +915,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 84 00"},
+					{"type":"static","default":"02 01 00 00 84 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -929,7 +929,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 95 00"}
+					{"type":"static","default":"02 00 00 00 95 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -938,7 +938,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 00 00 95 00"},
+					{"type":"static","default":"02 01 00 00 95 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -949,7 +949,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 96 00"}
+					{"type":"static","default":"02 00 00 00 96 00"}
 				],
 				"slave": [
 					{"name":"MaintenanceDue","type":"template","label":"zeigt an ob die Wartung fällig ist","id":"vaillant.templ.yesno"}
@@ -962,7 +962,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 9D 00"}
+					{"type":"static","default":"02 00 00 00 9D 00"}
 				],
 				"slave": [
 					{"name":"HwcStorageTempTop","type":"template","label":"Temp.fühler WW, oben","id":"vaillant.templ.tempv"}
@@ -975,7 +975,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 9E 00"}
+					{"type":"static","default":"02 00 00 00 9E 00"}
 				],
 				"slave": [
 					{"name":"HwcStorageTempBottom","type":"template","label":"Temp.fühler WW, unten","id":"vaillant.templ.tempv"}
@@ -988,7 +988,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 9F 00"}
+					{"type":"static","default":"02 00 00 00 9F 00"}
 				],
 				"slave": [
 					{"name":"HcStorageTempTop","type":"template","label":"Temp.fühler Hz, oben","id":"vaillant.templ.tempv"}
@@ -1001,7 +1001,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 00 00 A0 00"}
+					{"type":"static","default":"02 00 00 00 A0 00"}
 				],
 				"slave": [
 					{"name":"HcStorageTempBottom","type":"template","label":"Temp.fühler Hz, unten","id":"vaillant.templ.tempv"}
@@ -1017,7 +1017,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 03 00"}
+					{"type":"static","default":"02 00 01 00 03 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1026,7 +1026,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 03 00"},
+					{"type":"static","default":"02 01 01 00 03 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1040,7 +1040,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 04 00"}
+					{"type":"static","default":"02 00 01 00 04 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1049,7 +1049,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 04 00"},
+					{"type":"static","default":"02 01 01 00 04 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1060,7 +1060,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 05 00"}
+					{"type":"static","default":"02 00 01 00 05 00"}
 				],
 				"slave": [
 					{"name":"HwcStorageTemp","type":"template","label":"Speicheristtemperatur","id":"vaillant.templ.tempv"}
@@ -1073,7 +1073,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 08 00"}
+					{"type":"static","default":"02 00 01 00 08 00"}
 				],
 				"slave": [
 					{"name":"HwcFlowTemp","type":"template","label":"desired flow temp for Hwc","id":"vaillant.templ.tempv"}
@@ -1089,7 +1089,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 09 00"}
+					{"type":"static","default":"02 00 01 00 09 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1098,7 +1098,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 09 00"},
+					{"type":"static","default":"02 01 01 00 09 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1112,7 +1112,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 0A 00"}
+					{"type":"static","default":"02 00 01 00 0A 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1121,7 +1121,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 0A 00"},
+					{"type":"static","default":"02 01 01 00 0A 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1135,7 +1135,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 0B 00"}
+					{"type":"static","default":"02 00 01 00 0B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1144,7 +1144,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 0B 00"},
+					{"type":"static","default":"02 01 01 00 0B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1158,7 +1158,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 0C 00"}
+					{"type":"static","default":"02 00 01 00 0C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1167,7 +1167,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 0C 00"},
+					{"type":"static","default":"02 01 01 00 0C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1181,7 +1181,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 01 00 0D 00"}
+					{"type":"static","default":"02 00 01 00 0D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1190,7 +1190,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 01 00 0D 00"},
+					{"type":"static","default":"02 01 01 00 0D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1201,7 +1201,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 02 00"}
+					{"type":"static","default":"02 00 02 00 02 00"}
 				],
 				"slave": [
 					{"name":"mctype","type":"template","label":"CircuitType Heizkreis 1","id":"vaillant.templ.mctype"},
@@ -1215,7 +1215,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 07 00"}
+					{"type":"static","default":"02 00 02 00 07 00"}
 				],
 				"slave": [
 					{"name":"Hc1ActualFlowTempDesired","type":"template","label":"current flow temperature setpoint of Hc1","id":"vaillant.templ.tempv"}
@@ -1228,7 +1228,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 08 00"}
+					{"type":"static","default":"02 00 02 00 08 00"}
 				],
 				"slave": [
 					{"name":"Hc1FlowTemp","type":"template","label":"current flow temperature of Hc1","id":"vaillant.templ.tempv"}
@@ -1244,7 +1244,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 0B 00"}
+					{"type":"static","default":"02 00 02 00 0B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1253,7 +1253,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 0B 00"},
+					{"type":"static","default":"02 01 02 00 0B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1267,7 +1267,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 0E 00"}
+					{"type":"static","default":"02 00 02 00 0E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1276,7 +1276,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 0E 00"},
+					{"type":"static","default":"02 01 02 00 0E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1290,7 +1290,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 0F 00"}
+					{"type":"static","default":"02 00 02 00 0F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1299,7 +1299,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 0F 00"},
+					{"type":"static","default":"02 01 02 00 0F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1313,7 +1313,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 10 00"}
+					{"type":"static","default":"02 00 02 00 10 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1322,7 +1322,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 10 00"},
+					{"type":"static","default":"02 01 02 00 10 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1336,7 +1336,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 12 00"}
+					{"type":"static","default":"02 00 02 00 12 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1345,7 +1345,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 12 00"},
+					{"type":"static","default":"02 01 02 00 12 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1359,7 +1359,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 14 00"}
+					{"type":"static","default":"02 00 02 00 14 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1368,7 +1368,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 14 00"},
+					{"type":"static","default":"02 01 02 00 14 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1382,7 +1382,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 15 00"}
+					{"type":"static","default":"02 00 02 00 15 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1391,7 +1391,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 15 00"},
+					{"type":"static","default":"02 01 02 00 15 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1402,7 +1402,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 1A 00"}
+					{"type":"static","default":"02 00 02 00 1A 00"}
 				],
 				"slave": [
 					{"name":"Hc1MixerMovement","type":"float","label":"status of mixer (<0 closing, >0 opening)"}
@@ -1415,7 +1415,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 1C 00"}
+					{"type":"static","default":"02 00 02 00 1C 00"}
 				],
 				"slave": [
 					{"name":"Hc1HeatCurveAdaption","type":"float","label":"adaption applied to heating curve of Hc1"}
@@ -1431,7 +1431,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 1B 00"}
+					{"type":"static","default":"02 00 02 00 1B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1440,7 +1440,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 1B 00"},
+					{"type":"static","default":"02 01 02 00 1B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1454,7 +1454,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 00 1E 00"}
+					{"type":"static","default":"02 00 02 00 1E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1463,7 +1463,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 00 1E 00"},
+					{"type":"static","default":"02 01 02 00 1E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1474,7 +1474,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 01 02 00"}
+					{"type":"static","default":"02 00 02 01 02 00"}
 				],
 				"slave": [
 					{"name":"mctype","type":"template","label":"CircuitType Heizkreis 2","id":"vaillant.templ.mctype"},
@@ -1488,7 +1488,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 01 07 00"}
+					{"type":"static","default":"02 00 02 01 07 00"}
 				],
 				"slave": [
 					{"name":"Hc2ActualFlowTempDesired","type":"template","label":"current flow temperature setpoint of Hc2","id":"vaillant.templ.tempv"}
@@ -1501,7 +1501,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 01 08 00"}
+					{"type":"static","default":"02 00 02 01 08 00"}
 				],
 				"slave": [
 					{"name":"Hc2FlowTemp","type":"template","label":"current flow temperature of Hc2","id":"vaillant.templ.tempv"}
@@ -1517,7 +1517,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 01 0B 00"}
+					{"type":"static","default":"02 00 02 01 0B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1526,7 +1526,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 01 0B 00"},
+					{"type":"static","default":"02 01 02 01 0B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1540,7 +1540,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 01 0E 00"}
+					{"type":"static","default":"02 00 02 01 0E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1549,7 +1549,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 01 0E 00"},
+					{"type":"static","default":"02 01 02 01 0E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1563,7 +1563,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 02 01 0F 00"}
+					{"type":"static","default":"02 00 02 01 0F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1572,7 +1572,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 02 01 0F 00"},
+					{"type":"static","default":"02 01 02 01 0F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1586,7 +1586,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"10 00"}
+					{"type":"static","default":"10 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1595,7 +1595,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"10 00"},
+					{"type":"static","default":"10 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1609,7 +1609,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"12 00"}
+					{"type":"static","default":"12 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1618,7 +1618,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"12 00"},
+					{"type":"static","default":"12 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1632,7 +1632,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"14 00"}
+					{"type":"static","default":"14 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1641,7 +1641,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"14 00"},
+					{"type":"static","default":"14 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1655,7 +1655,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"15 00"}
+					{"type":"static","default":"15 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1664,7 +1664,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"15 00"},
+					{"type":"static","default":"15 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1675,7 +1675,7 @@
 			"command": "B5 15",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1A 00"}
+					{"type":"static","default":"1A 00"}
 				],
 				"slave": [
 					{"name":"Hc2MixerMovement","type":"float","label":"status of mixer (<0 closing, >0 opening)"}
@@ -1688,7 +1688,7 @@
 			"command": "B5 15",
 			"get": {
 				"master": [
-					{"type":"static","_default":"1C 00"}
+					{"type":"static","default":"1C 00"}
 				],
 				"slave": [
 					{"name":"Hc2HeatCurveAdaption","type":"float","label":"adaption applied to heating curve of Hc2"}
@@ -1704,7 +1704,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"1B 00"}
+					{"type":"static","default":"1B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1713,7 +1713,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"1B 00"},
+					{"type":"static","default":"1B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1727,7 +1727,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"1E 00"}
+					{"type":"static","default":"1E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1736,7 +1736,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"1E 00"},
+					{"type":"static","default":"1E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1750,7 +1750,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 03 00"}
+					{"type":"static","default":"02 00 03 00 03 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1759,7 +1759,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 03 00"},
+					{"type":"static","default":"02 01 03 00 03 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1773,7 +1773,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 04 00"}
+					{"type":"static","default":"02 00 03 00 04 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1782,7 +1782,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 04 00"},
+					{"type":"static","default":"02 01 03 00 04 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1796,7 +1796,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 05 00"}
+					{"type":"static","default":"02 00 03 00 05 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1805,7 +1805,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 05 00"},
+					{"type":"static","default":"02 01 03 00 05 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1819,7 +1819,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 06 00"}
+					{"type":"static","default":"02 00 03 00 06 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1828,7 +1828,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 06 00"},
+					{"type":"static","default":"02 01 03 00 06 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1842,7 +1842,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 07 00"}
+					{"type":"static","default":"02 00 03 00 07 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1851,7 +1851,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 07 00"},
+					{"type":"static","default":"02 01 03 00 07 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1865,7 +1865,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 08 00"}
+					{"type":"static","default":"02 00 03 00 08 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1874,7 +1874,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 08 00"},
+					{"type":"static","default":"02 01 03 00 08 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1888,7 +1888,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 09 00"}
+					{"type":"static","default":"02 00 03 00 09 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1897,7 +1897,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 09 00"},
+					{"type":"static","default":"02 01 03 00 09 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1911,7 +1911,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 0C 00"}
+					{"type":"static","default":"02 00 03 00 0C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1920,7 +1920,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 0C 00"},
+					{"type":"static","default":"02 01 03 00 0C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1934,7 +1934,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 0D 00"}
+					{"type":"static","default":"02 00 03 00 0D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1943,7 +1943,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 0D 00"},
+					{"type":"static","default":"02 01 03 00 0D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1957,7 +1957,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 0E 00"}
+					{"type":"static","default":"02 00 03 00 0E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -1966,7 +1966,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 0E 00"},
+					{"type":"static","default":"02 01 03 00 0E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -1977,7 +1977,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 0F 00"}
+					{"type":"static","default":"02 00 03 00 0F 00"}
 				],
 				"slave": [
 					{"name":"z1RoomTemp","type":"template","label":"current room temperature in zone 1","id":"vaillant.templ.tempv"}
@@ -1993,7 +1993,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 12 00"}
+					{"type":"static","default":"02 00 03 00 12 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2002,7 +2002,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 12 00"},
+					{"type":"static","default":"02 01 03 00 12 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2016,7 +2016,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 13 00"}
+					{"type":"static","default":"02 00 03 00 13 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2025,7 +2025,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 13 00"},
+					{"type":"static","default":"02 01 03 00 13 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2039,7 +2039,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 00 14 00"}
+					{"type":"static","default":"02 00 03 00 14 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2048,7 +2048,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 14 00"},
+					{"type":"static","default":"02 01 03 00 14 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2062,7 +2062,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 16 00"}
+					{"type":"static","default":"0D 16 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2071,7 +2071,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 16 00"},
+					{"type":"static","default":"02 01 03 00 16 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2085,7 +2085,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 17 00"}
+					{"type":"static","default":"0D 17 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2094,7 +2094,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 17 00"},
+					{"type":"static","default":"02 01 03 00 17 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2108,7 +2108,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 18 00"}
+					{"type":"static","default":"0D 18 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2117,7 +2117,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 00 18 00"},
+					{"type":"static","default":"02 01 03 00 18 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2131,7 +2131,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 03 00"}
+					{"type":"static","default":"02 00 03 01 03 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2140,7 +2140,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 03 00"},
+					{"type":"static","default":"02 01 03 01 03 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2154,7 +2154,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 04 00"}
+					{"type":"static","default":"02 00 03 01 04 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2163,7 +2163,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 04 00"},
+					{"type":"static","default":"02 01 03 01 04 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2177,7 +2177,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 05 00"}
+					{"type":"static","default":"02 00 03 01 05 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2186,7 +2186,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 05 00"},
+					{"type":"static","default":"02 01 03 01 05 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2200,7 +2200,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 06 00"}
+					{"type":"static","default":"02 00 03 01 06 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2209,7 +2209,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 06 00"},
+					{"type":"static","default":"02 01 03 01 06 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2223,7 +2223,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 07 00"}
+					{"type":"static","default":"02 00 03 01 07 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2232,7 +2232,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 07 00"},
+					{"type":"static","default":"02 01 03 01 07 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2246,7 +2246,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 08 00"}
+					{"type":"static","default":"02 00 03 01 08 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2255,7 +2255,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 08 00"},
+					{"type":"static","default":"02 01 03 01 08 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2269,7 +2269,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 09 00"}
+					{"type":"static","default":"02 00 03 01 09 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2278,7 +2278,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 09 00"},
+					{"type":"static","default":"02 01 03 01 09 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2292,7 +2292,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 0C 00"}
+					{"type":"static","default":"02 00 03 01 0C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2301,7 +2301,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 0C 00"},
+					{"type":"static","default":"02 01 03 01 0C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2315,7 +2315,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 0D 00"}
+					{"type":"static","default":"02 00 03 01 0D 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2324,7 +2324,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 0D 00"},
+					{"type":"static","default":"02 01 03 01 0D 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2338,7 +2338,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 0E 00"}
+					{"type":"static","default":"02 00 03 01 0E 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2347,7 +2347,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 0E 00"},
+					{"type":"static","default":"02 01 03 01 0E 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2358,7 +2358,7 @@
 			"command": "B5 24",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 0F 00"}
+					{"type":"static","default":"02 00 03 01 0F 00"}
 				],
 				"slave": [
 					{"name":"z2RoomTemp","type":"template","label":"current room temperature in zone 2","id":"vaillant.templ.tempv"}
@@ -2374,7 +2374,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 12 00"}
+					{"type":"static","default":"02 00 03 01 12 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2383,7 +2383,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 12 00"},
+					{"type":"static","default":"02 01 03 01 12 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2397,7 +2397,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 13 00"}
+					{"type":"static","default":"02 00 03 01 13 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2406,7 +2406,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 13 00"},
+					{"type":"static","default":"02 01 03 01 13 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2420,7 +2420,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 14 00"}
+					{"type":"static","default":"02 00 03 01 14 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2429,7 +2429,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 14 00"},
+					{"type":"static","default":"02 01 03 01 14 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2443,7 +2443,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 16 00"}
+					{"type":"static","default":"02 00 03 01 16 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2452,7 +2452,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 16 00"},
+					{"type":"static","default":"02 01 03 01 16 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2466,7 +2466,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 17 00"}
+					{"type":"static","default":"02 00 03 01 17 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2475,7 +2475,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 17 00"},
+					{"type":"static","default":"02 01 03 01 17 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2489,7 +2489,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 00 03 01 18 00"}
+					{"type":"static","default":"02 00 03 01 18 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2498,7 +2498,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"02 01 03 01 18 00"},
+					{"type":"static","default":"02 01 03 01 18 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2512,7 +2512,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 00"}
+					{"type":"static","default":"03 00 00 01 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2521,7 +2521,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 00"},
+					{"type":"static","default":"04 00 00 01 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2535,7 +2535,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 01"}
+					{"type":"static","default":"03 00 00 01 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2544,7 +2544,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 01"},
+					{"type":"static","default":"04 00 00 01 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -2558,7 +2558,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 02"}
+					{"type":"static","default":"03 00 00 01 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2567,7 +2567,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 02"},
+					{"type":"static","default":"04 00 00 01 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -2581,7 +2581,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 03"}
+					{"type":"static","default":"03 00 00 01 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2590,7 +2590,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 03"},
+					{"type":"static","default":"04 00 00 01 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -2604,7 +2604,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 04"}
+					{"type":"static","default":"03 00 00 01 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2613,7 +2613,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 04"},
+					{"type":"static","default":"04 00 00 01 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -2627,7 +2627,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 05"}
+					{"type":"static","default":"03 00 00 01 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2636,7 +2636,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 05"},
+					{"type":"static","default":"04 00 00 01 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -2650,7 +2650,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 01 06"}
+					{"type":"static","default":"03 00 00 01 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2659,7 +2659,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 01 06"},
+					{"type":"static","default":"04 00 00 01 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -2673,7 +2673,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 00"}
+					{"type":"static","default":"03 00 00 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2682,7 +2682,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 00"},
+					{"type":"static","default":"04 00 00 02 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2696,7 +2696,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 01"}
+					{"type":"static","default":"03 00 00 02 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2705,7 +2705,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 01"},
+					{"type":"static","default":"04 00 00 02 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -2719,7 +2719,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 02"}
+					{"type":"static","default":"03 00 00 02 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2728,7 +2728,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 02"},
+					{"type":"static","default":"04 00 00 02 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -2742,7 +2742,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 03"}
+					{"type":"static","default":"03 00 00 02 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2751,7 +2751,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 03"},
+					{"type":"static","default":"04 00 00 02 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -2765,7 +2765,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 04"}
+					{"type":"static","default":"03 00 00 02 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2774,7 +2774,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 04"},
+					{"type":"static","default":"04 00 00 02 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -2788,7 +2788,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 05"}
+					{"type":"static","default":"03 00 00 02 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2797,7 +2797,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 05"},
+					{"type":"static","default":"04 00 00 02 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -2811,7 +2811,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 02 06"}
+					{"type":"static","default":"03 00 00 02 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2820,7 +2820,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 02 06"},
+					{"type":"static","default":"04 00 00 02 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -2834,7 +2834,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 00"}
+					{"type":"static","default":"03 00 00 03 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2843,7 +2843,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 00"},
+					{"type":"static","default":"04 00 00 03 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -2857,7 +2857,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 01"}
+					{"type":"static","default":"03 00 00 03 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2866,7 +2866,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 01"},
+					{"type":"static","default":"04 00 00 03 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -2880,7 +2880,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 02"}
+					{"type":"static","default":"03 00 00 03 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2889,7 +2889,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 02"},
+					{"type":"static","default":"04 00 00 03 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -2903,7 +2903,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 03"}
+					{"type":"static","default":"03 00 00 03 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2912,7 +2912,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 03"},
+					{"type":"static","default":"04 00 00 03 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -2926,7 +2926,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 04"}
+					{"type":"static","default":"03 00 00 03 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2935,7 +2935,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 04"},
+					{"type":"static","default":"04 00 00 03 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -2949,7 +2949,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 05"}
+					{"type":"static","default":"03 00 00 03 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2958,7 +2958,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 05"},
+					{"type":"static","default":"04 00 00 03 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -2972,7 +2972,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 00 00 03 06"}
+					{"type":"static","default":"03 00 00 03 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -2981,7 +2981,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 00 00 03 06"},
+					{"type":"static","default":"04 00 00 03 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -2995,7 +2995,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 00"}
+					{"type":"static","default":"03 01 00 01 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3004,7 +3004,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 00"},
+					{"type":"static","default":"04 01 00 01 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -3018,7 +3018,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 01"}
+					{"type":"static","default":"03 01 00 01 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3027,7 +3027,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 01"},
+					{"type":"static","default":"04 01 00 01 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -3041,7 +3041,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 02"}
+					{"type":"static","default":"03 01 00 01 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3050,7 +3050,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 02"},
+					{"type":"static","default":"04 01 00 01 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -3064,7 +3064,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 03"}
+					{"type":"static","default":"03 01 00 01 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3073,7 +3073,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 03"},
+					{"type":"static","default":"04 01 00 01 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -3087,7 +3087,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 04"}
+					{"type":"static","default":"03 01 00 01 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3096,7 +3096,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 04"},
+					{"type":"static","default":"04 01 00 01 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -3110,7 +3110,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 05"}
+					{"type":"static","default":"03 01 00 01 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3119,7 +3119,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 05"},
+					{"type":"static","default":"04 01 00 01 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -3133,7 +3133,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 01 06"}
+					{"type":"static","default":"03 01 00 01 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3142,7 +3142,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 01 06"},
+					{"type":"static","default":"04 01 00 01 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -3156,7 +3156,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 00"}
+					{"type":"static","default":"03 01 00 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3165,7 +3165,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 00"},
+					{"type":"static","default":"04 01 00 02 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -3179,7 +3179,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 01"}
+					{"type":"static","default":"03 01 00 02 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3188,7 +3188,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 01"},
+					{"type":"static","default":"04 01 00 02 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -3202,7 +3202,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 02"}
+					{"type":"static","default":"03 01 00 02 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3211,7 +3211,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 02"},
+					{"type":"static","default":"04 01 00 02 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -3225,7 +3225,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 03"}
+					{"type":"static","default":"03 01 00 02 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3234,7 +3234,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 03"},
+					{"type":"static","default":"04 01 00 02 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -3248,7 +3248,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 04"}
+					{"type":"static","default":"03 01 00 02 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3257,7 +3257,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 04"},
+					{"type":"static","default":"04 01 00 02 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -3271,7 +3271,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 05"}
+					{"type":"static","default":"03 01 00 02 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3280,7 +3280,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 05"},
+					{"type":"static","default":"04 01 00 02 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -3294,7 +3294,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 01 00 02 06"}
+					{"type":"static","default":"03 01 00 02 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3303,7 +3303,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 01 00 02 06"},
+					{"type":"static","default":"04 01 00 02 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -3317,7 +3317,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 00"}
+					{"type":"static","default":"03 03 00 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3326,7 +3326,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 00"},
+					{"type":"static","default":"04 03 00 02 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -3340,7 +3340,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 01"}
+					{"type":"static","default":"03 03 00 02 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3349,7 +3349,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 01"},
+					{"type":"static","default":"04 03 00 02 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -3363,7 +3363,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 02"}
+					{"type":"static","default":"03 03 00 02 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3372,7 +3372,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 02"},
+					{"type":"static","default":"04 03 00 02 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -3386,7 +3386,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 03"}
+					{"type":"static","default":"03 03 00 02 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3395,7 +3395,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 03"},
+					{"type":"static","default":"04 03 00 02 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -3409,7 +3409,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 04"}
+					{"type":"static","default":"03 03 00 02 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3418,7 +3418,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 04"},
+					{"type":"static","default":"04 03 00 02 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -3432,7 +3432,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 05"}
+					{"type":"static","default":"03 03 00 02 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3441,7 +3441,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 05"},
+					{"type":"static","default":"04 03 00 02 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -3455,7 +3455,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 02 06"}
+					{"type":"static","default":"03 03 00 02 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3464,7 +3464,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 02 06"},
+					{"type":"static","default":"04 03 00 02 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -3478,7 +3478,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 00"}
+					{"type":"static","default":"03 03 00 01 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3487,7 +3487,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 00"},
+					{"type":"static","default":"04 03 00 01 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -3501,7 +3501,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 01"}
+					{"type":"static","default":"03 03 00 01 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3510,7 +3510,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 01"},
+					{"type":"static","default":"04 03 00 01 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -3524,7 +3524,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 02"}
+					{"type":"static","default":"03 03 00 01 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3533,7 +3533,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 02"},
+					{"type":"static","default":"04 03 00 01 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -3547,7 +3547,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 03"}
+					{"type":"static","default":"03 03 00 01 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3556,7 +3556,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 03"},
+					{"type":"static","default":"04 03 00 01 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -3570,7 +3570,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 04"}
+					{"type":"static","default":"03 03 00 01 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3579,7 +3579,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 04"},
+					{"type":"static","default":"04 03 00 01 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -3593,7 +3593,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 05"}
+					{"type":"static","default":"03 03 00 01 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3602,7 +3602,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 05"},
+					{"type":"static","default":"04 03 00 01 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -3616,7 +3616,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 00 01 06"}
+					{"type":"static","default":"03 03 00 01 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3625,7 +3625,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 00 01 06"},
+					{"type":"static","default":"04 03 00 01 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -3639,7 +3639,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 00"}
+					{"type":"static","default":"03 03 01 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3648,7 +3648,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 00"},
+					{"type":"static","default":"04 03 01 02 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -3662,7 +3662,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 01"}
+					{"type":"static","default":"03 03 01 02 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3671,7 +3671,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 01"},
+					{"type":"static","default":"04 03 01 02 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -3685,7 +3685,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 02"}
+					{"type":"static","default":"03 03 01 02 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3694,7 +3694,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 02"},
+					{"type":"static","default":"04 03 01 02 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -3708,7 +3708,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 03"}
+					{"type":"static","default":"03 03 01 02 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3717,7 +3717,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 03"},
+					{"type":"static","default":"04 03 01 02 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -3731,7 +3731,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 04"}
+					{"type":"static","default":"03 03 01 02 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3740,7 +3740,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 04"},
+					{"type":"static","default":"04 03 01 02 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -3754,7 +3754,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 05"}
+					{"type":"static","default":"03 03 01 02 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3763,7 +3763,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 05"},
+					{"type":"static","default":"04 03 01 02 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -3777,7 +3777,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 02 06"}
+					{"type":"static","default":"03 03 01 02 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3786,7 +3786,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 02 06"},
+					{"type":"static","default":"04 03 01 02 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -3800,7 +3800,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 00"}
+					{"type":"static","default":"03 03 01 01 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3809,7 +3809,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 00"},
+					{"type":"static","default":"04 03 01 01 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -3823,7 +3823,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 01"}
+					{"type":"static","default":"03 03 01 01 01"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3832,7 +3832,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 01"},
+					{"type":"static","default":"04 03 01 01 01"},
 					{"type":"template-block"}
 				]
 			}
@@ -3846,7 +3846,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 02"}
+					{"type":"static","default":"03 03 01 01 02"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3855,7 +3855,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 02"},
+					{"type":"static","default":"04 03 01 01 02"},
 					{"type":"template-block"}
 				]
 			}
@@ -3869,7 +3869,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 03"}
+					{"type":"static","default":"03 03 01 01 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3878,7 +3878,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 03"},
+					{"type":"static","default":"04 03 01 01 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -3892,7 +3892,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 04"}
+					{"type":"static","default":"03 03 01 01 04"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3901,7 +3901,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 04"},
+					{"type":"static","default":"04 03 01 01 04"},
 					{"type":"template-block"}
 				]
 			}
@@ -3915,7 +3915,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 05"}
+					{"type":"static","default":"03 03 01 01 05"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3924,7 +3924,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 05"},
+					{"type":"static","default":"04 03 01 01 05"},
 					{"type":"template-block"}
 				]
 			}
@@ -3938,7 +3938,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03 01 01 06"}
+					{"type":"static","default":"03 03 01 01 06"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -3947,7 +3947,7 @@
 			"set": {
 				"command": "B5 24",
 				"master": [
-					{"type":"static","_default":"04 03 01 01 06"},
+					{"type":"static","default":"04 03 01 01 06"},
 					{"type":"template-block"}
 				]
 			}
@@ -3958,7 +3958,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 01"}
+					{"type":"static","default":"00 01"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
@@ -3971,7 +3971,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"index","type":"byte","label":"Error history"},
@@ -3985,7 +3985,7 @@
 			"command": "B5 03",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02 01"},
+					{"type":"static","default":"02 01"},
 					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
 				]
 			}

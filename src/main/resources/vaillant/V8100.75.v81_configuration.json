@@ -13,7 +13,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1B 00"}
+					{"type":"static","default":"0D 1B 00"}
 				],
 				"slave": [
 					{"name":"DisplayedRoomTemp","type":"template","label":"displayed room temperature","id":"vaillant.templ.temp"}
@@ -26,7 +26,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 00 00"}
+					{"type":"static","default":"0D 00 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"raw value current room temperature and sensorstate (without any correction)","id":"vaillant.tempsensor"}
@@ -39,7 +39,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1D 00"}
+					{"type":"static","default":"0D 1D 00"}
 				],
 				"slave": [
 					{"name":"DesiredHcRoomTempDesired","type":"template","label":"current room setpoint","id":"vaillant.templ.temp"}
@@ -52,7 +52,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1E 00"}
+					{"type":"static","default":"0D 1E 00"}
 				],
 				"slave": [
 					{"name":"HcRoomTempDesiredAdjustable","type":"template","label":"room temperature setpoint is currently adjustable","id":"vaillant.templ.yesno"}
@@ -65,7 +65,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1F 00"}
+					{"type":"static","default":"0D 1F 00"}
 				],
 				"slave": [
 					{"name":"HcActiveSpecialFunction","type":"byte","label":"if unequal zero a special function (e.g. holidays, floor pavement drying …) has been activated"}
@@ -81,7 +81,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 04 00"}
+					{"type":"static","default":"0D 04 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -90,7 +90,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 04 00"},
+					{"type":"static","default":"0E 04 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -101,7 +101,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1C 00"}
+					{"type":"static","default":"0D 1C 00"}
 				],
 				"slave": [
 					{"name":"SelectedHc","type":"byte","label":"number of heating circuit to which this remote control is assigned"}
@@ -117,7 +117,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 02 00"}
+					{"type":"static","default":"0D 02 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -126,7 +126,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 02 00"},
+					{"type":"static","default":"0E 02 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -137,7 +137,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 01 00"}
+					{"type":"static","default":"0D 01 00"}
 				],
 				"slave": [
 					{"name":"RoomTempOffsetSelfWarming","type":"template","label":"room temperature intrinsic heating offset","id":"vaillant.templ.temp"}
@@ -150,7 +150,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0C 00"}
+					{"type":"static","default":"0D 0C 00"}
 				],
 				"slave": [
 					{"name":"StackeBUSTaskMax","type":"byte","label":"maximum number of bytes needed for the eBUS task stack"}
@@ -163,7 +163,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0D 00"}
+					{"type":"static","default":"0D 0D 00"}
 				],
 				"slave": [
 					{"name":"StackMainTaskMax","type":"byte","label":"maximum number of bytes needed for the main task stack"}
@@ -176,7 +176,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0E 00"}
+					{"type":"static","default":"0D 0E 00"}
 				],
 				"slave": [
 					{"name":"StackLifeCheckTaskMax","type":"byte","label":"maximum number of bytes needed for the life check task stack"}
@@ -189,7 +189,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0F 00"}
+					{"type":"static","default":"0D 0F 00"}
 				],
 				"slave": [
 					{"name":"UIN1","type":"word","label":"identifier for the variant"},
@@ -203,7 +203,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 10 00"}
+					{"type":"static","default":"0D 10 00"}
 				],
 				"slave": [
 					{"name":"eBUSCRC","type":"byte","label":"last calculated eBUS CRC"}
@@ -216,7 +216,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 11 00"}
+					{"type":"static","default":"0D 11 00"}
 				],
 				"slave": [
 					{"name":"eBUSFifoDiffCntMax","type":"byte","label":"max. eBUS-fifo level"}
@@ -229,7 +229,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 13 00"}
+					{"type":"static","default":"0D 13 00"}
 				],
 				"slave": [
 					{"name":"EEpromMaxInkonsCnt","type":"word","label":"EEPROM inconsistency counter"}
@@ -242,7 +242,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 14 00"}
+					{"type":"static","default":"0D 14 00"}
 				],
 				"slave": [
 					{"name":"POCResetCnt","type":"word","label":"power on resets"}
@@ -255,7 +255,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 15 00"}
+					{"type":"static","default":"0D 15 00"}
 				],
 				"slave": [
 					{"name":"WDResetCnt","type":"word","label":"watchdog resets"}
@@ -268,7 +268,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 16 00"}
+					{"type":"static","default":"0D 16 00"}
 				],
 				"slave": [
 					{"name":"LVResetCnt","type":"word","label":"low voltage resets"}
@@ -281,7 +281,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 17 00"}
+					{"type":"static","default":"0D 17 00"}
 				],
 				"slave": [
 					{"name":"CMResetCnt","type":"word","label":"clock monitor resets"}
@@ -294,7 +294,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 18 00"}
+					{"type":"static","default":"0D 18 00"}
 				],
 				"slave": [
 					{"name":"COMErrorCnt","type":"word","label":"eBUS-communication errors"}
@@ -307,7 +307,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 19 00"}
+					{"type":"static","default":"0D 19 00"}
 				],
 				"slave": [
 					{"name":"VariantDKRefreshCnt","type":"byte","label":"counts how often variant ID has been corrected"}
@@ -320,7 +320,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1A 00"}
+					{"type":"static","default":"0D 1A 00"}
 				],
 				"slave": [
 					{"name":"FiFoResetCnt","type":"byte","label":"counter how often eBUS Fifo was cleared"}

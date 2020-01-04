@@ -13,7 +13,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 00 00"}
+					{"type":"static","default":"0D 00 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"room temperature","id":"vaillant.tempsensor"}
@@ -29,7 +29,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 1F 00"}
+					{"type":"static","default":"0D 1F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -38,7 +38,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 1F 00"},
+					{"type":"static","default":"0E 1F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -49,7 +49,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 20 00"}
+					{"type":"static","default":"0D 20 00"}
 				],
 				"slave": [
 					{"name":"RoomTempOffsetSelfWarming","type":"template","label":"RaumTempOffsetEigenErwaerm","id":"vaillant.templ.temp"}
@@ -68,7 +68,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 43 00"}
+					{"type":"static","default":"0D 43 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -77,7 +77,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 43 00"},
+					{"type":"static","default":"0E 43 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -91,7 +91,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 22 00"}
+					{"type":"static","default":"0D 22 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -100,7 +100,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 22 00"},
+					{"type":"static","default":"0E 22 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -114,7 +114,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 36 00"}
+					{"type":"static","default":"0D 36 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -123,7 +123,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 36 00"},
+					{"type":"static","default":"0E 36 00"},
 					{"type":"template-block"}
 				]
 			}

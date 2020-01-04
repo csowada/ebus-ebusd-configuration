@@ -13,7 +13,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CC 00"}
+					{"type":"static","default":"0D CC 00"}
 				],
 				"slave": [
 					{"name":"StatPowerOn","type":"word","label":"StatPowerOn"}
@@ -26,7 +26,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CD 00"}
+					{"type":"static","default":"0D CD 00"}
 				],
 				"slave": [
 					{"name":"StatOperatingHours","type":"word","label":"StatOperatingHours"}
@@ -39,7 +39,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CE 00"}
+					{"type":"static","default":"0D CE 00"}
 				],
 				"slave": [
 					{"name":"StatMonthOfInstallation","type":"byte","label":"StatMonthOfInstallation"}
@@ -52,7 +52,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D CF 00"}
+					{"type":"static","default":"0D CF 00"}
 				],
 				"slave": [
 					{"name":"StatYearOfInstallation","type":"byte","label":"StatYearOfInstallation"}
@@ -65,7 +65,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D0 00"}
+					{"type":"static","default":"0D D0 00"}
 				],
 				"slave": [
 					{"name":"Stat15MinBusTimeout","type":"byte","label":"Stat15MinBusTimeout"}
@@ -78,7 +78,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D1 00"}
+					{"type":"static","default":"0D D1 00"}
 				],
 				"slave": [
 					{"name":"StatRTOSErrorcode","type":"word","label":"StatRTOSErrorcode"}
@@ -91,7 +91,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D2 00"}
+					{"type":"static","default":"0D D2 00"}
 				],
 				"slave": [
 					{"name":"StatRestarts","type":"word","label":"StatRestarts"}
@@ -104,7 +104,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D3 00"}
+					{"type":"static","default":"0D D3 00"}
 				],
 				"slave": [
 					{"name":"StatRTOSErrorCounter","type":"word","label":"StatRTOSErrorCounter"}
@@ -117,7 +117,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 46 00"}
+					{"type":"static","default":"0D 46 00"}
 				],
 				"slave": [
 					{"name":"FlowTempDesired","type":"template","label":"Desired flow temperature of MK1","id":"vaillant.templ.temp1"}
@@ -130,7 +130,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 01 00"}
+					{"type":"static","default":"0D 01 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Flow temperature","id":"vaillant.tempsensor"}
@@ -143,7 +143,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 06 00"}
+					{"type":"static","default":"0D 06 00"}
 				],
 				"slave": [
 					{"type":"template-block","label":"current outside temperature (valid only if a sensor is connected to the VR60)","id":"vaillant.tempsensor"}
@@ -156,7 +156,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0A 00"}
+					{"type":"static","default":"0D 0A 00"}
 				],
 				"slave": [
 					{"name":"TeleSwitch","type":"template","label":"State of the Teleswitch","id":"vaillant.templ.onoff"}
@@ -169,7 +169,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 27 00"}
+					{"type":"static","default":"0D 27 00"}
 				],
 				"slave": [
 					{"name":"IsInHoliday","type":"byte","label":"Every bit of this byte represents a heating circuit; holiday function can be started by setting the HC's corresponding bit"}
@@ -182,7 +182,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 4E 00"}
+					{"type":"static","default":"0D 4E 00"}
 				],
 				"slave": [
 					{"name":"IsInParty","type":"byte","label":"Every bit of this byte represents a heating circuit; if bit is set the party function is activated for the corresponding HC"}
@@ -195,7 +195,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 4B 00"}
+					{"type":"static","default":"0D 4B 00"}
 				],
 				"slave": [
 					{"name":"CleaningLady","type":"byte","label":"saving function is activated until read value * 1/2 h"}
@@ -208,7 +208,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 47 00"}
+					{"type":"static","default":"0D 47 00"}
 				],
 				"slave": [
 					{"name":"IsInStorageFilling","type":"template","label":"heating circuit is locked because of ongoing tank loading unless parallel loading has been activated","id":"vaillant.templ.yesno"}
@@ -221,7 +221,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 0E 00"}
+					{"type":"static","default":"0D 0E 00"}
 				],
 				"slave": [
 					{"name":"MixerDutyCycle","type":"char","label":"Telswitch,Pump,Circulation pump,DHW rewquest,DHW permittion"}
@@ -234,7 +234,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 91 00"}
+					{"type":"static","default":"0D 91 00"}
 				],
 				"slave": [
 					{"name":"HcPumpPort","type":"template","label":"Status of mixer cicuit pump on MK1P","id":"vaillant.templ.onoff"}
@@ -250,7 +250,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 3C 00"}
+					{"type":"static","default":"0D 3C 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -259,7 +259,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 3C 00"},
+					{"type":"static","default":"0E 3C 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -273,7 +273,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 2B 00"}
+					{"type":"static","default":"0D 2B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -282,7 +282,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 2B 00"},
+					{"type":"static","default":"0E 2B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -296,7 +296,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 32 00"}
+					{"type":"static","default":"0D 32 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -305,7 +305,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 32 00"},
+					{"type":"static","default":"0E 32 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -319,7 +319,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 33 00"}
+					{"type":"static","default":"0D 33 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -328,7 +328,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 33 00"},
+					{"type":"static","default":"0E 33 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -342,7 +342,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 35 00"}
+					{"type":"static","default":"0D 35 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -351,7 +351,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 35 00"},
+					{"type":"static","default":"0E 35 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -365,7 +365,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 36 00"}
+					{"type":"static","default":"0D 36 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -374,7 +374,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 36 00"},
+					{"type":"static","default":"0E 36 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -388,7 +388,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 4F 00"}
+					{"type":"static","default":"0D 4F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -397,7 +397,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 4F 00"},
+					{"type":"static","default":"0E 4F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -411,7 +411,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 30 00"}
+					{"type":"static","default":"0D 30 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -420,7 +420,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 30 00"},
+					{"type":"static","default":"0E 30 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -434,7 +434,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 31 00"}
+					{"type":"static","default":"0D 31 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -443,7 +443,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 31 00"},
+					{"type":"static","default":"0E 31 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -457,7 +457,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 38 00"}
+					{"type":"static","default":"0D 38 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -466,7 +466,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 38 00"},
+					{"type":"static","default":"0E 38 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -480,7 +480,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 3F 00"}
+					{"type":"static","default":"0D 3F 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -489,7 +489,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 3F 00"},
+					{"type":"static","default":"0E 3F 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -503,7 +503,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D 3B 00"}
+					{"type":"static","default":"0D 3B 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -512,7 +512,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E 3B 00"},
+					{"type":"static","default":"0E 3B 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -523,7 +523,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B6 00"}
+					{"type":"static","default":"0D B6 00"}
 				],
 				"slave": [
 					{"name":"CoolingRequest","type":"template","label":"CoolingRequest","id":"vaillant.templ.yesno"}
@@ -536,7 +536,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B5 00"}
+					{"type":"static","default":"0D B5 00"}
 				],
 				"slave": [
 					{"name":"AutocoolTestModeActive","type":"template","label":"AutocoolTestModeActive","id":"vaillant.templ.yesno"}
@@ -549,7 +549,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B4 00"}
+					{"type":"static","default":"0D B4 00"}
 				],
 				"slave": [
 					{"name":"SystemMode","type":"byte","label":"SystemMode"}
@@ -562,7 +562,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B9 00"}
+					{"type":"static","default":"0D B9 00"}
 				],
 				"slave": [
 					{"name":"CoolingSupported","type":"template","label":"CoolingSupported","id":"vaillant.templ.yesno"}
@@ -575,7 +575,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B7 00"}
+					{"type":"static","default":"0D B7 00"}
 				],
 				"slave": [
 					{"name":"DWMOffToHeatingDelay","type":"byte","label":"DWMOffToHeatingDelay"}
@@ -588,7 +588,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D B8 00"}
+					{"type":"static","default":"0D B8 00"}
 				],
 				"slave": [
 					{"name":"DWMOffToCoolingDelay","type":"byte","label":"DWMOffToCoolingDelay"}
@@ -604,7 +604,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D BA 00"}
+					{"type":"static","default":"0D BA 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -613,7 +613,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E BA 00"},
+					{"type":"static","default":"0E BA 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -624,7 +624,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D BB 00"}
+					{"type":"static","default":"0D BB 00"}
 				],
 				"slave": [
 					{"name":"Tot24h","type":"template","label":"Outside temperature mean value over 24 hours","id":"vaillant.templ.temp"}
@@ -637,7 +637,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D BC 00"}
+					{"type":"static","default":"0D BC 00"}
 				],
 				"slave": [
 					{"name":"TotAverageTime","type":"byte","label":"Tot_AverageTime"}
@@ -650,7 +650,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D BD 00"}
+					{"type":"static","default":"0D BD 00"}
 				],
 				"slave": [
 					{"name":"CoolingEfficiencyState","type":"byte","label":"CoolingEfficiencyState"}
@@ -666,7 +666,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D BE 00"}
+					{"type":"static","default":"0D BE 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -675,7 +675,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E BE 00"},
+					{"type":"static","default":"0E BE 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -689,7 +689,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D BF 00"}
+					{"type":"static","default":"0D BF 00"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -698,7 +698,7 @@
 			"set": {
 				"command": "B5 09",
 				"master": [
-					{"type":"static","_default":"0E BF 00"},
+					{"type":"static","default":"0E BF 00"},
 					{"type":"template-block"}
 				]
 			}
@@ -709,7 +709,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C1 00"}
+					{"type":"static","default":"0D C1 00"}
 				],
 				"slave": [
 					{"name":"TempDiffInOutdoor","type":"data1c","label":"TemperaturDiffInOutdoor"}
@@ -722,7 +722,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C2 00"}
+					{"type":"static","default":"0D C2 00"}
 				],
 				"slave": [
 					{"name":"HcManualWorkingModeTriggeringActive","type":"byte","label":"HCManualWorkingModeTriggeringActive"}
@@ -735,7 +735,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C3 00"}
+					{"type":"static","default":"0D C3 00"}
 				],
 				"slave": [
 					{"name":"HcMode","type":"byte","label":"HeatCircuitMode"}
@@ -748,7 +748,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C4 00"}
+					{"type":"static","default":"0D C4 00"}
 				],
 				"slave": [
 					{"name":"HcModeAutomaticState","type":"byte","label":"HeatCircuitModeAutomaticState"}
@@ -761,7 +761,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C5 00"}
+					{"type":"static","default":"0D C5 00"}
 				],
 				"slave": [
 					{"name":"HcModeManualState","type":"byte","label":"HeatCircuitModeManualState"}
@@ -774,7 +774,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C6 00"}
+					{"type":"static","default":"0D C6 00"}
 				],
 				"slave": [
 					{"name":"CoolingOpmodeAutoState","type":"byte","label":"CoolingOpmodeAutoState"}
@@ -787,7 +787,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C7 00"}
+					{"type":"static","default":"0D C7 00"}
 				],
 				"slave": [
 					{"name":"CoolingModeAutomaticState","type":"byte","label":"CoolingModeAutomaticState"}
@@ -800,7 +800,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C8 00"}
+					{"type":"static","default":"0D C8 00"}
 				],
 				"slave": [
 					{"name":"CoolingWhileHolidaySupported","type":"byte","label":"CoolingWhileHolidaySupported"}
@@ -813,7 +813,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D C9 00"}
+					{"type":"static","default":"0D C9 00"}
 				],
 				"slave": [
 					{"name":"RcRoomTemp","type":"template","label":"RcRoomTemp","id":"vaillant.templ.temp"}
@@ -826,7 +826,7 @@
 			"command": "B5 09",
 			"get": {
 				"master": [
-					{"type":"static","_default":"0D D4 00"}
+					{"type":"static","default":"0D D4 00"}
 				],
 				"slave": [
 					{"name":"SystemWithCooling","type":"template","label":"SystemWithCooling","id":"vaillant.templ.yesno"}
@@ -842,7 +842,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 03"}
+					{"type":"static","default":"00 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -851,7 +851,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"00 03"},
+					{"type":"static","default":"00 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -865,7 +865,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 03"}
+					{"type":"static","default":"01 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -874,7 +874,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"01 03"},
+					{"type":"static","default":"01 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -888,7 +888,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"02 03"}
+					{"type":"static","default":"02 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -897,7 +897,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"02 03"},
+					{"type":"static","default":"02 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -911,7 +911,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"03 03"}
+					{"type":"static","default":"03 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -920,7 +920,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"03 03"},
+					{"type":"static","default":"03 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -934,7 +934,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"04 03"}
+					{"type":"static","default":"04 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -943,7 +943,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"04 03"},
+					{"type":"static","default":"04 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -957,7 +957,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"05 03"}
+					{"type":"static","default":"05 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -966,7 +966,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"05 03"},
+					{"type":"static","default":"05 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -980,7 +980,7 @@
 			],
 			"get": {
 				"master": [
-					{"type":"static","_default":"06 03"}
+					{"type":"static","default":"06 03"}
 				],
 				"slave": [
 					{"type":"template-block"}
@@ -989,7 +989,7 @@
 			"set": {
 				"command": "B5 15",
 				"master": [
-					{"type":"static","_default":"06 03"},
+					{"type":"static","default":"06 03"},
 					{"type":"template-block"}
 				]
 			}
@@ -1000,7 +1000,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00"}
+					{"type":"static","default":"00"}
 				],
 				"slave": [
 					{"name":"dcfstate","type":"template","label":"Date time","id":"vaillant.templ.dcfstate"},
@@ -1016,7 +1016,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01"}
+					{"type":"static","default":"01"}
 				],
 				"slave": [
 					{"name":"tempdesired","type":"template","label":"Operation mode","id":"vaillant.templ.temp0"},
@@ -1036,7 +1036,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"01"},
+					{"type":"static","default":"01"},
 					{"name":"SetTempDesired","type":"template","label":"Set desired temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -1047,7 +1047,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02"},
+					{"type":"static","default":"02"},
 					{"name":"SetMode","type":"template","label":"Set operation mode","id":"vaillant.templ.mcmode"}
 				]
 			}
@@ -1058,7 +1058,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"03"},
+					{"type":"static","default":"03"},
 					{"name":"SetFloorPavingDryingDay","type":"template","label":"Set floor paving drying day","id":"vaillant.templ.days"}
 				]
 			}
@@ -1069,7 +1069,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"04"},
+					{"type":"static","default":"04"},
 					{"name":"SetFloorPavingDryingTemp","type":"template","label":"Set floor paving drying temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -1080,7 +1080,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 08"},
+					{"type":"static","default":"2D 08"},
 					{"name":"SetType","type":"template","label":"Set type","id":"vaillant.templ.mctype"}
 				]
 			}
@@ -1091,7 +1091,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 0A"},
+					{"type":"static","default":"2D 0A"},
 					{"name":"SetTempDesiredLow","type":"template","label":"Set desired low temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -1102,7 +1102,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 0B"},
+					{"type":"static","default":"2D 0B"},
 					{"name":"SetHeatingCurve","type":"template","label":"Set heating curve","id":"vaillant.templ.curve"}
 				]
 			}
@@ -1113,7 +1113,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 0C"},
+					{"type":"static","default":"2D 0C"},
 					{"name":"SetShutdownTemp","type":"template","label":"Set outside shutdown temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -1124,7 +1124,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 0D"},
+					{"type":"static","default":"2D 0D"},
 					{"name":"SetPumpIdlePeriod","type":"template","label":"Set pump idle period","id":"vaillant.templ.minutes0"}
 				]
 			}
@@ -1135,7 +1135,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 0E"},
+					{"type":"static","default":"2D 0E"},
 					{"name":"SetFlowTempMin","type":"template","label":"Set min flow temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -1146,7 +1146,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 0F"},
+					{"type":"static","default":"2D 0F"},
 					{"name":"SetFlowTempMax","type":"template","label":"Set max flow temperature","id":"vaillant.templ.temp0"}
 				]
 			}
@@ -1157,7 +1157,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"2D 10"},
+					{"type":"static","default":"2D 10"},
 					{"name":"SetMaxPreHeating","type":"template","label":"Set max pre-heating","id":"vaillant.templ.hours12"}
 				]
 			}
@@ -1168,7 +1168,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 09"}
+					{"type":"static","default":"01 09"}
 				],
 				"slave": [
 					{"name":"tempdesired","type":"template","label":"Parameters","id":"vaillant.templ.temp0"},
@@ -1189,7 +1189,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 0A"}
+					{"type":"static","default":"01 0A"}
 				],
 				"slave": [
 					{"name":"flowtemp","type":"template","label":"Status flow temperature/mixer/pump/desired flow temperature","id":"vaillant.templ.temp"},
@@ -1206,7 +1206,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 0D"}
+					{"type":"static","default":"01 0D"}
 				],
 				"slave": [
 					{"name":"flowtempdesired","type":"template","label":"Status flow desired/current","id":"vaillant.templ.temp0"},
@@ -1222,7 +1222,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 16"}
+					{"type":"static","default":"01 16"}
 				],
 				"slave": [
 					{"name":"Status16","type":"template","label":"Outside temperature","id":"vaillant.templ.temp"}
@@ -1235,7 +1235,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"02"}
+					{"type":"static","default":"02"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Monday","id":"vaillant.timer"}
@@ -1248,7 +1248,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"03"}
+					{"type":"static","default":"03"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Tuesday","id":"vaillant.timer"}
@@ -1261,7 +1261,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"04"}
+					{"type":"static","default":"04"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Wednesday","id":"vaillant.timer"}
@@ -1274,7 +1274,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"05"}
+					{"type":"static","default":"05"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Thursday","id":"vaillant.timer"}
@@ -1287,7 +1287,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"06"}
+					{"type":"static","default":"06"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Friday","id":"vaillant.timer"}
@@ -1300,7 +1300,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"07"}
+					{"type":"static","default":"07"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Saturday","id":"vaillant.timer"}
@@ -1313,7 +1313,7 @@
 			"command": "B5 04",
 			"get": {
 				"master": [
-					{"type":"static","_default":"08"}
+					{"type":"static","default":"08"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Periods Sunday","id":"vaillant.timer"}
@@ -1326,7 +1326,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 01"},
+					{"type":"static","default":"09 01"},
 					{"type":"template-block","label":"Periods Monday","id":"vaillant.timer"}
 				]
 			}
@@ -1337,7 +1337,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 02"},
+					{"type":"static","default":"09 02"},
 					{"type":"template-block","label":"Periods Tuesday","id":"vaillant.timer"}
 				]
 			}
@@ -1348,7 +1348,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 03"},
+					{"type":"static","default":"09 03"},
 					{"type":"template-block","label":"Periods Wednesday","id":"vaillant.timer"}
 				]
 			}
@@ -1359,7 +1359,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 04"},
+					{"type":"static","default":"09 04"},
 					{"type":"template-block","label":"Periods Thursday","id":"vaillant.timer"}
 				]
 			}
@@ -1370,7 +1370,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 05"},
+					{"type":"static","default":"09 05"},
 					{"type":"template-block","label":"Periods Friday","id":"vaillant.timer"}
 				]
 			}
@@ -1381,7 +1381,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 06"},
+					{"type":"static","default":"09 06"},
 					{"type":"template-block","label":"Periods Saturday","id":"vaillant.timer"}
 				]
 			}
@@ -1392,7 +1392,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"09 07"},
+					{"type":"static","default":"09 07"},
 					{"type":"template-block","label":"Periods Sunday","id":"vaillant.timer"}
 				]
 			}
@@ -1403,7 +1403,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"00 01"}
+					{"type":"static","default":"00 01"}
 				],
 				"slave": [
 					{"type":"template-block","label":"Current errors","id":"vaillant.errors"}
@@ -1416,7 +1416,7 @@
 			"command": "B5 03",
 			"get": {
 				"master": [
-					{"type":"static","_default":"01 01"}
+					{"type":"static","default":"01 01"}
 				],
 				"slave": [
 					{"name":"index","type":"byte","label":"Error history"},
@@ -1430,7 +1430,7 @@
 			"command": "B5 03",
 			"set": {
 				"master": [
-					{"type":"static","_default":"02 01"},
+					{"type":"static","default":"02 01"},
 					{"name":"cleared","type":"template","label":"Clear error history","id":"vaillant.templ.yesno"}
 				]
 			}
@@ -1441,7 +1441,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"05"},
+					{"type":"static","default":"05"},
 					{"name":"party","type":"template","label":"Quick - party","id":"vaillant.templ.onoff"}
 				]
 			}
@@ -1452,7 +1452,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"06"},
+					{"type":"static","default":"06"},
 					{"name":"load","type":"template","label":"Quick - hot water tank filling","id":"vaillant.templ.onoff"}
 				]
 			}
@@ -1463,7 +1463,7 @@
 			"command": "B5 05",
 			"set": {
 				"master": [
-					{"type":"static","_default":"07"},
+					{"type":"static","default":"07"},
 					{"name":"save","type":"time","label":"Quick - cleaning lady","variant":"minutes_short","minuteMultiplier":30}
 				]
 			}
