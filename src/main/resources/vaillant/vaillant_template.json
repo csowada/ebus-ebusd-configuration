@@ -248,15 +248,15 @@
 		{
 			"name": "slot1-3",
 			"template": [
-				{"name":"slot1","type":"template-block","id":"vaillant.slot1"},
-				{"name":"slot2","type":"template-block","id":"vaillant.slot2"},
-				{"name":"slot3","type":"template-block","id":"vaillant.slot3"}
+				{"type":"template-block","id":"vaillant.slot1"},
+				{"type":"template-block","id":"vaillant.slot2"},
+				{"type":"template-block","id":"vaillant.slot3"}
 			]
 		},
 		{
 			"name": "timer",
 			"template": [
-				{"name":"slot1-3","type":"template-block","id":"vaillant.slot1-3"},
+				{"type":"template-block","id":"vaillant.slot1-3"},
 				{"name":"daysel","type":"template","id":"vaillant.templ.daysel"}
 			]
 		},
