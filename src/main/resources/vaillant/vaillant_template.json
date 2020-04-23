@@ -227,36 +227,44 @@
 		{
 			"name": "slot1",
 			"template": [
-				{"name":"from","type":"template","id":"vaillant.templ.from"},
-				{"name":"to","type":"template","id":"vaillant.templ.to"}
+				{"name":"from1","type":"template","id":"vaillant.templ.from"},
+				{"name":"to1","type":"template","id":"vaillant.templ.to"}
 			]
 		},
 		{
 			"name": "slot2",
 			"template": [
-				{"name":"from","type":"template","id":"vaillant.templ.from"},
-				{"name":"to","type":"template","id":"vaillant.templ.to"}
+				{"name":"from2","type":"template","id":"vaillant.templ.from"},
+				{"name":"to2","type":"template","id":"vaillant.templ.to"}
 			]
 		},
 		{
 			"name": "slot3",
 			"template": [
-				{"name":"from","type":"template","id":"vaillant.templ.from"},
-				{"name":"to","type":"template","id":"vaillant.templ.to"}
+				{"name":"from3","type":"template","id":"vaillant.templ.from"},
+				{"name":"to3","type":"template","id":"vaillant.templ.to"}
 			]
 		},
 		{
 			"name": "slot1-3",
 			"template": [
-				{"type":"template-block","id":"vaillant.slot1"},
-				{"type":"template-block","id":"vaillant.slot2"},
-				{"type":"template-block","id":"vaillant.slot3"}
+				{"name":"from1","type":"template","id":"vaillant.templ.from"},
+				{"name":"to1","type":"template","id":"vaillant.templ.to"},
+				{"name":"from2","type":"template","id":"vaillant.templ.from"},
+				{"name":"to2","type":"template","id":"vaillant.templ.to"},
+				{"name":"from3","type":"template","id":"vaillant.templ.from"},
+				{"name":"to3","type":"template","id":"vaillant.templ.to"}
 			]
 		},
 		{
 			"name": "timer",
 			"template": [
-				{"type":"template-block","id":"vaillant.slot1-3"},
+				{"name":"from1","type":"template","id":"vaillant.templ.from"},
+				{"name":"to1","type":"template","id":"vaillant.templ.to"},
+				{"name":"from2","type":"template","id":"vaillant.templ.from"},
+				{"name":"to2","type":"template","id":"vaillant.templ.to"},
+				{"name":"from3","type":"template","id":"vaillant.templ.from"},
+				{"name":"to3","type":"template","id":"vaillant.templ.to"},
 				{"name":"daysel","type":"template","id":"vaillant.templ.daysel"}
 			]
 		},
